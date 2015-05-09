@@ -1,2 +1,3 @@
-# thesis
-My Thesis at the University Of Queensland
+# Thesis
+My Thesis at the University Of Queensland.
+
