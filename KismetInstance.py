@@ -20,12 +20,12 @@ class KismetInstance:
     def __create_kismet_instance__(self):
         shell = ['sudo', '/usr/local/bin/kismet_server']
         self.logger.debug('Attempting to run: %s', " ".join(shell))
-        self.kismet = Popen(shell, stdin=PIPE, stdout=PIPE, stderr=PIPE)
+        self.kismet = Popen(shell, stdin=PIPE, stdout=PIPE, stderr=PIPE, cwd=r'./logs', preexec_fn=os.setsid)
 
 
     def __destroy_kismet_instance__(self):
         try:
-            os.killpg(self.kismet.pid, signal.SIGTERM)
+            os.killpg(os.getpgid(self.kismet.pid), signal.SIGINT)
         except:
             pass
 
