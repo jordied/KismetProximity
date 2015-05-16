@@ -2,6 +2,7 @@ import sys
 
 from MessageFormatter import MessageFormatter
 from KismetInstance import KismetInstance
+from MQTTHelper import MQTTHelper
 
 ### My Class
 
@@ -9,4 +10,9 @@ from KismetInstance import KismetInstance
 if __name__ == "__main__":
     kismet_instance = KismetInstance()
     formatter = MessageFormatter()
-    print formatter.format_kismet_response(kismet_instance.run_scan())
+    MQTTHelper = MQTTHelper()
+    client_list = formatter.format_kismet_response(kismet_instance.run_scan())
+    list_dict = formatter.get_client_list(client_list)
+    MQTTHelper.send(list_dict)
+    #print list_dict
+
