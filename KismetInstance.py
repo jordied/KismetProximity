@@ -1,6 +1,5 @@
 __author__ = 'Jordi'
 
-import sys
 import logging
 import signal
 import os
@@ -42,6 +41,7 @@ class KismetInstance:
                 pid = int(line.split(None, 1)[0])
                 self.logger.debug("Found: %d", pid)
                 os.killpg(os.getpgid(pid), sig)
+
 
 
     def __get_raw_kismet_response__(self):
