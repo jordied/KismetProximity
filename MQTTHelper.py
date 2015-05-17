@@ -3,7 +3,6 @@ __author__ = 'Jordi'
 import paho.mqtt.publish as publish
 import json
 import logging
-import pprint
 
 class MQTTHelper:
     def __init__(self, host='winter.ceit.uq.edu.au', base_topic='proximity', location='rpi1'):
