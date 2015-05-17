@@ -1,7 +1,9 @@
 __author__ = 'Jordi'
 import string
 import logging
+import time
 from datetime import datetime
+
 class MessageFormatter:
     """This Class is essentially the main class"""
 
@@ -24,7 +26,8 @@ class MessageFormatter:
             output.append(text)
         return ''.join(output)
 
-    def get_client_list(self, text):
+
+    def get_client_list(self, text, interface_addr):
         list_of_clients = []
         list_of_client_dict = []
         for item in text.split("\n"):
@@ -33,7 +36,9 @@ class MessageFormatter:
         for x in list_of_clients:
             z = x.split()
             mac = z[1]
-            t = datetime.now()
-            list_of_client_dict.append({'year': t.date().year, 'month':t.date().month, 'date': t.date().day, 'hour': t.hour, 'minute': t.minute, 'second': t.second, 'MAC': mac})
+            if not interface_addr.lower() == mac.lower():
+                t = datetime.now()
+                list_of_client_dict.append({'year': t.date().year, 'month':t.date().month, 'date': t.date().day, 'hour': t.hour, 'minute': t.minute, 'second': t.second, 'MAC': mac})
+                print '{0}\t{1}'.format(time.strftime('%X %x %Z'), mac)
         return list_of_client_dict
 

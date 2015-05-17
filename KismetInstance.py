@@ -6,6 +6,9 @@ import os
 from subprocess import Popen, PIPE
 import time
 import subprocess
+import socket
+import fcntl
+import struct
 
 
 
@@ -64,9 +67,16 @@ class KismetInstance:
                 self.logger.warning("Something bad happened when fetching client list from kismet.")
         return output
 
-    def run_scan(self):
+    def get_Hw_Addr(self, ifname='wlan0'):
+        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        info = fcntl.ioctl(s.fileno(), 0x8927,  struct.pack('256s', ifname[:15]))
+        return ':'.join(['%02x' % ord(char) for char in info[18:24]])
+
+
+    def run_scan(self, scan=2, wait=1):
         self.__create_kismet_instance__()
-        time.sleep(2)
+        time.sleep(float(scan))
         text = self.__get_raw_kismet_response__()
         self.__destroy_kismet_instance__()
+        time.sleep(float(wait))
         return text
