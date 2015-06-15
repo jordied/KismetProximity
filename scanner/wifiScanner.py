@@ -21,44 +21,9 @@ from MQTTHelper import MQTTHelper
 import subprocess
 import os
 import signal
+import argparse
 
-### My Class
-class ProximityDetector:
 
-    def __init__(self, scan_length=2, wait_between=1):
-        self.scan = scan_length
-        self.wait = wait_between
-
-    def handle_argv(self, argv):
-        i = 0
-        self.hostname = 'winter.ceit.uq.edu.au'
-        self.id = 1
-        while i < len(argv):
-            if argv[i] == '-s':
-                try:
-                    self.scan = argv[i+1]
-                    i += 1
-                except:
-                    pass
-            if argv[i] == '-w':
-                try:
-                    self.wait = argv[i + 1]
-                    i += 1
-                except:
-                    pass
-            if argv[i] == '-i':
-                try:
-                    self.id = argv[i + 1]
-                    i += 1
-                except:
-                    pass
-            if argv[i] == '-h':
-                try:
-                    self.hostname = argv[i + 1]
-                    i += 1
-                except:
-                    pass
-            i += 1
 
 def signal_handler(signal, frame):
         print '\nExiting! Killing all Kismet Instances...'
@@ -75,12 +40,18 @@ def signal_handler(signal, frame):
 if __name__ == "__main__":
     signal.signal(signal.SIGINT, signal_handler)
     kismet_instance = KismetInstance()
-    ProximityDetector = ProximityDetector()
-    ProximityDetector.handle_argv(sys.argv)
-    MQTTHelper = MQTTHelper(host=ProximityDetector.hostname)
-    formatter = MessageFormatter(id=ProximityDetector.id)
+    #Handle Arguements
+    parser = argparse.ArgumentParser(description='Using a Raspberry Pi, scan the nearby environemnt for active WiFi devices and post on MQTT')
+    parser.add_argument('--scan', metavar='sec', type=int, nargs='?', help='Scan Duration in seconds.', default=3)
+    parser.add_argument('--wait', metavar='sec', type=int, nargs='?', help='Wait Duration in seconds.', default=1)
+    parser.add_argument('--id', metavar='N', type=int, nargs='?', help='ID of scanner', default=1)
+    parser.add_argument('--host', metavar='url', type=str, nargs='?', help='UQL of MQTT server', default='winter.ceit.uq.edu.au')
+    args = parser.parse_args()
+    # Begin
+    MQTTHelper = MQTTHelper(host=args.host)
+    formatter = MessageFormatter(id=args.id)
     while True:
-        client_list = formatter.format_kismet_response(kismet_instance.run_scan(scan=ProximityDetector.scan, wait=ProximityDetector.wait))
+        client_list = formatter.format_kismet_response(kismet_instance.run_scan(scan=args.scan, wait=args.wait))
         list_dict = formatter.get_client_list(client_list, kismet_instance.get_hw_Addr('wlan0'))
         MQTTHelper.send(list_dict)
 
