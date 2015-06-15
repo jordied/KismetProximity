@@ -18,10 +18,11 @@ import logging
 import time
 from datetime import datetime
 
+
 class MessageFormatter:
     """This Class is essentially the main class"""
 
-    def __init__(self, id = 1):
+    def __init__(self, id=1):
         logging.basicConfig(format='%(asctime)-15s::: %(message)s')
         self.logger = logging.getLogger('WiFiSniffer')
         self.id = id
@@ -56,8 +57,9 @@ class MessageFormatter:
             except ValueError:
                 dbm = 0
             if not interface_addr.lower() == mac.lower():
-                t = datetime.now()
-                list_of_client_dict.append({'pi_id': self.id, 'year': t.date().year, 'month':t.date().month, 'date': t.date().day, 'hour': t.hour, 'minute': t.minute, 'second': t.second, 'MAC': mac, 'rssi': dbm})
+                format = "%H:%M:%S_%B_%d_%Y"
+                list_of_client_dict.append(
+                    {'pi_id': self.id, 'time':datetime.now().strftime(format), 'MAC': mac, 'rssi': dbm})
                 print '{0}\t{1}\t{2}'.format(time.strftime('%X %x %Z'), mac, dbm)
         return list_of_client_dict
 

@@ -14,38 +14,42 @@
 # along with KismetProximity.  If not, see <http://www.gnu.org/licenses/>.
 
 import sys
-
-from MessageFormatter import MessageFormatter
-from KismetInstance import KismetInstance
-from MQTTHelper import MQTTHelper
 import subprocess
 import os
 import signal
 import argparse
 
+from MessageFormatter import MessageFormatter
+from KismetInstance import KismetInstance
+from MQTTHelper import MQTTHelper
 
 
 def signal_handler(signal, frame):
-        print '\nExiting! Killing all Kismet Instances...'
-        p_list = subprocess.Popen(['ps', '-A'], stdout=subprocess.PIPE)
-        out, err = p_list.communicate()
-        for line in out.splitlines():
-            if 'kismet' in line:
-                print 'Found: ' + line + ' ...',
-                pid = int(line.split(None, 1)[0])
-                os.killpg(os.getpgid(pid), 9)
-                print 'DONE'
-        sys.exit(0)
+    print '\nExiting! Killing all Kismet Instances...'
+    p_list = subprocess.Popen(['ps', '-A'], stdout=subprocess.PIPE)
+    out, err = p_list.communicate()
+    for line in out.splitlines():
+        if 'kismet' in line:
+            print 'Found: ' + line + ' ...',
+            pid = int(line.split(None, 1)[0])
+            os.killpg(os.getpgid(pid), 9)
+            print 'DONE'
+    sys.exit(0)
+
 
 if __name__ == "__main__":
     signal.signal(signal.SIGINT, signal_handler)
     kismet_instance = KismetInstance()
-    #Handle Arguements
-    parser = argparse.ArgumentParser(description='Using a Raspberry Pi, scan the nearby environemnt for active WiFi devices and post on MQTT')
-    parser.add_argument('--scan', metavar='sec', type=int, nargs='?', help='Scan Duration in seconds.', default=3)
-    parser.add_argument('--wait', metavar='sec', type=int, nargs='?', help='Wait Duration in seconds.', default=1)
-    parser.add_argument('--id', metavar='N', type=int, nargs='?', help='ID of scanner', default=1)
-    parser.add_argument('--host', metavar='url', type=str, nargs='?', help='UQL of MQTT server', default='winter.ceit.uq.edu.au')
+    # Handle Arguements
+    parser = argparse.ArgumentParser(
+        description='Using a Raspberry Pi, scan the nearby environemnt for active WiFi devices and post on MQTT')
+    parser.add_argument('--scan', metavar='sec', type=int, nargs='?', help='Scan duration in seconds (default of 3).',
+                        default=3)
+    parser.add_argument('--wait', metavar='sec', type=int, nargs='?', help='Wait duration in seconds (default of 1).',
+                        default=1)
+    parser.add_argument('--id', metavar='N', type=int, nargs='?', help='ID of scanner (default of 1).', default=1)
+    parser.add_argument('--host', metavar='url', type=str, nargs='?',
+                        help='UQL of MQTT server (default is CEIT winter).', default='winter.ceit.uq.edu.au')
     args = parser.parse_args()
     # Begin
     MQTTHelper = MQTTHelper(host=args.host)

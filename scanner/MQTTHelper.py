@@ -14,9 +14,10 @@
 # along with KismetProximity.  If not, see <http://www.gnu.org/licenses/>.
 __author__ = 'Jordi'
 
-import paho.mqtt.publish as publish
 import json
 import logging
+
+import paho.mqtt.publish as publish
 
 
 class MQTTHelper:

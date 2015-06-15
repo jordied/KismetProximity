@@ -25,9 +25,8 @@ import fcntl
 import struct
 
 
-
 class KismetInstance:
-    """This Class is essentially the main class"""
+    """This Class contains an instance of kismet"""
 
     def __init__(self, value=False):
         logging.basicConfig(format='%(asctime)-15s::: %(message)s')
@@ -42,7 +41,8 @@ class KismetInstance:
         """
         shell = ['sudo', '/usr/local/bin/kismet_server']
         self.logger.debug('Attempting to run: %s', " ".join(shell))
-        self.kismet = Popen(shell, stdin=PIPE, stdout=PIPE, stderr=PIPE, cwd=r'./logs', preexec_fn=os.setsid, shell=False)
+        self.kismet = Popen(shell, stdin=PIPE, stdout=PIPE, stderr=PIPE, cwd=r'./logs', preexec_fn=os.setsid,
+                            shell=False)
 
     def __destroy_kismet_instance__(self):
         """
@@ -50,15 +50,19 @@ class KismetInstance:
         :return:
         """
         sig = signal.SIGKILL
-        os.killpg(os.getpgid(self.kismet.pid), sig) # Kill one of them
+        os.killpg(os.getpgid(self.kismet.pid), sig)  # Kill one of them
         p_list = subprocess.Popen(['ps', '-A'], stdout=subprocess.PIPE)
         out, err = p_list.communicate()
         for line in out.splitlines():
             if 'kismet' in line:
                 pid = int(line.split(None, 1)[0])
                 self.logger.debug("Found: %d", pid)
-                os.killpg(os.getpgid(pid), sig)
-
+                try:
+                    os.killpg(os.getpgid(pid), sig)
+                except:
+                    msg = 'Failed to kill a kismet instance! PID:{0} '.format(pid)
+                    self.logger.warning(msg)
+                    print msg
 
 
     def __get_raw_kismet_response__(self):
@@ -83,7 +87,7 @@ class KismetInstance:
 
     def get_hw_Addr(self, ifname='wlan0'):
         s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        info = fcntl.ioctl(s.fileno(), 0x8927,  struct.pack('256s', ifname[:15]))
+        info = fcntl.ioctl(s.fileno(), 0x8927, struct.pack('256s', ifname[:15]))
         return ':'.join(['%02x' % ord(char) for char in info[18:24]])
 
 
