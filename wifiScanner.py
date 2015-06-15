@@ -16,6 +16,8 @@ class ProximityDetector:
 
     def handle_argv(self, argv):
         i = 0
+        self.hostname = 'winter.ceit.uq.edu.au'
+        self.id = 1
         while i < len(argv):
             if argv[i] == '-s':
                 try:
@@ -26,6 +28,18 @@ class ProximityDetector:
             if argv[i] == '-w':
                 try:
                     self.wait = argv[i + 1]
+                    i += 1
+                except:
+                    pass
+            if argv[i] == '-i':
+                try:
+                    self.id = argv[i + 1]
+                    i += 1
+                except:
+                    pass
+            if argv[i] == '-h':
+                try:
+                    self.hostname = argv[i + 1]
                     i += 1
                 except:
                     pass
@@ -46,12 +60,12 @@ def signal_handler(signal, frame):
 if __name__ == "__main__":
     signal.signal(signal.SIGINT, signal_handler)
     kismet_instance = KismetInstance()
-    formatter = MessageFormatter()
-    MQTTHelper = MQTTHelper()
     ProximityDetector = ProximityDetector()
     ProximityDetector.handle_argv(sys.argv)
+    MQTTHelper = MQTTHelper(host=ProximityDetector.hostname)
+    formatter = MessageFormatter(id=ProximityDetector.id)
     while True:
         client_list = formatter.format_kismet_response(kismet_instance.run_scan(scan=ProximityDetector.scan, wait=ProximityDetector.wait))
-        list_dict = formatter.get_client_list(client_list, kismet_instance.get_Hw_Addr('wlan0'))
+        list_dict = formatter.get_client_list(client_list, kismet_instance.get_hw_Addr('wlan0'))
         MQTTHelper.send(list_dict)
 
