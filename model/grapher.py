@@ -28,7 +28,8 @@ class Grapher:
 
     def plot_a_graph(self):
         i = 1
-        plt.axis([0, 25, 0, 20])
+        max = 20
+        plt.axis([0, 2, 0, max])
         plt.ion()
         plt.show()
         while True:
@@ -37,6 +38,9 @@ class Grapher:
                 # If `False`, the program is not blocked. `Queue.Empty` is thrown if
                 # the queue is empty
                 y = int(msg)
+                if max < y:
+                    max = y + 1
+                plt.axis([0, i+1, 0, max])
                 plt.scatter(i, y)
                 print "Total: " + str(y)
                 plt.draw()
