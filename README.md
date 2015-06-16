@@ -11,14 +11,15 @@ This must be installed on your Raspberry Pi  or linux device for it to run. **I 
 
 This can be installed using `sudo pip install paho-mqtt`
 
+#### 3. [Dictionary to XML](https://pypi.python.org/pypi/dicttoxml)
+
+This can be installed using `sudo pip install dicttoxml`
+#### 4. [lxml](http://lxml.de)
+
+This can be installed using `sudo pip install lxml`
+
 ## Usage
-`sudo python thesis.py`
-
-*Optional Arguements*
-
-`-s %d` sets the scan duration in seconds. where `%d` is the number of seconds.
-
-`-w %d` sets the wait duration in seconds. where `%d` is the number of seconds. This is the wait in between each scan.
+*To be completed*
 
 
 
