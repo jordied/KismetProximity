@@ -18,33 +18,15 @@ import json
 import pprint
 import dicttoxml
 from lxml import etree
-from datetime import timedelta
-import matplotlib
+from grapher import Grapher
 
-# matplotlib.use("qt4agg")
 import matplotlib.pyplot as plt
 import paho.mqtt.client as mqtt
 import multiprocessing
 import time
 
-
-def plot_a_graph():
-    f, a = plt.subplots(1)
-    line = plt.plot(range(10))
-    print multiprocessing.current_process().name, "starting plot show process"  # print statement preceded by true process name
-    plt.show()  # I think the code in the child will stop here until the graph is closed
-    print multiprocessing.current_process().name, "plotted graph"  # print statement preceded by true process name
-    time.sleep(4)
-
-
-def keep_data_up_to_date():
-    FMT = '%H:%M:%S'
-    tdelta = datetime.strptime(s2, FMT) - datetime.strptime(s1, FMT)
-
-
 class Receiver:
-    def __init__(self, graph, timeout, filename):
-        self.graph = graph
+    def __init__(self, timeout, filename, queue):
         self.timeout = timeout
         self.current_time = datetime.datetime.now()
         self.devices = []
@@ -52,6 +34,7 @@ class Receiver:
         self.pp = pprint.PrettyPrinter(indent=4)
         self.xml = ''
         self.file = open(filename, "wb")
+        self.queue = queue
 
     def __print_device__(self, adding, mac):
         if adding:
@@ -60,6 +43,9 @@ class Receiver:
             status = "Removing"
         print "{0}\t{1}".format(status, mac)
 
+    def __writer__(self, msg):
+        ## Write to the queue
+        self.queue.put(msg)             # Write 'count' numbers into the queue
 
     def on_connect(self, mqttc, obj, flags, rc):
         print("Connected! - " + str(rc))
@@ -90,6 +76,7 @@ class Receiver:
         tree = etree.fromstring(self.xml, etree.XMLParser())
         tree.set('id', datetime.datetime.now().strftime(format))
         self.file.write(etree.tostring(tree, pretty_print=True))
+        self.queue.put_nowait(len(self.devices))
 
     def on_publish(self, mqttc, obj, mid):
         print("Published! " + str(mid))
@@ -100,26 +87,8 @@ class Receiver:
     def on_log(self, mqttc, obj, level, string):
         print(string)
 
-### Helper functions
-if __name__ == "__main__":
-    # Handle args
-    parser = argparse.ArgumentParser(
-        description='This is to be usedin conjunction with the WifiScanner on a Raspberry Pi')
-    parser.add_argument('--topic', metavar='base/sub', type=str, nargs='?',
-                        help='Full topic to listen to. (Example "proximity/sensor")', default="proximity/#")
-    parser.add_argument('--host', metavar='url', type=str, nargs='?',
-                        help='UQL of MQTT server (default is CEIT winter).', default='winter.ceit.uq.edu.au')
-    parser.add_argument('--graph', metavar='True/False', type=bool, nargs='?', help='Whether to print the data.',
-                        default=True)
-    parser.add_argument('--timeout', metavar='sec', type=int, nargs='?', help='How long the device will be remembered',
-                        default=10)
-    parser.add_argument('--file', metavar='filename', type=str, nargs='?',
-                        help='Filename to save XML data', default='log.xml')
-    args = parser.parse_args()
-    # Create  a receiver instance
-    receiver = Receiver(graph=args.graph, timeout=args.timeout, filename=args.file)
-    # Create a graphing process
-    # MQTT
+def listener(queue, args):
+    receiver = Receiver(timeout=args.timeout, filename=args.file, queue=queue)
     mqttc = mqtt.Client()
     mqttc.on_message = receiver.on_message
     mqttc.on_connect = receiver.on_connect
@@ -131,5 +100,30 @@ if __name__ == "__main__":
     mqttc.subscribe(args.topic, 0)
     # Start to listen
     mqttc.loop_forever()
+
+### Helper functions
+if __name__ == "__main__":
+    # Handle args
+    parser = argparse.ArgumentParser(
+        description='This is to be usedin conjunction with the WifiScanner on a Raspberry Pi')
+    parser.add_argument('--topic', metavar='base/sub', type=str, nargs='?',
+                        help='Full topic to listen to. (Example "proximity/sensor")', default="proximity/#")
+    parser.add_argument('--host', metavar='url', type=str, nargs='?',
+                        help='UQL of MQTT server (default is CEIT winter).', default='winter.ceit.uq.edu.au')
+    parser.add_argument('--graph', action='store_true', help='Whether to graph the data.')
+    parser.add_argument('--timeout', metavar='sec', type=int, nargs='?', help='How long the device will be remembered',
+                        default=10)
+    parser.add_argument('--file', metavar='filename', type=str, nargs='?',
+                        help='Filename to save XML data', default='log.xml')
+    parser.add_argument('--man', action='store_true',
+                        help='Make a guess at the manufacturer')
+    args = parser.parse_args()
+    # Create a Multi Process Queue
+    queue = multiprocessing.Queue()
+    # Create a graphing process
+    grapher = Grapher(queue)
+     # MQTT process
+    listener(queue, args)
+
 
 
