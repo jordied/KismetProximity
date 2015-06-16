@@ -15,6 +15,7 @@ __author__ = 'Jordi'
 import matplotlib.pyplot as plt
 #let's try using multiprocessing instead of threading module:
 from multiprocessing import Queue, Process
+from datetime import datetime
 from Queue import Empty
 import time
 
@@ -27,21 +28,21 @@ class Grapher:
         self.process.start()
 
     def plot_a_graph(self):
+        start_time = datetime.now()
         i = 1
-        max = 20
-        plt.axis([0, 2, 0, max])
+        y_max = 20
+        plt.axis([0, 2, 0, y_max])
         plt.ion()
         plt.show()
         while True:
             try:
                 msg = self.queue.get(False)
-                # If `False`, the program is not blocked. `Queue.Empty` is thrown if
-                # the queue is empty
-                y = int(msg)
-                if max < y:
-                    max = y + 1
-                plt.axis([0, i+1, 0, max])
-                plt.scatter(i, y)
+                y = int(msg)  # Might not be necessary but to be safe.
+                tdiff = datetime.now() - start_time
+                if y_max < y:
+                    y_max = y + 1
+                plt.axis([0, tdiff.seconds, 0, y_max])
+                plt.scatter(tdiff.seconds, y)
                 print "Total: " + str(y)
                 plt.draw()
                 i += 1
