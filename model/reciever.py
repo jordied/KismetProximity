@@ -19,11 +19,11 @@ import pprint
 import dicttoxml
 from lxml import etree
 from grapher import Grapher
+from netaddr import *
 
-import matplotlib.pyplot as plt
 import paho.mqtt.client as mqtt
 import multiprocessing
-import time
+
 
 class Receiver:
     def __init__(self, timeout, filename, queue):
@@ -32,16 +32,23 @@ class Receiver:
         self.devices = []
         self.time_strings = ['time', 'rssi', 'pi_id']
         self.pp = pprint.PrettyPrinter(indent=4)
-        self.xml = ''
         self.file = open(filename, "wb")
         self.queue = queue
 
-    def __print_device__(self, adding, mac):
+    def __print_device__(self, adding, device):
         if adding:
             status = "Adding\t"
         else:
             status = "Removing"
-        print "{0}\t{1}".format(status, mac)
+        try:
+            mac = device['MAC']
+        except KeyError:
+            mac = 'UNKNOWN-MAC'
+        try:
+            man = device['man']
+        except KeyError:
+            man = 'UNKNOWN-MAN'
+        print "{0}\t{1}\t{2}".format(status, mac, man)
 
     def __writer__(self, msg):
         ## Write to the queue
@@ -66,17 +73,24 @@ class Receiver:
                 if datetime.datetime.now() > (
                     datetime.datetime.strptime(exi['time'], format) + datetime.timedelta(seconds=self.timeout)):
                     # Haven't device in long enough
-                    self.__print_device__(adding=False, mac=exi['MAC'])
+                    # self.__print_device__(adding=False, device=exi)
                     self.devices.remove(exi)
             if not already_stored:
-                self.__print_device__(adding=True, mac=val['MAC'])
+                try:
+                    mac = EUI(val['MAC'])
+                    oui = mac.oui
+                    val['man'] = oui.registration().org
+                except NotRegisteredError:
+                    val['man'] = 'UNKNOWN'
+                # self.__print_device__(adding=True, device=val)
                 self.devices.append(val)
+
         # Now save as XML
-        self.xml = dicttoxml.dicttoxml(self.devices, attr_type=False)
-        tree = etree.fromstring(self.xml, etree.XMLParser())
+        tmp_xml = dicttoxml.dicttoxml(self.devices, attr_type=False)
+        tree = etree.fromstring(tmp_xml, etree.XMLParser())
         tree.set('id', datetime.datetime.now().strftime(format))
         self.file.write(etree.tostring(tree, pretty_print=True))
-        self.queue.put_nowait(len(self.devices))
+        self.queue.put_nowait(self.devices)
 
     def on_publish(self, mqttc, obj, mid):
         print("Published! " + str(mid))
@@ -110,18 +124,19 @@ if __name__ == "__main__":
                         help='Full topic to listen to. (Example "proximity/sensor")', default="proximity/#")
     parser.add_argument('--host', metavar='url', type=str, nargs='?',
                         help='UQL of MQTT server (default is CEIT winter).', default='winter.ceit.uq.edu.au')
-    parser.add_argument('--graph', action='store_true', help='Whether to graph the data.')
+    parser.add_argument('--graph', action='store_false', help='Whether to graph the data.')
     parser.add_argument('--timeout', metavar='sec', type=int, nargs='?', help='How long the device will be remembered',
                         default=10)
     parser.add_argument('--file', metavar='filename', type=str, nargs='?',
                         help='Filename to save XML data', default='log.xml')
-    parser.add_argument('--man', action='store_true',
-                        help='Make a guess at the manufacturer')
+    parser.add_argument('--man', action='store_false',
+                        help='Display multiple points for different manufacturers')
     args = parser.parse_args()
     # Create a Multi Process Queue
     queue = multiprocessing.Queue()
     # Create a graphing process
-    grapher = Grapher(queue)
+    if args.graph:
+        grapher = Grapher(queue, man=args.man)
      # MQTT process
     listener(queue, args)
 
