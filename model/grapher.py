@@ -100,7 +100,7 @@ class Grapher:
         y = 0
         y_max = 5
         # Setup Plot
-        ax.axis([0, 2, 0, y_max])
+        ax.axis([0, 0.5, 0, y_max])
         plt.xlabel('Time (s)')
         plt.ylabel('Device Count')
         plt.title('Number of Active Devices Detected')
@@ -120,6 +120,6 @@ class Grapher:
             # Increase height if necessary
             if y > y_max:
                 y_max = y + 1
-            ax.axis([0, tdiff.seconds, 0, y_max])
+            ax.axis([0, tdiff.seconds + 0.5, 0, y_max])
             plt.draw()
             time.sleep(0.5)
