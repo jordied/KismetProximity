@@ -15,6 +15,7 @@ __author__ = 'Jordi'
 import argparse
 import json
 import pprint
+import logging
 import multiprocessing
 from multiprocessing import Process
 from datetime import datetime, timedelta
@@ -32,7 +33,8 @@ import numpy as np
 
 
 class Receiver:
-    def __init__(self, timeout, filename, queue):
+    def __init__(self, timeout, filename, queue, logger):
+        self.logger = logger
         self.timeout = timeout
         self.current_time = datetime.now()
         self.devices = []
@@ -54,14 +56,14 @@ class Receiver:
             man = device['man']
         except KeyError:
             man = 'UNKNOWN-MAN'
-        print "{0}\t{1}\t{2}".format(status, mac, man)
+        self.logger.info("{0}\t{1}\t{2}".format(status, mac, man))
 
     def __writer__(self, msg):
         ## Write to the queue
         self.queue.put(msg)  # Write 'count' numbers into the queue
 
     def on_connect(self, mqttc, obj, flags, rc):
-        print("Connected! - " + str(rc))
+        self.logger.debug("Connected! - " + str(rc))
 
     def on_message(self, mqttc, obj, msg):
         format = "%H:%M:%S_%B_%d_%Y"
@@ -74,11 +76,9 @@ class Receiver:
                         # Update the time.
                         self.devices[j][x] = val[x]
                         already_stored = True
-                # print datetime.now()
-                # print (datetime.strptime(exi['time'], format) + timedelta(seconds=self.timeout))
                 if datetime.now() > (
                             datetime.strptime(exi['time'], format) + timedelta(seconds=self.timeout)):
-                    # Haven't device in long enough
+                    # Haven't seen device in long enough
                     # self.__print_device__(adding=False, device=exi)
                     self.devices.remove(exi)
             if not already_stored:
@@ -99,17 +99,17 @@ class Receiver:
         self.queue.put_nowait(self.devices)
 
     def on_publish(self, mqttc, obj, mid):
-        print("Published! " + str(mid))
+        self.logger.debug("Published! " + str(mid))
 
     def on_subscribe(self, mqttc, obj, mid, granted_qos):
-        print("Subscribed! - " + str(mid) + " " + str(granted_qos))
+        self.logger.debug("Subscribed! - " + str(mid) + " " + str(granted_qos))
 
     def on_log(self, mqttc, obj, level, string):
-        print(string)
+        self.logger.info(string)
 
 
-def listener(queue, args):
-    receiver = Receiver(timeout=args.timeout, filename=args.file, queue=queue)
+def listener(queue, args, logger):
+    receiver = Receiver(timeout=args.timeout, filename=args.file, queue=queue, logger=logger)
     mqttc = mqtt.Client()
     mqttc.on_message = receiver.on_message
     mqttc.on_connect = receiver.on_connect
@@ -117,6 +117,7 @@ def listener(queue, args):
     mqttc.on_subscribe = receiver.on_subscribe
     # Uncomment to enable debug messages
     # mqttc.on_log = on_log
+    logger.debug("Connecting to {0} on port 1833 with topic as {1}".format(args.host, args.topic))
     mqttc.connect(args.host, 1883, 60)
     mqttc.subscribe(args.topic, 0)
     # Start to listen
@@ -124,13 +125,14 @@ def listener(queue, args):
 
 
 class Manufacterer:
-    def __init__(self, ax, name, color, marker, line_style='-'):
+    def __init__(self, logger, ax, name, color, marker, line_style='-'):
         self.name = name
         self.count = 0
         self.x_values = [0]
         self.y_values = [0]
         self.line, = ax.plot(self.x_values, self.y_values, marker=marker, c=color, ms=5, ls=line_style, label=name)
-        print 'New manufacturer ({0}{1}): {2}'.format(color, marker, name)
+        self.logger = logger
+        self.logger.debug('New manufacturer ({0}{1}): {2}'.format(color, marker, name))
 
 
     def increment_count(self):
@@ -149,11 +151,13 @@ class Manufacterer:
 
 
 class Grapher:
-    def __init__(self, queue):
+    def __init__(self, queue, logger, period):
+        self.logger = logger
         self.queue = queue
         self.markers = itertools.cycle(('x', '+', '.', 'o', '*'))
         self.colors = itertools.cycle(('b', 'g', 'r', 'm', 'y', 'k', 'Aqua', 'Chocolate', 'DeepPink', 'Lime', 'Purple'))
         self.lines = itertools.cycle((':', '-.', '--'))
+        self.period = period
         self.devs = []
         # Process
         self.process = Process(target=self.plot_a_graph)
@@ -167,18 +171,12 @@ class Grapher:
                 val.increment_count()
                 already_in = True
         if not already_in:
-            new_dev = Manufacterer(ax=ax, name=device['man'], color=self.colors.next(), marker=self.markers.next(),
+            new_dev = Manufacterer(logger=logging.getLogger('Manufacturer'), ax=ax, name=device['man'], color=self.colors.next(), marker=self.markers.next(),
                                    line_style=self.lines.next())
             self.devs.append(new_dev)
 
-    def __draw_a_line__(self):
-        for x in range(1, 80):
-            sys.stdout.write('-')
-        sys.stdout.write('\n')
-
     def __draw_points__(self, ax, tdiff, devices):
         y_max = 1
-        # self.__draw_a_line__()
         for y, dev in enumerate(devices):
             self.__set_man_style__(ax, dev)
         for val in self.devs:
@@ -199,7 +197,7 @@ class Grapher:
         y = 0
         y_max = 5
         # Setup Plot
-        ax.axis([0, 0.5, 0, y_max])
+        ax.axis([0, self.period, 0, y_max])
         plt.xlabel('Time (s)')
         plt.ylabel('Device Count')
         plt.title('Number of Active Devices Detected')
@@ -219,9 +217,9 @@ class Grapher:
             # Increase height if necessary
             if y > y_max:
                 y_max = y + 1
-            ax.axis([0, tdiff.seconds + 0.5, 0, y_max])
+            ax.axis([0, tdiff.seconds + self.period, 0, y_max])
             plt.draw()
-            time.sleep(0.5)
+            time.sleep(self.period)
 
 ### Helper functions
 if __name__ == "__main__":
@@ -235,14 +233,21 @@ if __name__ == "__main__":
     parser.add_argument('--graph', action='store_false', help='Do not graph the data.')
     parser.add_argument('--timeout', metavar='sec', type=int, nargs='?', help='How long the device will be remembered',
                         default=10)
+    parser.add_argument('--freq', metavar='Hz', type=int, nargs='?', help='Frequency of graph updating, default 2Hz',
+                        default=2.0)
     parser.add_argument('--file', metavar='filename', type=str, nargs='?',
-                        help='Filename to save XML data', default='logs/log_{0}.xml'.format(datetime.now().strftime("%H_%M_%S_%B_%d_%Y")))
+                        help='Filename to save XML data',
+                        default='logs/log_{0}.xml'.format(datetime.now().strftime("%H_%M_%S_%B_%d_%Y")))
+    parser.add_argument('--logfile', metavar='filename', type=str, nargs='?',
+                        help='Save the logfile generated by this program', default='log.txt')
+    parser.add_argument('--loglevel', metavar='N', type=int, nargs='?', help='Log level as 0, 10 , 20, 30, 40 or 50', default=30)
     args = parser.parse_args()
+    logging.basicConfig(filename=args.logfile, format='%(asctime)-15s::%(levelname)s:: %(message)s', level=args.loglevel)
     # Create a Multi Process Queue
     queue = multiprocessing.Queue()
     # Create a graphing process
     if args.graph:
-        grapher = Grapher(queue)
+        grapher = Grapher(queue, logging.getLogger('Graph'), (1/float(args.freq)))
         # MQTT process
-    listener(queue, args)
+    listener(queue, args, logging.getLogger('MQTT_Listener'))
 
