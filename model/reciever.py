@@ -236,7 +236,7 @@ if __name__ == "__main__":
     parser.add_argument('--timeout', metavar='sec', type=int, nargs='?', help='How long the device will be remembered',
                         default=10)
     parser.add_argument('--file', metavar='filename', type=str, nargs='?',
-                        help='Filename to save XML data', default='log_{0}.xml'.format(datetime.now().strftime("%H_%M_%S_%B_%d_%Y")))
+                        help='Filename to save XML data', default='logs/log_{0}.xml'.format(datetime.now().strftime("%H_%M_%S_%B_%d_%Y")))
     args = parser.parse_args()
     # Create a Multi Process Queue
     queue = multiprocessing.Queue()
