@@ -59,3 +59,4 @@ docs/_build/
 target/
 log.xml
 model/logs/*.xml
+log.txt
