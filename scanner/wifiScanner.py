@@ -32,6 +32,12 @@ from subprocess import Popen, PIPE
 
 
 def signal_handler(signal, frame):
+    """
+    This function handles the event of a control-c event.
+    :param signal: The signal that will be handled
+    :param frame:
+    :return: Exit's the system
+    """
     print '\nExiting! Killing all Kismet Instances...'
     p_list = subprocess.Popen(['ps', '-A'], stdout=subprocess.PIPE)
     out, err = p_list.communicate()
@@ -47,9 +53,8 @@ def signal_handler(signal, frame):
 class KismetInstance:
     """This Class contains an instance of kismet"""
 
-    def __init__(self, value=False):
-        logging.basicConfig(format='%(asctime)-15s::: %(message)s')
-        self.logger = logging.getLogger('kismet_instance')
+    def __init__(self, logger, value=False):
+        self.logger = logger
         self.logger.debug('Setting log level to warning')
         self.example = value
 
@@ -75,12 +80,12 @@ class KismetInstance:
         for line in out.splitlines():
             if 'kismet' in line:
                 pid = int(line.split(None, 1)[0])
-                self.logger.debug("Found: %d", pid)
+                self.logger.warning("Found: %d", pid)
                 try:
                     os.killpg(os.getpgid(pid), sig)
                 except:
                     msg = 'Failed to kill a kismet instance! PID:{0} '.format(pid)
-                    self.logger.warning(msg)
+                    self.logger.error(msg)
                     print msg
 
 
@@ -105,12 +110,23 @@ class KismetInstance:
         return output
 
     def get_hw_Addr(self, ifname='wlan0'):
+        """
+        This gets the Mac Address of the current network interface. So it can be removed from the list of devices that were detected.
+        :param ifname:
+        :return: the Mac address of the interface name
+        """
         s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         info = fcntl.ioctl(s.fileno(), 0x8927, struct.pack('256s', ifname[:15]))
         return ':'.join(['%02x' % ord(char) for char in info[18:24]])
 
 
     def run_scan(self, scan=2, wait=1):
+        """
+        Runs a kismet WiFi scan for nearby active WiFi devices
+        :param scan: The time in seconds (can be a float) to hold a scan.
+        :param wait: The time in seconds(can be float) to wait between each scan.
+        :return:
+        """
         self.__create_kismet_instance__()
         time.sleep(float(scan))
         text = self.__get_raw_kismet_response__()
@@ -120,19 +136,35 @@ class KismetInstance:
 
 
 class MessageFormatter:
-    """This Class is essentially the main class"""
+    """
+    This class formats strings returned from kismet and gets a list of clients.
+    """
 
-    def __init__(self, id=1):
-        logging.basicConfig(format='%(asctime)-15s::: %(message)s')
-        self.logger = logging.getLogger('WiFiSniffer')
+    def __init__(self, logger, id=1):
+        """
+        Initialise the class
+        :param logger: The logger object to use.
+        :param id: The scanner's ID. Allows you to have multiple scanners
+        :return:
+        """
+        self.logger = logger
         self.id = id
 
     def __remove_control_chars__(self, s):
+        """
+        Removes the unnecessary, unprintable characters from the kismet response.
+        :param s: The string with unprintable characters in it
+        :return: the string with the characters removed.
+        """
         return filter(lambda x: x in string.printable, s)  # control_char_re.sub('', s)
 
     def format_kismet_response(self, in_text):
+        """
+
+        :param in_text: The raw kismet input
+        :return: A better formatted response with unprintable characters removed.
+        """
         output = []
-        # print "Original Text:\n", repr(intext)
         try:
             in_text.rstrip.split('\n')
         except AttributeError:
@@ -142,8 +174,13 @@ class MessageFormatter:
             output.append(text)
         return ''.join(output)
 
-
     def get_client_list(self, text, interface_addr):
+        """
+        Takes the text of the kismet response and transforms it into a list of dictionaries of devices.
+        :param text: The text that has had the unnecessary characters removed.
+        :param interface_addr: The interfaces mac address so it won't be added to the list.
+        :return: A list of dictionaries containing all the devices that were detected.
+        """
         list_of_clients = []
         list_of_client_dict = []
         for item in text.split("\n"):
@@ -160,29 +197,50 @@ class MessageFormatter:
                 format = "%H:%M:%S_%B_%d_%Y"
                 list_of_client_dict.append(
                     {'pi_id': self.id, 'time': datetime.now().strftime(format), 'MAC': mac, 'rssi': dbm})
-                print '{0}\t{1}\t{2}'.format(time.strftime('%X %x %Z'), mac, dbm)
+                msg = '{0}\t{1}\t{2}'.format(time.strftime('%X %x %Z'), mac, dbm)
+                self.logger.debug(msg)
+                print msg
         return list_of_client_dict
 
 
 class MQTTHelper:
-    def __init__(self, host='winter.ceit.uq.edu.au', base_topic='proximity', sub_topic='sensor'):
+    """
+    This class handles sending over MQTT to the server.
+    """
+    def __init__(self, logger, host='winter.ceit.uq.edu.au', base_topic='proximity', sub_topic='sensor'):
+        """
+
+        :param logger: The logging class to help log information
+        :param host: The URL of the MQTT server
+        :param base_topic: The base topic to use
+        :param sub_topic: The sub_topic to use
+        :return:
+        """
         self.host = host
         self.full_topic = base_topic + '/' + sub_topic
-        self.logger = logging.getLogger('MQTTHelper')
+        self.logger = logger
 
     def send(self, message, is_json=False):
+        """
+        Takes a message and sends it over MQTT
+        :param message: Send this message over MQTT
+        :param is_json: let the function know if it is already formatted as json.
+        :return:
+        """
         if not is_json:
             message = json.dumps(message, ensure_ascii=True, )
-        self.logger.debug("Sending MQTT message: " + message + ", to" + self.host)
+        self.logger.debug("Sending MQTT message: " + message + ", to " + self.host)
         try:
             publish.single(self.full_topic, message, hostname=self.host)
         except:
-            print 'Failed publishing to ' + self.host
+            # Failed to send over MQTT
+            e_message = 'Failed publishing to {0}'.format(self.host)
+            self.logger.error(e_message)
+            print e_message
 
 
 if __name__ == "__main__":
     signal.signal(signal.SIGINT, signal_handler)
-    kismet_instance = KismetInstance()
     # Handle Arguements
     parser = argparse.ArgumentParser(
         description='Using a Raspberry Pi, scan the nearby environemnt for active WiFi devices and post on MQTT')
@@ -193,10 +251,17 @@ if __name__ == "__main__":
     parser.add_argument('--id', metavar='N', type=int, nargs='?', help='ID of scanner (default of 1).', default=1)
     parser.add_argument('--host', metavar='url', type=str, nargs='?',
                         help='UQL of MQTT server (default is CEIT winter).', default='winter.ceit.uq.edu.au')
+    parser.add_argument('--logfile', metavar='filename', type=str, nargs='?',
+                        help='Save the logfile generated by this program', default='log.txt')
+    parser.add_argument('--loglevel', metavar='N', type=int, nargs='?', help='Log level as 0, 10 , 20, 30, 40 or 50', default=30)
     args = parser.parse_args()
     # Begin
-    MQTTHelper = MQTTHelper(host=args.host)
-    formatter = MessageFormatter(id=args.id)
+    logging.basicConfig(filename=args.logfile, format='%(asctime)-15s::%(levelname)s:: %(message)s', level=args.loglevel)
+    root_logger = logging.getLogger('WiFiScanner')
+    kismet_instance = KismetInstance(logger=logging.getLogger('kismet'))
+    MQTTHelper = MQTTHelper(logger=logging.getLogger('MQTT_Helper'), host=args.host)
+    formatter = MessageFormatter(logger=logging.getLogger('Message_Formatter'), id=args.id)
+    root_logger.warning("Program Starting!")
     while True:
         client_list = formatter.format_kismet_response(kismet_instance.run_scan(scan=args.scan, wait=args.wait))
         list_dict = formatter.get_client_list(client_list, kismet_instance.get_hw_Addr('wlan0'))
