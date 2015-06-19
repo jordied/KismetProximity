@@ -17,6 +17,7 @@ import json
 import pprint
 import logging
 import multiprocessing
+from threading import  Thread
 from multiprocessing import Process
 from datetime import datetime, timedelta
 from Queue import Empty
@@ -40,17 +41,14 @@ class CSVLogger:
         self.csv_writer = csv.writer(f, delimiter=',')
 
 
-
 class UserInputMonitor:
-
     def __init__(self, queue, logger):
         self.logger = logger
         self.ui_queue = queue
         self.person_count = 0
         # Process
-        self.process = Process(target=self.user_input)
-        self.process.daemon = True
-        self.process.start()
+        self.thread = Thread(target=self.user_input)
+        self.thread.start()
 
     def user_input(self):
         while True:
@@ -332,5 +330,6 @@ if __name__ == "__main__":
     if args.graph:
         grapher = Grapher(MQTT_to_Graph, UI_to_MQTT, logging.getLogger('Graph'), (1/float(args.freq)))
         # MQTT process
+    ui = UserInputMonitor(UI_to_MQTT, logging.getLogger('UI_Monitor'))
     listener(MQTT_to_Graph, args, logging.getLogger('MQTT_Listener'))
 
