@@ -59,7 +59,7 @@ class MessageFormatter:
             if not interface_addr.lower() == mac.lower():
                 format = "%H:%M:%S_%B_%d_%Y"
                 list_of_client_dict.append(
-                    {'pi_id': self.id, 'time':datetime.now().strftime(format), 'MAC': mac, 'rssi': dbm})
+                    {'pi_id': self.id, 'time': datetime.now().strftime(format), 'MAC': mac, 'rssi': dbm})
                 print '{0}\t{1}\t{2}'.format(time.strftime('%X %x %Z'), mac, dbm)
         return list_of_client_dict
 

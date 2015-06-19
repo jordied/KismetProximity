@@ -13,22 +13,28 @@
 # You should have received a copy of the GNU General Public License
 __author__ = 'Jordi'
 import argparse
-import datetime
 import json
 import pprint
+import multiprocessing
+from multiprocessing import Process
+from datetime import datetime, timedelta
+from Queue import Empty
+import time
+import itertools
+import sys
+
 import dicttoxml
 from lxml import etree
-from grapher import Grapher
 from netaddr import *
-
 import paho.mqtt.client as mqtt
-import multiprocessing
+import matplotlib.pyplot as plt
+import numpy as np
 
 
 class Receiver:
     def __init__(self, timeout, filename, queue):
         self.timeout = timeout
-        self.current_time = datetime.datetime.now()
+        self.current_time = datetime.now()
         self.devices = []
         self.time_strings = ['time', 'rssi', 'pi_id']
         self.pp = pprint.PrettyPrinter(indent=4)
@@ -52,7 +58,7 @@ class Receiver:
 
     def __writer__(self, msg):
         ## Write to the queue
-        self.queue.put(msg)             # Write 'count' numbers into the queue
+        self.queue.put(msg)  # Write 'count' numbers into the queue
 
     def on_connect(self, mqttc, obj, flags, rc):
         print("Connected! - " + str(rc))
@@ -68,10 +74,10 @@ class Receiver:
                         # Update the time.
                         self.devices[j][x] = val[x]
                         already_stored = True
-                # print datetime.datetime.now()
-                # print (datetime.datetime.strptime(exi['time'], format) + datetime.timedelta(seconds=self.timeout))
-                if datetime.datetime.now() > (
-                    datetime.datetime.strptime(exi['time'], format) + datetime.timedelta(seconds=self.timeout)):
+                # print datetime.now()
+                # print (datetime.strptime(exi['time'], format) + timedelta(seconds=self.timeout))
+                if datetime.now() > (
+                            datetime.strptime(exi['time'], format) + timedelta(seconds=self.timeout)):
                     # Haven't device in long enough
                     # self.__print_device__(adding=False, device=exi)
                     self.devices.remove(exi)
@@ -88,7 +94,7 @@ class Receiver:
         # Now save as XML
         tmp_xml = dicttoxml.dicttoxml(self.devices, attr_type=False)
         tree = etree.fromstring(tmp_xml, etree.XMLParser())
-        tree.set('id', datetime.datetime.now().strftime(format))
+        tree.set('id', datetime.now().strftime(format))
         self.file.write(etree.tostring(tree, pretty_print=True))
         self.queue.put_nowait(self.devices)
 
@@ -100,6 +106,7 @@ class Receiver:
 
     def on_log(self, mqttc, obj, level, string):
         print(string)
+
 
 def listener(queue, args):
     receiver = Receiver(timeout=args.timeout, filename=args.file, queue=queue)
@@ -115,30 +122,127 @@ def listener(queue, args):
     # Start to listen
     mqttc.loop_forever()
 
+
+class Manufacterer:
+    def __init__(self, ax, name, color, marker, line_style='-'):
+        self.name = name
+        self.count = 0
+        self.x_values = [0]
+        self.y_values = [0]
+        self.line, = ax.plot(self.x_values, self.y_values, marker=marker, c=color, ms=5, ls=line_style, label=name)
+        print 'New manufacturer ({0}{1}): {2}'.format(color, marker, name)
+
+
+    def increment_count(self):
+        self.count += 1
+
+    def reset_count(self):
+        self.previous_val = self.count
+        self.count = 0
+
+    def set_data(self, time):
+        self.x_values.append(time)
+        self.y_values.append(self.count)
+        # Update the graph
+        self.line.set_xdata(np.array(self.x_values))
+        self.line.set_ydata(np.array(self.y_values))
+
+
+class Grapher:
+    def __init__(self, queue):
+        self.queue = queue
+        self.markers = itertools.cycle(('x', '+', '.', 'o', '*'))
+        self.colors = itertools.cycle(('b', 'g', 'r', 'm', 'y', 'k', 'Aqua', 'Chocolate', 'DeepPink', 'Lime', 'Purple'))
+        self.lines = itertools.cycle((':', '-.', '--'))
+        self.devs = []
+        # Process
+        self.process = Process(target=self.plot_a_graph)
+        self.process.daemon = True
+        self.process.start()
+
+    def __set_man_style__(self, ax, device):
+        already_in = False
+        for val in self.devs:
+            if device['man'] == val.name:
+                val.increment_count()
+                already_in = True
+        if not already_in:
+            new_dev = Manufacterer(ax=ax, name=device['man'], color=self.colors.next(), marker=self.markers.next(),
+                                   line_style=self.lines.next())
+            self.devs.append(new_dev)
+
+    def __draw_a_line__(self):
+        for x in range(1, 80):
+            sys.stdout.write('-')
+        sys.stdout.write('\n')
+
+    def __draw_points__(self, ax, tdiff, devices):
+        y_max = 1
+        # self.__draw_a_line__()
+        for y, dev in enumerate(devices):
+            self.__set_man_style__(ax, dev)
+        for val in self.devs:
+            if val.count > y_max:
+                y_max = val.count + 1
+            val.set_data(tdiff.seconds)
+            # print "Found {0} {1} devices".format(val.count, val.name)
+        ax.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+        leg = plt.gca().get_legend()
+        plt.setp(leg.get_texts(), fontsize='small')
+        return y_max
+
+    def plot_a_graph(self):
+        start_time = datetime.now()
+        # Set initial values
+        fig = plt.figure(num=None, figsize=(16, 8), dpi=80)
+        ax = plt.subplot(111)
+        y = 0
+        y_max = 5
+        # Setup Plot
+        ax.axis([0, 0.5, 0, y_max])
+        plt.xlabel('Time (s)')
+        plt.ylabel('Device Count')
+        plt.title('Number of Active Devices Detected')
+        plt.ion()
+        plt.show()
+        box = ax.get_position()
+        ax.set_position([box.x0, box.y0, box.width * 0.8, box.height])
+        while True:
+            try:
+                msg = self.queue.get(False)
+                y = self.__draw_points__(ax, tdiff, msg)
+                for x in self.devs:
+                    x.reset_count()
+            except Empty:
+                msg = None
+            tdiff = datetime.now() - start_time
+            # Increase height if necessary
+            if y > y_max:
+                y_max = y + 1
+            ax.axis([0, tdiff.seconds + 0.5, 0, y_max])
+            plt.draw()
+            time.sleep(0.5)
+
 ### Helper functions
 if __name__ == "__main__":
     # Handle args
     parser = argparse.ArgumentParser(
-        description='This is to be usedin conjunction with the WifiScanner on a Raspberry Pi')
+        description='This is to be used in conjunction with the WifiScanner on a Raspberry Pi')
     parser.add_argument('--topic', metavar='base/sub', type=str, nargs='?',
                         help='Full topic to listen to. (Example "proximity/sensor")', default="proximity/#")
     parser.add_argument('--host', metavar='url', type=str, nargs='?',
                         help='UQL of MQTT server (default is CEIT winter).', default='winter.ceit.uq.edu.au')
-    parser.add_argument('--graph', action='store_false', help='Whether to graph the data.')
+    parser.add_argument('--graph', action='store_false', help='Do not graph the data.')
     parser.add_argument('--timeout', metavar='sec', type=int, nargs='?', help='How long the device will be remembered',
                         default=10)
     parser.add_argument('--file', metavar='filename', type=str, nargs='?',
-                        help='Filename to save XML data', default='log.xml')
-    parser.add_argument('--man', action='store_false',
-                        help='Display multiple points for different manufacturers')
+                        help='Filename to save XML data', default='log_{0}.xml'.format(datetime.now().strftime("%H_%M_%S_%B_%d_%Y")))
     args = parser.parse_args()
     # Create a Multi Process Queue
     queue = multiprocessing.Queue()
     # Create a graphing process
     if args.graph:
-        grapher = Grapher(queue, man=args.man)
-     # MQTT process
+        grapher = Grapher(queue)
+        # MQTT process
     listener(queue, args)
-
-
 
