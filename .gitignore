@@ -60,3 +60,5 @@ target/
 log.xml
 model/logs/*.xml
 log.txt
+
+model/logs
