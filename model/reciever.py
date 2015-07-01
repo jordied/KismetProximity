@@ -17,13 +17,14 @@ import json
 import pprint
 import logging
 import multiprocessing
-from threading import  Thread
+from threading import Thread
 from multiprocessing import Process
 from datetime import datetime, timedelta
 from Queue import Empty
 import time
 import itertools
 import csv
+import signal
 
 import dicttoxml
 from lxml import etree
@@ -31,14 +32,6 @@ from netaddr import *
 import paho.mqtt.client as mqtt
 import matplotlib.pyplot as plt
 import numpy as np
-
-class CSVLogger:
-    def __init__(self, rec_queue, filename):
-        self.rec_queue = rec_queue
-        self.man_list = []
-        self.__file_string__ = 'logs/log_{0}.csv'.format(datetime.now().strftime("%H_%M_%S_%B_%d_%Y"))
-        f = open(self.__file_string__, 'wb')
-        self.csv_writer = csv.writer(f, delimiter=',')
 
 
 class UserInputMonitor:
@@ -72,34 +65,34 @@ class UserInputMonitor:
                     self.person_count += int((response.split('+'))[1])
                 except:
                     pass
-            if response[0] == '-':
+            elif response[0] == '-':
                 try:
                     self.person_count -= int((response.split('-'))[1])
                     if self.person_count < 0:
                         self.person_count = 0
                 except:
                     pass
-            if response[0] == '=':
+            elif response[0] == '=':
                 try:
                     self.person_count = int((response.split('='))[1])
                 except:
                     pass
-
-
+            else:
+                print 'Please use +, - or = before the number to express change or total.'
 
 
 class Receiver:
-    def __init__(self, timeout, filename, send_queue, logger):
+    def __init__(self, timeout, file, send_queue, logger):
         self.logger = logger
         self.timeout = timeout
         self.current_time = datetime.now()
         self.devices = []
         self.time_strings = ['time', 'rssi', 'pi_id']
         self.pp = pprint.PrettyPrinter(indent=4)
-        self.file = open(filename, "wb")
+        self.file = file
         self.send_queue = send_queue
 
-    def __print_device__(self, adding, device):
+    def _print_device(self, adding, device):
         if adding:
             status = "Adding\t"
         else:
@@ -131,7 +124,7 @@ class Receiver:
                 if datetime.now() > (
                             datetime.strptime(exi['time'], format) + timedelta(seconds=self.timeout)):
                     # Haven't seen device in long enough
-                    # self.__print_device__(adding=False, device=exi)
+                    # self._print_device(adding=False, device=exi)
                     self.devices.remove(exi)
             if not already_stored:
                 try:
@@ -140,7 +133,7 @@ class Receiver:
                     val['man'] = oui.registration().org
                 except NotRegisteredError:
                     val['man'] = 'UNKNOWN'
-                # self.__print_device__(adding=True, device=val)
+                # self._print_device(adding=True, device=val)
                 self.devices.append(val)
 
         # Now save as XML
@@ -161,19 +154,20 @@ class Receiver:
 
 
 def listener(send_queue, args, logger):
-    receiver = Receiver(timeout=args.timeout, filename=args.file, send_queue=send_queue, logger=logger)
-    mqttc = mqtt.Client()
-    mqttc.on_message = receiver.on_message
-    mqttc.on_connect = receiver.on_connect
-    mqttc.on_publish = receiver.on_publish
-    mqttc.on_subscribe = receiver.on_subscribe
-    # Uncomment to enable debug messages
-    # mqttc.on_log = on_log
-    logger.debug("Connecting to {0} on port 1833 with topic as {1}".format(args.host, args.topic))
-    mqttc.connect(args.host, 1883, 60)
-    mqttc.subscribe(args.topic, 0)
-    # Start to listen
-    mqttc.loop_forever()
+    with open((args.logfile + '.xml'), "wb") as file:
+        receiver = Receiver(timeout=args.timeout, file=file, send_queue=send_queue, logger=logger)
+        mqttc = mqtt.Client()
+        mqttc.on_message = receiver.on_message
+        mqttc.on_connect = receiver.on_connect
+        mqttc.on_publish = receiver.on_publish
+        mqttc.on_subscribe = receiver.on_subscribe
+        # Uncomment to enable debug messages
+        # mqttc.on_log = on_log
+        logger.debug("Connecting to {0} on port 1833 with topic as {1}".format(args.host, args.topic))
+        mqttc.connect(args.host, 1883, 60)
+        mqttc.subscribe(args.topic, 0)
+        # Start to listen
+        mqttc.loop_forever()
 
 
 class Manufacterer:
@@ -203,9 +197,10 @@ class Manufacterer:
 
 
 class Grapher:
-    def __init__(self, queue, ui_queue, logger, period):
+    def __init__(self, MQTT_queue, ui_queue, logger, period, filename):
+        self.filename = filename
         self.logger = logger
-        self.queue = queue
+        self.MQTT_queue = MQTT_queue
         self.ui_queue = ui_queue
         self.markers = itertools.cycle(('x', '+', '.', 'o', '*'))
         self.colors = itertools.cycle(('b', 'g', 'r', 'm', 'y', 'k', 'Aqua', 'Chocolate', 'DeepPink', 'Lime', 'Purple'))
@@ -217,21 +212,22 @@ class Grapher:
         self.process.daemon = True
         self.process.start()
 
-    def __set_man_style__(self, ax, device):
+    def _set_man_style(self, ax, device):
         already_in = False
         for val in self.devs:
             if device['man'] == val.name:
                 val.increment_count()
                 already_in = True
         if not already_in:
-            new_dev = Manufacterer(logger=logging.getLogger('Manufacturer'), ax=ax, name=device['man'], color=self.colors.next(), marker=self.markers.next(),
+            new_dev = Manufacterer(logger=logging.getLogger('Manufacturer'), ax=ax, name=device['man'],
+                                   color=self.colors.next(), marker=self.markers.next(),
                                    line_style=self.lines.next())
             self.devs.append(new_dev)
 
-    def __draw_device_points__(self, ax, tdiff, devices):
+    def _draw_device_points(self, ax, tdiff, devices):
         y_max = 1
         for y, dev in enumerate(devices):
-            self.__set_man_style__(ax, dev)
+            self._set_man_style(ax, dev)
         for val in self.devs:
             if val.count > y_max:
                 y_max = val.count + 1
@@ -239,7 +235,7 @@ class Grapher:
             # print "Found {0} {1} devices".format(val.count, val.name)
         return y_max
 
-    def __draw_ui_point__(self, ax, tdiff, count, man_count):
+    def _draw_ui_point(self, ax, tdiff, count, man_count):
         y_max = 1
         if man_count.count > y_max:
             y_max = man_count.count + 1
@@ -248,12 +244,32 @@ class Grapher:
         # print "Found {0} {1} devices".format(val.count, val.name)
         return y_max
 
-    def __draw_legend__(self, ax):
+    def _draw_legend(self, ax):
         ax.legend(loc='center left', bbox_to_anchor=(1, 0.5))
         leg = plt.gca().get_legend()
         plt.setp(leg.get_texts(), fontsize='small')
 
+    def _dump_data(self, signal, frame):
+        print '\n' \
+              '---------------------------------------\n' \
+              'DUMPING DATA INTO {0}\n' \
+              '---------------------------------------\n'.format(self.filename)
+        with open(self.filename, 'wb') as f:
+            writer = csv.writer(f, delimiter=',')
+            for line in plt.gca().get_lines():
+                xd = ['Time']
+                xd.extend(line.get_xdata().tolist())
+                yd = [line.get_label()]
+                yd.extend(line.get_ydata().tolist())
+                print xd
+                writer.writerow(xd)
+                print yd
+                writer.writerow(yd)
+
+
     def plot_a_graph(self):
+        # Dump data to file in case of exit
+        signal.signal(signal.SIGINT, self._dump_data)
         start_time = datetime.now()
         # Set initial values
         fig = plt.figure(num=None, figsize=(16, 8), dpi=80)
@@ -272,12 +288,12 @@ class Grapher:
         ax.set_position([box.x0, box.y0, box.width * 0.8, box.height])
         # Create UI Manufacterer
         man_count = Manufacterer(logger=logging.getLogger('UI'), ax=ax, name='Manual_Count', color='r', marker='x',
-                                   line_style='-')
+                                 line_style='-')
         while True:
             # Get data from MQTT
             try:
-                msg = self.queue.get(False)
-                y = self.__draw_device_points__(ax, tdiff, msg)
+                msg = self.MQTT_queue.get(False)
+                y = self._draw_device_points(ax, tdiff, msg)
                 for x in self.devs:
                     x.reset_count()
             except Empty:
@@ -285,10 +301,10 @@ class Grapher:
             # Try and get from UI
             try:
                 ui = self.ui_queue.get(False)
-                z = self.__draw_ui_point__(ax, tdiff, ui, man_count)
+                z = self._draw_ui_point(ax, tdiff, ui, man_count)
             except Empty:
                 pass
-            self.__draw_legend__(ax)
+            self._draw_legend(ax)
             # Get ready to plot
             tdiff = datetime.now() - start_time
             # Increase height if necessary
@@ -315,20 +331,21 @@ if __name__ == "__main__":
                         default=10)
     parser.add_argument('--freq', metavar='Hz', type=int, nargs='?', help='Frequency of graph updating, default 2Hz',
                         default=2.0)
-    parser.add_argument('--file', metavar='filename', type=str, nargs='?',
-                        help='Filename to save XML data',
-                        default='logs/log_{0}.xml'.format(datetime.now().strftime("%H_%M_%S_%B_%d_%Y")))
     parser.add_argument('--logfile', metavar='filename', type=str, nargs='?',
-                        help='Save the logfile generated by this program', default='log.txt')
-    parser.add_argument('--loglevel', metavar='N', type=int, nargs='?', help='Log level as 0, 10 , 20, 30, 40 or 50', default=30)
+                        help='Save the logfile generated by this program',
+                        default='logs/dump_{0}'.format(datetime.now().strftime("%H_%M_%S_%B_%d_%Y")))
+    parser.add_argument('--loglevel', metavar='N', type=int, nargs='?', help='Log level as 0, 10 , 20, 30, 40 or 50',
+                        default=30)
     args = parser.parse_args()
-    logging.basicConfig(filename=args.logfile, format='%(asctime)-15s::%(levelname)s:: %(message)s', level=args.loglevel)
+    logging.basicConfig(filename=(args.logfile + '.log'), format='%(asctime)-15s::%(levelname)s:: %(message)s',
+                        level=args.loglevel)
     # Create a Multi Process Queue
     MQTT_to_Graph = multiprocessing.Queue()
     UI_to_MQTT = multiprocessing.Queue()
     # Create a graphing process
     if args.graph:
-        grapher = Grapher(MQTT_to_Graph, UI_to_MQTT, logging.getLogger('Graph'), (1/float(args.freq)))
+        grapher = Grapher(MQTT_to_Graph, UI_to_MQTT, logging.getLogger('Graph'), (1 / float(args.freq)),
+                          filename=(args.logfile + '.csv'))
         # MQTT process
     ui = UserInputMonitor(UI_to_MQTT, logging.getLogger('UI_Monitor'))
     listener(MQTT_to_Graph, args, logging.getLogger('MQTT_Listener'))

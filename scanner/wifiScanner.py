@@ -240,6 +240,9 @@ class MQTTHelper:
 
 
 if __name__ == "__main__":
+    if os.getuid() != 0:
+        print("Error!\nThis program requires root privileges, re-run with sudo. Use the flag '-h' for more help.\n")
+        sys.exit(1)
     signal.signal(signal.SIGINT, signal_handler)
     # Handle Arguements
     parser = argparse.ArgumentParser(
