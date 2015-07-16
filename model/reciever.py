@@ -16,9 +16,10 @@ import argparse
 import json
 import pprint
 import logging
+import cmd
 import multiprocessing
-from threading import Thread
 from multiprocessing import Process
+from threading import Thread
 from datetime import datetime, timedelta
 from Queue import Empty
 import time
@@ -34,60 +35,105 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-class UserInputMonitor:
-    def __init__(self, queue, logger):
-        self.logger = logger
-        self.ui_queue = queue
+# Process list
+
+processes = []
+
+
+class UserInputMonitor(cmd.Cmd):
+    """
+    Class which monitors and interprets user input.
+    """
+    def cmdloop(self, queue):
+        self.id = 0
         self.person_count = 0
-        # Process
-        self.user_input()
-        # self.thread.setDaemon(True)
-        # self.thread.start()
-
-    def user_input(self):
-        while True:
-            self.print_person_count()
-            self.get_ui()
-            self.put_value()
-
-    def print_person_count(self):
-        msg = 'Person count is now {0}'.format(self.person_count)
-        self.logger.info(msg)
-        print msg
+        self.ui_queue = queue
+        return cmd.Cmd.cmdloop(self)
 
     def put_value(self):
+        """
+        Put the user's input into a queue so it can be handled by another process.
+        :return:
+        """
         self.ui_queue.put_nowait(self.person_count)
 
-    def get_ui(self):
-        try:
-            q = 1
-            response = raw_input("Enter Person Count: ")
-        except (KeyboardInterrupt, EOFError):
-            exit(0)
-        if len(response) > 1:
-            if response[0] == '+':
-                try:
-                    self.person_count += int((response.split('+'))[1])
-                except:
-                    pass
-            elif response[0] == '-':
-                try:
-                    self.person_count -= int((response.split('-'))[1])
-                    if self.person_count < 0:
-                        self.person_count = 0
-                except:
-                    pass
-            elif response[0] == '=':
-                try:
-                    self.person_count = int((response.split('='))[1])
-                except:
-                    pass
-            else:
-                print 'Please use +, - or = before the number to express change or total.'
+    def _print_people(self):
+        print "{0} People".format(self.person_count)
+        self.put_value()
+
+    #Add
+    def do_add(self, input):
+        if input:
+            print input
+            try:
+                self.person_count += int(input)
+            except:
+                print '{0} is not valid'.format(input)
+            self._print_people()
+
+
+    def help_add(self):
+        print '\n'.join(['add [num]', 'Add the number to the current total', ])
+    # Subtract
+    def do_sub(self, input):
+        if input:
+            print input
+            try:
+                self.person_count -= int(input)
+            except:
+                print '{0} is not valid'.format(input)
+            self._print_people()
+
+    def help_sub(self):
+        print '\n'.join(['sub [num]', 'Subtract the number to the current total', ])
+    # Total
+    def do_tot(self, input):
+        if input:
+            print input
+            try:
+                self.person_count = int(input)
+            except:
+                print '{0} is not valid'.format(input)
+            self._print_people()
+
+    def help_tot(self):
+        print '\n'.join(['tot [num]', 'Subtract the number to the current total', ])
+    # Exit
+    def do_quit(self, input):
+        print 'Exiting...'
+        for p in processes:
+            p.terminate()
+        exit(0)
+
+    def help_quit(self):
+        print '\n'.join(['quit', 'Quit the application', ])
+    # Exit
+    def do_save(self, input):
+        if input:
+            if '.' not in input:
+                # No file extension provided, add the default
+                input.append('.csv')
+        else:
+            filename = 'logs/log_{0}_{1}.csv'.format(datetime.now().strftime("%H_%M_%S_%B_%d_%Y"), self.id)
+        print 'Saving to ' + filename
+        self.ui_queue.put_nowait(filename)
+
+    def help_save(self):
+        print '\n'.join(['save [filename]', 'Save the current graph to filename', ])
 
 
 class Receiver:
+    """
+    Class which handles aspects of the MQTT
+    """
     def __init__(self, timeout, file, send_queue, logger):
+        """
+        :param timeout: The timeout for the connection
+        :param file: The filename which will save all teh data in XML format.
+        :param send_queue: The queue to place the data in so it can be graphed.
+        :param logger: The Python Logger instance which will log information.
+        :return:
+        """
         self.logger = logger
         self.timeout = timeout
         self.current_time = datetime.now()
@@ -98,8 +144,13 @@ class Receiver:
         self.send_queue = send_queue
 
     def _print_device(self, adding, device):
+        """
+        :param adding: Boolean to determine whether a device is being added or removed.
+        :param device: The Dictionary which hodls the information about the device.
+        :return:
+        """
         if adding:
-            status = "Adding\t"
+            status = "Adding"
         else:
             status = "Removing"
         try:
@@ -113,9 +164,23 @@ class Receiver:
         self.logger.info("{0}\t{1}\t{2}".format(status, mac, man))
 
     def on_connect(self, mqttc, obj, flags, rc):
+        """
+        :param mqttc: Used by Paho MQTT
+        :param obj: Used by Paho MQTT
+        :param flags: Used by Paho MQTT
+        :param rc: Used by Paho MQTT
+        :return:
+        """
         self.logger.debug("Connected! - " + str(rc))
 
     def on_message(self, mqttc, obj, msg):
+        """
+        Callback which is used when a message is recieved.
+        :param mqttc: Used by Paho MQTT
+        :param obj: Used by Paho MQTT
+        :param msg: Used by Paho MQTT (The String which is the message which was received)
+        :return:
+        """
         format = "%H:%M:%S_%B_%d_%Y"
         decoded = json.loads(msg.payload)
         for i, val in enumerate(decoded):
@@ -148,16 +213,44 @@ class Receiver:
         self.send_queue.put_nowait(self.devices)
 
     def on_publish(self, mqttc, obj, mid):
+        """
+        Callback for when something is published.
+        :param mqttc: Used by Paho MQTT
+        :param obj: Used by Paho MQTT
+        :param mid: Used by Paho MQTT
+        :return:
+        """
         self.logger.debug("Published! " + str(mid))
 
     def on_subscribe(self, mqttc, obj, mid, granted_qos):
+        """
+        :param mqttc: Used by Paho MQTT
+        :param obj: Used by Paho MQTT
+        :param mid: Used by Paho MQTT
+        :param granted_qos: Used by Paho MQTT
+        :return:
+        """
         self.logger.debug("Subscribed! - " + str(mid) + " " + str(granted_qos))
 
     def on_log(self, mqttc, obj, level, string):
+        """
+        :param mqttc: Used by Paho MQTT
+        :param obj: Used by Paho MQTT
+        :param level: Used by Paho MQTT
+        :param string: Used by Paho MQTT
+        :return:
+        """
         self.logger.info(string)
 
 def listener_process(send_queue, args, logger):
-     with open((args.logfile + '.xml'), "wb") as file:
+    """
+
+    :param send_queue: The queue to send the MQTT received information upon.
+    :param args: The arguement list passed to the program.
+    :param logger: The Python Logger which handles the logging.
+    :return:
+    """
+    with open((args.logfile + '.xml'), "wb") as file:
         receiver = Receiver(timeout=args.timeout, file=file, send_queue=send_queue, logger=logger)
         mqttc = mqtt.Client()
         mqttc.on_message = receiver.on_message
@@ -173,14 +266,32 @@ def listener_process(send_queue, args, logger):
         mqttc.loop_forever()
 
 def listener(send_queue, args, logger):
+    """
+    Function which starts a process for the MQTT
+    :param send_queue: Queue which handles passing teh data.
+    :param args: The programs argument list.
+    :param logger: The Python Logger instance.
+    :return:
+    """
     process = Process(target=listener_process, args=(send_queue, args, logger))
     process.daemon = True
     process.start()
+    processes.append(process)
 
 
 
 class Manufacterer:
     def __init__(self, logger, ax, name, color, marker, line_style='-'):
+        """
+        This class is a manufacter which is used to contain the details of the line. i.e. x,y values.
+        :param logger: The Python Logger which will log data.
+        :param ax: The pyplot axis.
+        :param name: The name of teh manufacturer as a String.
+        :param color: The colour of the marker
+        :param marker: The marker's style.
+        :param line_style: The linestyle for the manufacterer.
+        :return:
+        """
         self.name = name
         self.count = 0
         self.x_values = [0]
@@ -191,14 +302,27 @@ class Manufacterer:
 
 
     def increment_count(self):
+        """
+        Increments the count.
+        :return:
+        """
         self.count += 1
 
     def reset_count(self):
+        """
+        Resets the current count and saves the previous.
+        :return:
+        """
         self.previous_val = self.count
         self.count = 0
 
-    def set_data(self, time):
-        self.x_values.append(time)
+    def set_data(self, t):
+        """
+        Sets the x and y as parts of the numpy array.
+        :param t: The current time passed in seconds (int)
+        :return:
+        """
+        self.x_values.append(t)
         self.y_values.append(self.count)
         # Update the graph
         self.line.set_xdata(np.array(self.x_values))
@@ -221,6 +345,7 @@ class Grapher:
         self.process = Process(target=self.plot_a_graph)
         self.process.daemon = True
         self.process.start()
+        processes.append(self.process)
 
     def _set_man_style(self, ax, device):
         already_in = False
@@ -259,11 +384,11 @@ class Grapher:
         leg = plt.gca().get_legend()
         plt.setp(leg.get_texts(), fontsize='small')
 
-    def _dump_data(self, signal, frame):
+    def save_data(self, fname):
         print '\n' \
               '---------------------------------------\n' \
-              'DUMPING DATA INTO {0}\n'.format(self.filename)
-        with open(self.filename + '_' + str(self.file_id) + '.csv', 'wb') as f:
+              'SAVING DATA INTO {0}\n'.format(fname)
+        with open(fname, 'wb') as f:
             writer = csv.writer(f, delimiter=',')
             for line in plt.gca().get_lines():
                 xd = ['Time']
@@ -275,13 +400,18 @@ class Grapher:
         self.file_id += 1
         print 'DONE!!!\n' \
               '---------------------------------------\n'
+
+    def _dump_data(self, signal, frame):
+        self.save_data(self.filename + '_' + str(self.file_id) + '.csv')
         plt.close('all')
+        exit(0)
+
 
 
 
     def plot_a_graph(self):
         # Dump data to file in case of exit
-        signal.signal(signal.SIGINT, self._dump_data)
+        signal.signal(signal.SIGTERM, self._dump_data)
         start_time = datetime.now()
         # Set initial values
         fig = plt.figure(num=None, figsize=(16, 8), dpi=80)
@@ -313,7 +443,11 @@ class Grapher:
             # Try and get from UI
             try:
                 ui = self.ui_queue.get(False)
-                z = self._draw_ui_point(ax, tdiff, ui, man_count)
+                if isinstance(ui, str):
+                    self.save_data(fname=ui)
+                else:
+                    z = self._draw_ui_point(ax, tdiff, ui, man_count)
+
             except Empty:
                 pass
             self._draw_legend(ax)
@@ -328,6 +462,10 @@ class Grapher:
             ax.axis([0, tdiff.seconds + self.period, 0, y_max])
             plt.draw()
             time.sleep(self.period)
+
+# Register the Control+C event to be ignored
+def init_worker():
+    signal.signal(signal.SIGINT, signal.SIG_IGN)
 
 ### Helper functions
 if __name__ == "__main__":
@@ -345,7 +483,7 @@ if __name__ == "__main__":
                         default=2.0)
     parser.add_argument('--logfile', metavar='filename', type=str, nargs='?',
                         help='Save the logfile generated by this program',
-                        default='logs/dump_{0}'.format(datetime.now().strftime("%H_%M_%S_%B_%d_%Y")))
+                        default='logs/log_{0}'.format(datetime.now().strftime("%H_%M_%S_%B_%d_%Y")))
     parser.add_argument('--loglevel', metavar='N', type=int, nargs='?', help='Log level as 0, 10 , 20, 30, 40 or 50',
                         default=0)
     args = parser.parse_args()
@@ -353,11 +491,17 @@ if __name__ == "__main__":
                         level=args.loglevel)
     # Create a Multi Process Queue
     MQTT_to_Graph = multiprocessing.Queue()
-    UI_to_MQTT = multiprocessing.Queue()
+    UI_to_Graph = multiprocessing.Queue()
+    # This program uses multiprocessing so I will create the following pool
     # Create a graphing process
     listener(MQTT_to_Graph, args, logging.getLogger('MQTT_Listener'))
     if args.graph:
-        grapher = Grapher(MQTT_to_Graph, UI_to_MQTT, logging.getLogger('Graph'), (1 / float(args.freq)),
+        grapher = Grapher(MQTT_to_Graph, UI_to_Graph, logging.getLogger('Graph'), (1 / float(args.freq)),
                           filename=(args.logfile))
-        # MQTT process
-    ui = UserInputMonitor(UI_to_MQTT, logging.getLogger('UI_Monitor'))
+    thread = Thread(target=UserInputMonitor().cmdloop, args=(UI_to_Graph,))
+    thread.start()
+    thread.join()
+    for process in processes:
+        process.join()
+
+
