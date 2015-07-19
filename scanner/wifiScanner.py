@@ -220,7 +220,6 @@ class MQTTHelper:
         self.host = host
         self.full_topic = base_topic + '/' + sub_topic
         self.logger = logger
-
     def send(self, message, is_json=False):
         """
         Takes a message and sends it over MQTT

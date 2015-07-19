@@ -34,20 +34,26 @@ import paho.mqtt.client as mqtt
 import matplotlib.pyplot as plt
 import numpy as np
 
-
 # Process list
 
 processes = []
-
+suffix = 0
 
 class UserInputMonitor(cmd.Cmd):
     """
-    Class which monitors and interprets user input.
+    Class which monitors and interprets user input. Inherits from Cmd Line interface.
     """
-    def cmdloop(self, queue):
+    def cmdloop(self, queue, count, def_filename):
+        """
+        Overrides the inherited method so that some aspects can be set initially.
+        :param queue:
+        :return:
+        """
         self.id = 0
-        self.person_count = 0
+        self.person_count = count
+        self.def_filename = def_filename
         self.ui_queue = queue
+        self._print_people()
         return cmd.Cmd.cmdloop(self)
 
     def put_value(self):
@@ -58,26 +64,36 @@ class UserInputMonitor(cmd.Cmd):
         self.ui_queue.put_nowait(self.person_count)
 
     def _print_people(self):
+        """
+        Prints the number of people to the terminal and then sends to the graphing queue.
+        """
         print "{0} People".format(self.person_count)
         self.put_value()
 
     #Add
     def do_add(self, input):
+        """
+        Adds the input to the current number of people.
+        :param input: The input the user has entered.
+        """
         if input:
-            print input
             try:
                 self.person_count += int(input)
             except:
                 print '{0} is not valid'.format(input)
             self._print_people()
-
-
     def help_add(self):
+        """
+        Displays the help for the add command.
+        """
         print '\n'.join(['add [num]', 'Add the number to the current total', ])
     # Subtract
     def do_sub(self, input):
+        """
+        Subtract the input to the current number of people.
+        :param input: The input the user has entered.
+        """
         if input:
-            print input
             try:
                 self.person_count -= int(input)
             except:
@@ -85,11 +101,17 @@ class UserInputMonitor(cmd.Cmd):
             self._print_people()
 
     def help_sub(self):
+        """
+        Displays the help for the sub command.
+        """
         print '\n'.join(['sub [num]', 'Subtract the number to the current total', ])
     # Total
     def do_tot(self, input):
+        """
+        Sets the input to the current number of people.
+        :param input: The input the user has entered.
+        """
         if input:
-            print input
             try:
                 self.person_count = int(input)
             except:
@@ -97,30 +119,61 @@ class UserInputMonitor(cmd.Cmd):
             self._print_people()
 
     def help_tot(self):
+        """
+        Displays the help for the tot command.
+        """
         print '\n'.join(['tot [num]', 'Subtract the number to the current total', ])
     # Exit
-    def do_quit(self, input):
+    def do_exit(self, input):
+        """
+        Quit's the program
+        :param input: The input the user has entered.
+        """
         print 'Exiting...'
         for p in processes:
             p.terminate()
         exit(0)
+    def help_exit(self):
+        """
+        Display's help message for exit
+        """
+        print '\n'.join(['exit', 'Quit the application', ])
+    def do_quit(self, input):
+        """
+        Alias for exit
+        """
+        self.do_exit()
 
     def help_quit(self):
-        print '\n'.join(['quit', 'Quit the application', ])
-    # Exit
+        """
+        Display's help message for exit
+        """
+        print '\n'.join(['quit', 'Quit the application (alias for exit)', ])
+
+    def do_EOF(self, args):
+        """
+        If the user uses Control+D
+        """
+        return self.do_quit(args)
+    # Save
     def do_save(self, input):
+        """
+        Save's the information to a file
+        """
         if input:
             if '.' not in input:
                 # No file extension provided, add the default
                 input.append('.csv')
         else:
-            filename = 'logs/log_{0}_{1}.csv'.format(datetime.now().strftime("%H_%M_%S_%B_%d_%Y"), self.id)
+            filename = '{0}_{1}.csv'.format(self.def_filename, datetime.now().strftime("%H_%M_%S_%B_%d_%Y"), self.id)
+            self.id += 1
         print 'Saving to ' + filename
         self.ui_queue.put_nowait(filename)
-
     def help_save(self):
+        """
+        Help message for Save
+        """
         print '\n'.join(['save [filename]', 'Save the current graph to filename', ])
-
 
 class Receiver:
     """
@@ -330,7 +383,18 @@ class Manufacterer:
 
 
 class Grapher:
+    """
+    Class which handles the graphing and saving aspects.
+    """
     def __init__(self, MQTT_queue, ui_queue, logger, period, filename):
+        """
+        :param MQTT_queue: The Queue which will handle the interaction between the MQTT listener and the grapher.
+        :param ui_queue: The Queue which will handle user input and place on the graph.
+        :param logger: The Python Logger which will log the information.
+        :param period: Used to refresh the graph at certain intervals.
+        :param filename: The filename of where to export the data.
+        :return:
+        """
         self.file_id = 0
         self.filename = filename
         self.logger = logger
@@ -348,6 +412,12 @@ class Grapher:
         processes.append(self.process)
 
     def _set_man_style(self, ax, device):
+        """
+        This method is called when a new manufacterer is detected.
+        :param ax: The pyplot axis.
+        :param device: The Dictionary type which will be converted to a manufacturer.
+        :return:
+        """
         already_in = False
         for val in self.devs:
             if device['man'] == val.name:
@@ -360,6 +430,13 @@ class Grapher:
             self.devs.append(new_dev)
 
     def _draw_device_points(self, ax, tdiff, devices):
+        """
+        Adjusts the PyPlot line so that it can be redrawn.
+        :param ax: The PyPlot axis.
+        :param tdiff: The time difference since the last point was drawn.
+        :param devices: The devices.
+        :return:
+        """
         y_max = 1
         for y, dev in enumerate(devices):
             self._set_man_style(ax, dev)
@@ -371,6 +448,14 @@ class Grapher:
         return y_max
 
     def _draw_ui_point(self, ax, tdiff, count, man_count):
+        """
+        Similat to self._draw_device_points but used when a User Input is used rather than a WiFi Scan.
+        :param ax: The PyPlot axis
+        :param tdiff: The time difference since the last point was drawn.
+        :param count: The total count of manual input.
+        :param man_count: The manual count implemented by people.
+        :return:
+        """
         y_max = 1
         if man_count.count > y_max:
             y_max = man_count.count + 1
@@ -380,14 +465,24 @@ class Grapher:
         return y_max
 
     def _draw_legend(self, ax):
+        """
+        Draws he legend onto the graph.
+        :param ax: The Pyplot axis.
+        :return:
+        """
         ax.legend(loc='center left', bbox_to_anchor=(1, 0.5))
         leg = plt.gca().get_legend()
         plt.setp(leg.get_texts(), fontsize='small')
 
     def save_data(self, fname):
+        """
+        Saves the data to a file.
+        :param fname: The filename of which to save the data.
+        :return:
+        """
         print '\n' \
               '---------------------------------------\n' \
-              'SAVING DATA INTO {0}\n'.format(fname)
+              'SAVING DATA INTO {0}'.format(fname)
         with open(fname, 'wb') as f:
             writer = csv.writer(f, delimiter=',')
             for line in plt.gca().get_lines():
@@ -402,14 +497,21 @@ class Grapher:
               '---------------------------------------\n'
 
     def _dump_data(self, signal, frame):
-        self.save_data(self.filename + '_' + str(self.file_id) + '.csv')
+        """
+        When told to quit, save the data and then close the plot and exit.
+        :param signal: Signal used to kill
+        :param frame:
+        :return:
+        """
+        self.save_data(self.filename + '__' + str(self.file_id) + '.csv')
         plt.close('all')
         exit(0)
 
-
-
-
     def plot_a_graph(self):
+        """
+        The main graphing method used.
+        :return:
+        """
         # Dump data to file in case of exit
         signal.signal(signal.SIGTERM, self._dump_data)
         start_time = datetime.now()
@@ -418,7 +520,7 @@ class Grapher:
         ax = plt.subplot(111)
         y = 0
         z = 0
-        y_max = 5
+        y_max = 20
         # Setup Plot
         ax.axis([0, self.period, 0, y_max])
         plt.xlabel('Time (s)')
@@ -433,6 +535,7 @@ class Grapher:
                                  line_style='-')
         while True:
             # Get data from MQTT
+            tdiff = datetime.now() - start_time
             try:
                 msg = self.MQTT_queue.get(False)
                 y = self._draw_device_points(ax, tdiff, msg)
@@ -447,12 +550,10 @@ class Grapher:
                     self.save_data(fname=ui)
                 else:
                     z = self._draw_ui_point(ax, tdiff, ui, man_count)
-
             except Empty:
                 pass
             self._draw_legend(ax)
             # Get ready to plot
-            tdiff = datetime.now() - start_time
             # Increase height if necessary
             if y > y_max:
                 y_max = y + 1
@@ -463,12 +564,9 @@ class Grapher:
             plt.draw()
             time.sleep(self.period)
 
-# Register the Control+C event to be ignored
-def init_worker():
-    signal.signal(signal.SIGINT, signal.SIG_IGN)
-
-### Helper functions
+### Main Method.
 if __name__ == "__main__":
+    def_filename = 'logs/log_{0}'.format(datetime.now().strftime("%H_%M_%S_%B_%d_%Y"))
     # Handle args
     parser = argparse.ArgumentParser(
         description='This is to be used in conjunction with the WifiScanner on a Raspberry Pi')
@@ -483,8 +581,10 @@ if __name__ == "__main__":
                         default=2.0)
     parser.add_argument('--logfile', metavar='filename', type=str, nargs='?',
                         help='Save the logfile generated by this program',
-                        default='logs/log_{0}'.format(datetime.now().strftime("%H_%M_%S_%B_%d_%Y")))
+                        default=def_filename)
     parser.add_argument('--loglevel', metavar='N', type=int, nargs='?', help='Log level as 0, 10 , 20, 30, 40 or 50',
+                        default=0)
+    parser.add_argument('--init', metavar='N', type=int, nargs='?', help='Initial number of people.',
                         default=0)
     args = parser.parse_args()
     logging.basicConfig(filename=(args.logfile + '.log'), format='%(asctime)-15s::%(levelname)s:: %(message)s',
@@ -492,16 +592,13 @@ if __name__ == "__main__":
     # Create a Multi Process Queue
     MQTT_to_Graph = multiprocessing.Queue()
     UI_to_Graph = multiprocessing.Queue()
-    # This program uses multiprocessing so I will create the following pool
-    # Create a graphing process
+    # This program uses multiprocessing so create the classes which starts the multiprocessing
     listener(MQTT_to_Graph, args, logging.getLogger('MQTT_Listener'))
     if args.graph:
         grapher = Grapher(MQTT_to_Graph, UI_to_Graph, logging.getLogger('Graph'), (1 / float(args.freq)),
-                          filename=(args.logfile))
-    thread = Thread(target=UserInputMonitor().cmdloop, args=(UI_to_Graph,))
-    thread.start()
-    thread.join()
-    for process in processes:
-        process.join()
+                          filename=args.logfile)
+    UserInputMonitor().cmdloop(UI_to_Graph, args.init, args.logfile)
+
+
 
 
