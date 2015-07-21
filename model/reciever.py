@@ -535,12 +535,14 @@ class Grapher:
                                  line_style='-')
         while True:
             # Get data from MQTT
+            drawing_points = False
             tdiff = datetime.now() - start_time
             try:
                 msg = self.MQTT_queue.get(False)
                 y = self._draw_device_points(ax, tdiff, msg)
                 for x in self.devs:
                     x.reset_count()
+                drawing_points = True
             except Empty:
                 pass
             # Try and get from UI
@@ -548,10 +550,11 @@ class Grapher:
                 ui = self.ui_queue.get(False)
                 if isinstance(ui, str):
                     self.save_data(fname=ui)
-                else:
-                    z = self._draw_ui_point(ax, tdiff, ui, man_count)
             except Empty:
                 pass
+            finally:
+                if drawing_points:
+                    z = self._draw_ui_point(ax, tdiff, ui, man_count)
             self._draw_legend(ax)
             # Get ready to plot
             # Increase height if necessary

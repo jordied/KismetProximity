@@ -16,8 +16,13 @@ __author__ = 'Jordi'
 import csv
 import os
 from itertools import izip
+import sys
 
-filename = raw_input('filename: ')
+try:
+    filename = sys.argv[1]
+except IndexError:
+    print 'Please add a filename'
+    exit(-1)
 with open(os.path.splitext(filename)[0] + '_t.csv', 'wb') as outfile, open(filename, 'rb') as infile:
     a = izip(*csv.reader(infile))
     csv.writer(outfile).writerows(a)
