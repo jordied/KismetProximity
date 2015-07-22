@@ -20,6 +20,7 @@ import cmd
 import multiprocessing
 from multiprocessing import Process
 from datetime import datetime, timedelta
+from collections import OrderedDict
 from Queue import Empty
 import time
 import itertools
@@ -345,7 +346,7 @@ def listener(send_queue, args, logger):
 
 
 class Manufacterer:
-    def __init__(self, logger, ax, name, color, marker, line_style='-'):
+    def __init__(self, logger, ax, name, color, marker, points, line_style='-'):
         """
         This class is a manufacter which is used to contain the details of the line. i.e. x,y values.
         :param logger: The Python Logger which will log data.
@@ -358,8 +359,8 @@ class Manufacterer:
         """
         self.name = name
         self.count = 0
-        self.x_values = [0]
-        self.y_values = [0]
+        self.x_values = points
+        self.y_values = [0] * (len(points))
         self.line, = ax.plot(self.x_values, self.y_values, marker=marker, c=color, ms=5, ls=line_style, label=name)
         self.logger = logger
         self.logger.debug('New manufacturer ({0}{1}): {2}'.format(color, marker, name))
@@ -377,7 +378,6 @@ class Manufacterer:
         Resets the current count and saves the previous.
         :return:
         """
-        self.previous_val = self.count
         self.count = 0
 
     def set_data(self, t):
@@ -386,12 +386,14 @@ class Manufacterer:
         :param t: The current time passed in seconds (int)
         :return:
         """
+        list(OrderedDict.fromkeys(self.x_values))
+        print 'b: ' + str(self.x_values) + '::' + str(self.y_values) + '::' + str(t) + '::' + str(self.count)
         self.x_values.append(t)
         self.y_values.append(self.count)
+        print 'a: ' + str(self.x_values) + '::' + str(self.y_values)
         # Update the graph
         self.line.set_xdata(np.array(self.x_values))
         self.line.set_ydata(np.array(self.y_values))
-
 
 class Grapher:
     """
@@ -422,7 +424,7 @@ class Grapher:
         self.process.start()
         processes.append(self.process)
 
-    def _set_man_style(self, ax, device):
+    def _set_man_style(self, ax, device, init_points):
         """
         This method is called when a new manufacterer is detected.
         :param ax: The pyplot axis.
@@ -437,10 +439,11 @@ class Grapher:
         if not already_in:
             new_dev = Manufacterer(logger=logging.getLogger('Manufacturer'), ax=ax, name=device['man'],
                                    color=self.colors.next(), marker=self.markers.next(),
-                                   line_style=self.lines.next())
+                                   points=init_points, line_style=self.lines.next())
+            print 'new_dev: ' + str(new_dev.x_values)
             self.devs.append(new_dev)
 
-    def _draw_device_points(self, ax, tdiff, devices):
+    def _draw_device_points(self, ax, tdiff, devices, init_points):
         """
         Adjusts the PyPlot line so that it can be redrawn.
         :param ax: The PyPlot axis.
@@ -449,9 +452,11 @@ class Grapher:
         :return:
         """
         y_max = 1
+        print 'init_points' + str(init_points)
         for y, dev in enumerate(devices):
-            self._set_man_style(ax, dev)
+            self._set_man_style(ax, dev, init_points)
         for val in self.devs:
+            print 'x: ' + str(val.x_values) + ', y:' +str(val.y_values)
             if val.count > y_max:
                 y_max = val.count + 1
             val.set_data(tdiff.seconds)
@@ -527,6 +532,7 @@ class Grapher:
         signal.signal(signal.SIGTERM, self._dump_data)
         start_time = datetime.now()
         # Set initial values
+        timer_list = [0]
         fig = plt.figure(num=None, figsize=(16, 8), dpi=80)
         ax = plt.subplot(111)
         y = 0
@@ -543,17 +549,22 @@ class Grapher:
         ax.set_position([box.x0, box.y0, box.width * 0.8, box.height])
         # Create UI Manufacterer
         man_count = Manufacterer(logger=logging.getLogger('UI'), ax=ax, name='Manual_Count', color='r', marker='x',
-                                 line_style='-')
+                                 points=timer_list, line_style='-')
+        # Create a list that will be used to fill the initial values
         while True:
-            # Get data from MQTT
+            # Setup variables for loop
             drawing_points = False
             tdiff = datetime.now() - start_time
+            # Get data from MQTT
             try:
                 msg = self.MQTT_queue.get(False)
-                y = self._draw_device_points(ax, tdiff, msg)
+                print 't_list:' + str(timer_list)
+                y = self._draw_device_points(ax, tdiff, msg, timer_list)
+                timer_list.append(tdiff.seconds)
                 for x in self.devs:
                     x.reset_count()
                 drawing_points = True
+                print timer_list
             except Empty:
                 pass
             # Try and get from UI
@@ -561,11 +572,10 @@ class Grapher:
                 ui = self.ui_queue.get(False)
                 if isinstance(ui, str):
                     self.save_data(fname=ui)
+                elif drawing_points:
+                    z = self._draw_ui_point(ax, tdiff, ui, man_count)
             except Empty:
                 pass
-            finally:
-                if drawing_points:
-                    z = self._draw_ui_point(ax, tdiff, ui, man_count)
             self._draw_legend(ax)
             # Get ready to plot
             # Increase height if necessary
@@ -591,8 +601,6 @@ if __name__ == "__main__":
     parser.add_argument('--graph', action='store_false', help='Do not graph the data.')
     parser.add_argument('--timeout', metavar='sec', type=int, nargs='?', help='How long the device will be remembered',
                         default=10)
-    parser.add_argument('--freq', metavar='Hz', type=int, nargs='?', help='Frequency of graph updating, default 2Hz',
-                        default=2.0)
     parser.add_argument('--logfile', metavar='filename', type=str, nargs='?',
                         help='Save the logfile generated by this program',
                         default=def_filename)
@@ -609,7 +617,7 @@ if __name__ == "__main__":
     # This program uses multiprocessing so create the classes which starts the multiprocessing
     listener(MQTT_to_Graph, args, logging.getLogger('MQTT_Listener'))
     if args.graph:
-        grapher = Grapher(MQTT_to_Graph, UI_to_Graph, logging.getLogger('Graph'), (1 / float(args.freq)),
+        grapher = Grapher(MQTT_to_Graph, UI_to_Graph, logging.getLogger('Graph'), 1.0,
                           filename=args.logfile)
     UserInputMonitor().cmdloop(UI_to_Graph, args.init, args.logfile, logging.getLogger('UserInputMonitor'))
 
