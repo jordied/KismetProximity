@@ -149,7 +149,7 @@ class UserInputMonitor(cmd.Cmd):
         """
         Alias for exit
         """
-        self.do_exit()
+        self.do_exit(input)
 
     def help_quit(self):
         """
@@ -175,7 +175,7 @@ class UserInputMonitor(cmd.Cmd):
                 # No file extension provided, add the default
                 input.append('.csv')
         else:
-            filename = '{0}_{1}.csv'.format(self.def_filename, datetime.now().strftime("%H_%M_%S_%B_%d_%Y"), self.id)
+            filename = '{0}_{1}.csv'.format(self.def_filename, self.id)
             self.logger.debug('No Filename provided, using {0}'.format(filename))
             self.id += 1
         print 'Saving to ' + filename
@@ -266,6 +266,8 @@ class Receiver:
                     oui = mac.oui
                     val['man'] = oui.registration().org
                 except NotRegisteredError:
+                    val['man'] = 'UNKNOWN'
+                except AddrFormatError:
                     val['man'] = 'UNKNOWN'
                 # self._print_device(adding=True, device=val)
                 self.devices.append(val)
@@ -561,11 +563,13 @@ class Grapher:
                 ui = self.ui_queue.get(False)
                 if isinstance(ui, str):
                     self.save_data(fname=ui)
+                else:
+                    good_ui = ui
             except Empty:
                 pass
             finally:
                 if drawing_points:
-                    z = self._draw_ui_point(ax, tdiff, ui, man_count)
+                    z = self._draw_ui_point(ax, tdiff, good_ui, man_count)
             self._draw_legend(ax)
             # Get ready to plot
             # Increase height if necessary
