@@ -12,10 +12,9 @@
 #
 # You should have received a copy of the GNU General Public License
 __author__ = 'Jordi'
-
 import csv
 import os
-from itertools import izip
+from itertools import izip_longest
 import sys
 
 try:
@@ -24,5 +23,5 @@ except IndexError:
     print 'Please add a filename'
     exit(-1)
 with open(os.path.splitext(filename)[0] + '_t.csv', 'wb') as outfile, open(filename, 'rb') as infile:
-    a = izip(*csv.reader(infile))
+    a = izip_longest(*csv.reader(infile))
     csv.writer(outfile).writerows(a)
