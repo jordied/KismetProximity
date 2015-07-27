@@ -242,7 +242,7 @@ class MQTTHelper:
 if __name__ == "__main__":
     if os.getuid() != 0:
         print(
-            "***************************************** ERROR! *****************************************\nThis program" +
+            "***** ERROR! *****\nThis program" +
             " requires root privileges, re-run with sudo. Use the flag '-h' for more help.")
         sys.exit(1)
     signal.signal(signal.SIGINT, signal_handler)

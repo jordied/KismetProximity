@@ -19,7 +19,6 @@ import logging
 import cmd
 import multiprocessing
 from multiprocessing import Process
-from threading import Thread
 from datetime import datetime, timedelta
 from Queue import Empty
 import time
@@ -43,7 +42,7 @@ class UserInputMonitor(cmd.Cmd):
     """
     Class which monitors and interprets user input. Inherits from Cmd Line interface.
     """
-    def cmdloop(self, queue, count, def_filename):
+    def cmdloop(self, queue, count, def_filename, logger):
         """
         Overrides the inherited method so that some aspects can be set initially.
         :param queue:
@@ -54,6 +53,7 @@ class UserInputMonitor(cmd.Cmd):
         self.def_filename = def_filename
         self.ui_queue = queue
         self._print_people()
+        self.logger = logger
         return cmd.Cmd.cmdloop(self)
 
     def put_value(self):
@@ -77,9 +77,11 @@ class UserInputMonitor(cmd.Cmd):
         :param input: The input the user has entered.
         """
         if input:
+            self.logger.info('add {0}'.format(input))
             try:
                 self.person_count += int(input)
             except:
+                self.logger.warning('The input was not valid.')
                 print '{0} is not valid'.format(input)
             self._print_people()
     def help_add(self):
@@ -94,9 +96,11 @@ class UserInputMonitor(cmd.Cmd):
         :param input: The input the user has entered.
         """
         if input:
+            self.logger.info('sub {0}'.format(input))
             try:
                 self.person_count -= int(input)
             except:
+                self.logger.warning('The input was not valid.')
                 print '{0} is not valid'.format(input)
             self._print_people()
 
@@ -112,9 +116,11 @@ class UserInputMonitor(cmd.Cmd):
         :param input: The input the user has entered.
         """
         if input:
+            self.logger.info('tot {0}'.format(input))
             try:
                 self.person_count = int(input)
             except:
+                self.logger.warning('The input was not valid.')
                 print '{0} is not valid'.format(input)
             self._print_people()
 
@@ -130,6 +136,7 @@ class UserInputMonitor(cmd.Cmd):
         :param input: The input the user has entered.
         """
         print 'Exiting...'
+        self.logger.warning('The program is now exiting.')
         for p in processes:
             p.terminate()
         exit(0)
@@ -142,7 +149,7 @@ class UserInputMonitor(cmd.Cmd):
         """
         Alias for exit
         """
-        self.do_exit()
+        self.do_exit(input)
 
     def help_quit(self):
         """
@@ -160,12 +167,16 @@ class UserInputMonitor(cmd.Cmd):
         """
         Save's the information to a file
         """
+        self.logger.info('Saving graph.')
         if input:
+            self.logger.debug('Filename provided')
             if '.' not in input:
+                self.logger.debug('No file extension, add a .csv')
                 # No file extension provided, add the default
                 input.append('.csv')
         else:
-            filename = '{0}_{1}.csv'.format(self.def_filename, datetime.now().strftime("%H_%M_%S_%B_%d_%Y"), self.id)
+            filename = '{0}_{1}.csv'.format(self.def_filename, self.id)
+            self.logger.debug('No Filename provided, using {0}'.format(filename))
             self.id += 1
         print 'Saving to ' + filename
         self.ui_queue.put_nowait(filename)
@@ -255,6 +266,8 @@ class Receiver:
                     oui = mac.oui
                     val['man'] = oui.registration().org
                 except NotRegisteredError:
+                    val['man'] = 'UNKNOWN'
+                except AddrFormatError:
                     val['man'] = 'UNKNOWN'
                 # self._print_device(adding=True, device=val)
                 self.devices.append(val)
@@ -550,11 +563,13 @@ class Grapher:
                 ui = self.ui_queue.get(False)
                 if isinstance(ui, str):
                     self.save_data(fname=ui)
+                else:
+                    good_ui = ui
             except Empty:
                 pass
             finally:
                 if drawing_points:
-                    z = self._draw_ui_point(ax, tdiff, ui, man_count)
+                    z = self._draw_ui_point(ax, tdiff, good_ui, man_count)
             self._draw_legend(ax)
             # Get ready to plot
             # Increase height if necessary
@@ -590,7 +605,7 @@ if __name__ == "__main__":
     parser.add_argument('--init', metavar='N', type=int, nargs='?', help='Initial number of people.',
                         default=0)
     args = parser.parse_args()
-    logging.basicConfig(filename=(args.logfile + '.log'), format='%(asctime)-15s::%(levelname)s:: %(message)s',
+    logging.basicConfig(filename=(args.logfile + '.log'), format='[%(asctime)-15s][%(levelname)s] %(message)s',
                         level=args.loglevel)
     # Create a Multi Process Queue
     MQTT_to_Graph = multiprocessing.Queue()
@@ -600,7 +615,7 @@ if __name__ == "__main__":
     if args.graph:
         grapher = Grapher(MQTT_to_Graph, UI_to_Graph, logging.getLogger('Graph'), (1 / float(args.freq)),
                           filename=args.logfile)
-    UserInputMonitor().cmdloop(UI_to_Graph, args.init, args.logfile)
+    UserInputMonitor().cmdloop(UI_to_Graph, args.init, args.logfile, logging.getLogger('UserInputMonitor'))
 
 
 
