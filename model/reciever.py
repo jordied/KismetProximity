@@ -379,7 +379,6 @@ class Manufacterer:
         Resets the current count and saves the previous.
         :return:
         """
-        self.previous_val = self.count
         self.count = 0
 
     def set_data(self, t):
@@ -417,7 +416,7 @@ class Grapher:
         self.colors = itertools.cycle(('b', 'g', 'r', 'm', 'y', 'k', 'Aqua', 'Chocolate', 'DeepPink', 'Lime', 'Purple'))
         self.lines = itertools.cycle((':', '-.', '--'))
         self.period = period
-        self.devs = []
+        self.man_list = []
         # Process
         self.process = Process(target=self.plot_a_graph)
         self.process.daemon = True
@@ -432,15 +431,15 @@ class Grapher:
         :return:
         """
         already_in = False
-        for val in self.devs:
-            if device['man'] == val.name:
-                val.increment_count()
+        for dev_saved in self.man_list:
+            if device['man'] == dev_saved.name:
+                dev_saved.increment_count()
                 already_in = True
         if not already_in:
             new_dev = Manufacterer(logger=logging.getLogger('Manufacturer'), ax=ax, name=device['man'],
                                    color=self.colors.next(), marker=self.markers.next(),
                                    line_style=self.lines.next())
-            self.devs.append(new_dev)
+            self.man_list.append(new_dev)
 
     def _draw_device_points(self, ax, tdiff, devices):
         """
@@ -453,11 +452,12 @@ class Grapher:
         y_max = 1
         for y, dev in enumerate(devices):
             self._set_man_style(ax, dev)
-        for val in self.devs:
+        for val in self.man_list:
             if val.count > y_max:
                 y_max = val.count + 1
             val.set_data(tdiff.seconds)
-            # print "Found {0} {1} devices".format(val.count, val.name)
+            self.logger.debug("Found {0} {1} devices".format(val.count, val.name))
+            val.reset_count() # Data set, so reset the count.
         return y_max
 
     def _draw_ui_point(self, ax, tdiff, count, man_count):
@@ -493,9 +493,7 @@ class Grapher:
         :param fname: The filename of which to save the data.
         :return:
         """
-        print '\n' \
-              '---------------------------------------\n' \
-              'SAVING DATA INTO {0}'.format(fname)
+        self.logger.debug('Saving into {0}'.format(fname))
         with open(fname, 'wb') as f:
             writer = csv.writer(f, delimiter=',')
             for line in plt.gca().get_lines():
@@ -506,8 +504,7 @@ class Grapher:
                 writer.writerow(xd)
                 writer.writerow(yd)
         self.file_id += 1
-        print 'DONE!!!\n' \
-              '---------------------------------------\n'
+        self.logger.debug('DONE')
 
     def _dump_data(self, signal, frame):
         """
@@ -529,10 +526,9 @@ class Grapher:
         signal.signal(signal.SIGTERM, self._dump_data)
         start_time = datetime.now()
         # Set initial values
-        fig = plt.figure(num=None, figsize=(16, 8), dpi=80)
+        plt.figure(num=None, figsize=(16, 8), dpi=80)
         ax = plt.subplot(111)
-        y = 0
-        z = 0
+        y = z = 0
         y_max = 20
         # Setup Plot
         ax.axis([0, self.period, 0, y_max])
@@ -553,8 +549,6 @@ class Grapher:
             try:
                 msg = self.MQTT_queue.get(False)
                 y = self._draw_device_points(ax, tdiff, msg)
-                for x in self.devs:
-                    x.reset_count()
                 drawing_points = True
             except Empty:
                 pass
@@ -564,15 +558,14 @@ class Grapher:
                 if isinstance(ui, str):
                     self.save_data(fname=ui)
                 else:
-                    good_ui = ui
+                    int_input = ui
             except Empty:
                 pass
             finally:
                 if drawing_points:
-                    z = self._draw_ui_point(ax, tdiff, good_ui, man_count)
+                    z = self._draw_ui_point(ax, tdiff, int_input, man_count)
             self._draw_legend(ax)
-            # Get ready to plot
-            # Increase height if necessary
+            # Get ready to plot, Increase height if necessary
             if y > y_max:
                 y_max = y + 1
             if z > y_max:
