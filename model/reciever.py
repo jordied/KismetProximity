@@ -33,6 +33,7 @@ import paho.mqtt.client as mqtt
 import matplotlib.pyplot as plt
 import numpy as np
 
+
 # Process list
 
 processes = []
@@ -201,6 +202,7 @@ class Receiver:
         self.logger = logger
         self.timeout = timeout
         self.current_time = datetime.now()
+        self.start_time = datetime.now()
         self.devices = []
         self.time_strings = ['time', 'rssi', 'pi_id']
         self.pp = pprint.PrettyPrinter(indent=4)
@@ -274,7 +276,7 @@ class Receiver:
         # Now save as XML
         tmp_xml = dicttoxml.dicttoxml(self.devices, attr_type=False)
         tree = etree.fromstring(tmp_xml, etree.XMLParser())
-        tree.set('id', datetime.now().strftime(format))
+        tree.set('id', str((datetime.now() - self.start_time).seconds))
         self.file.write(etree.tostring(tree, pretty_print=True))
         self.send_queue.put_nowait(self.devices)
 
@@ -398,7 +400,8 @@ class Grapher:
     """
     Class which handles the graphing and saving aspects.
     """
-    def __init__(self, MQTT_queue, ui_queue, logger, period, filename):
+
+    def __init__(self, MQTT_queue, ui_queue, logger, period, rssi, filename):
         """
         :param MQTT_queue: The Queue which will handle the interaction between the MQTT listener and the grapher.
         :param ui_queue: The Queue which will handle user input and place on the graph.
@@ -410,6 +413,7 @@ class Grapher:
         self.file_id = 0
         self.filename = filename
         self.logger = logger
+        self.rssi = rssi
         self.MQTT_queue = MQTT_queue
         self.ui_queue = ui_queue
         self.markers = itertools.cycle(('x', '+', '.', 'o', '*'))
@@ -433,8 +437,9 @@ class Grapher:
         already_in = False
         for dev_saved in self.man_list:
             if device['man'] == dev_saved.name:
-                dev_saved.increment_count()
-                already_in = True
+                if abs(device['rssi']) <= self.rssi:
+                    dev_saved.increment_count()
+                    already_in = True
         if not already_in:
             new_dev = Manufacterer(logger=logging.getLogger('Manufacturer'), ax=ax, name=device['man'],
                                    color=self.colors.next(), marker=self.markers.next(),
@@ -588,6 +593,8 @@ if __name__ == "__main__":
     parser.add_argument('--graph', action='store_false', help='Do not graph the data.')
     parser.add_argument('--timeout', metavar='sec', type=int, nargs='?', help='How long the device will be remembered',
                         default=10)
+    parser.add_argument('--rssi', metavar='db', type=int, nargs='?', help='RSSI Cutoff Value',
+                        default=90)
     parser.add_argument('--freq', metavar='Hz', type=int, nargs='?', help='Frequency of graph updating, default 2Hz',
                         default=2.0)
     parser.add_argument('--logfile', metavar='filename', type=str, nargs='?',
@@ -607,7 +614,7 @@ if __name__ == "__main__":
     listener(MQTT_to_Graph, args, logging.getLogger('MQTT_Listener'))
     if args.graph:
         grapher = Grapher(MQTT_to_Graph, UI_to_Graph, logging.getLogger('Graph'), (1 / float(args.freq)),
-                          filename=args.logfile)
+                          args.rssi, filename=args.logfile)
     UserInputMonitor().cmdloop(UI_to_Graph, args.init, args.logfile, logging.getLogger('UserInputMonitor'))
 
 
