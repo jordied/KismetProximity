@@ -439,7 +439,7 @@ class Grapher:
             if device['man'] == dev_saved.name:
                 if abs(device['rssi']) <= self.rssi:
                     dev_saved.increment_count()
-                    already_in = True
+                already_in = True
         if not already_in:
             new_dev = Manufacterer(logger=logging.getLogger('Manufacturer'), ax=ax, name=device['man'],
                                    color=self.colors.next(), marker=self.markers.next(),
