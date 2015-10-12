@@ -1,0 +1,4865 @@
+<root id="11:43:10_July_04_2015">
+  <item>
+    <rssi>-85</rssi>
+    <MAC>00:14:6C:E0:8A:F6</MAC>
+    <man>Netgear Inc.</man>
+    <pi_id>1</pi_id>
+    <time>11:43:05_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:43:05_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-67</rssi>
+    <MAC>06:27:22:D5:F0:CA</MAC>
+    <man>UNKNOWN</man>
+    <pi_id>1</pi_id>
+    <time>11:43:05_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-83</rssi>
+    <MAC>2A:A4:3C:4D:F4:35</MAC>
+    <man>UNKNOWN</man>
+    <pi_id>1</pi_id>
+    <time>11:43:05_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>60:03:47:02:DC:E3</MAC>
+    <man>Billion Electric Co. Ltd.</man>
+    <pi_id>1</pi_id>
+    <time>11:43:05_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>6C:B0:CE:78:AC:9E</MAC>
+    <man>NETGEAR</man>
+    <pi_id>1</pi_id>
+    <time>11:43:05_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>C4:04:15:A5:DA:20</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:43:05_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>C4:04:15:A5:DA:21</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:43:05_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-21</rssi>
+    <MAC>10:40:F3:80:A1:AE</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:43:05_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>D4:A0:2A:31:40:7E</MAC>
+    <man>CISCO SYSTEMS, INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:43:05_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-73</rssi>
+    <MAC>E8:DE:27:3D:D5:F2</MAC>
+    <man>TP-LINK TECHNOLOGIES CO.,LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:43:05_July_04_2015</time>
+  </item>
+</root>
+<root id="11:43:19_July_04_2015">
+  <item>
+    <rssi>-85</rssi>
+    <MAC>00:14:6C:E0:8A:F6</MAC>
+    <man>Netgear Inc.</man>
+    <pi_id>1</pi_id>
+    <time>11:43:05_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:43:14_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>06:27:22:D5:F0:CA</MAC>
+    <man>UNKNOWN</man>
+    <pi_id>1</pi_id>
+    <time>11:43:14_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-83</rssi>
+    <MAC>2A:A4:3C:4D:F4:35</MAC>
+    <man>UNKNOWN</man>
+    <pi_id>1</pi_id>
+    <time>11:43:05_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>60:03:47:02:DC:E3</MAC>
+    <man>Billion Electric Co. Ltd.</man>
+    <pi_id>1</pi_id>
+    <time>11:43:14_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>6C:B0:CE:78:AC:9E</MAC>
+    <man>NETGEAR</man>
+    <pi_id>1</pi_id>
+    <time>11:43:14_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>C4:04:15:A5:DA:20</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:43:05_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>C4:04:15:A5:DA:21</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:43:14_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-21</rssi>
+    <MAC>10:40:F3:80:A1:AE</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:43:05_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>D4:A0:2A:31:40:7E</MAC>
+    <man>CISCO SYSTEMS, INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:43:14_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>E8:DE:27:3D:D5:F2</MAC>
+    <man>TP-LINK TECHNOLOGIES CO.,LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:43:14_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-51</rssi>
+    <MAC>10:41:7F:9C:2A:D6</MAC>
+    <man>Apple Inc</man>
+    <pi_id>1</pi_id>
+    <time>11:43:14_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>00:16:76:77:60:2E</MAC>
+    <man>Intel Corporate</man>
+    <pi_id>1</pi_id>
+    <time>11:43:14_July_04_2015</time>
+  </item>
+</root>
+<root id="11:43:29_July_04_2015">
+  <item>
+    <rssi>-85</rssi>
+    <MAC>00:14:6C:E0:8A:F6</MAC>
+    <man>Netgear Inc.</man>
+    <pi_id>1</pi_id>
+    <time>11:43:05_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:43:23_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-67</rssi>
+    <MAC>06:27:22:D5:F0:CA</MAC>
+    <man>UNKNOWN</man>
+    <pi_id>1</pi_id>
+    <time>11:43:23_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-83</rssi>
+    <MAC>2A:A4:3C:4D:F4:35</MAC>
+    <man>UNKNOWN</man>
+    <pi_id>1</pi_id>
+    <time>11:43:05_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>60:03:47:02:DC:E3</MAC>
+    <man>Billion Electric Co. Ltd.</man>
+    <pi_id>1</pi_id>
+    <time>11:43:23_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>6C:B0:CE:78:AC:9E</MAC>
+    <man>NETGEAR</man>
+    <pi_id>1</pi_id>
+    <time>11:43:23_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>C4:04:15:A5:DA:20</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:43:23_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>C4:04:15:A5:DA:21</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:43:23_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-21</rssi>
+    <MAC>10:40:F3:80:A1:AE</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:43:05_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>D4:A0:2A:31:40:7E</MAC>
+    <man>CISCO SYSTEMS, INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:43:23_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>E8:DE:27:3D:D5:F2</MAC>
+    <man>TP-LINK TECHNOLOGIES CO.,LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:43:23_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-51</rssi>
+    <MAC>10:41:7F:9C:2A:D6</MAC>
+    <man>Apple Inc</man>
+    <pi_id>1</pi_id>
+    <time>11:43:14_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>00:16:76:77:60:2E</MAC>
+    <man>Intel Corporate</man>
+    <pi_id>1</pi_id>
+    <time>11:43:23_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-81</rssi>
+    <MAC>6C:B0:CE:78:EE:66</MAC>
+    <man>NETGEAR</man>
+    <pi_id>1</pi_id>
+    <time>11:43:23_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>F8:27:93:E8:C4:67</MAC>
+    <man>Apple, Inc</man>
+    <pi_id>1</pi_id>
+    <time>11:43:23_July_04_2015</time>
+  </item>
+</root>
+<root id="11:43:38_July_04_2015">
+  <item>
+    <rssi>-85</rssi>
+    <MAC>00:14:6C:E0:8A:F6</MAC>
+    <man>Netgear Inc.</man>
+    <pi_id>1</pi_id>
+    <time>11:43:05_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:43:33_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-65</rssi>
+    <MAC>06:27:22:D5:F0:CA</MAC>
+    <man>UNKNOWN</man>
+    <pi_id>1</pi_id>
+    <time>11:43:33_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-83</rssi>
+    <MAC>2A:A4:3C:4D:F4:35</MAC>
+    <man>UNKNOWN</man>
+    <pi_id>1</pi_id>
+    <time>11:43:05_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>60:03:47:02:DC:E3</MAC>
+    <man>Billion Electric Co. Ltd.</man>
+    <pi_id>1</pi_id>
+    <time>11:43:33_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>6C:B0:CE:78:AC:9E</MAC>
+    <man>NETGEAR</man>
+    <pi_id>1</pi_id>
+    <time>11:43:33_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>C4:04:15:A5:DA:20</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:43:33_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>C4:04:15:A5:DA:21</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:43:23_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-21</rssi>
+    <MAC>10:40:F3:80:A1:AE</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:43:05_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-67</rssi>
+    <MAC>D4:A0:2A:31:40:7E</MAC>
+    <man>CISCO SYSTEMS, INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:43:33_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>E8:DE:27:3D:D5:F2</MAC>
+    <man>TP-LINK TECHNOLOGIES CO.,LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:43:33_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-51</rssi>
+    <MAC>10:41:7F:9C:2A:D6</MAC>
+    <man>Apple Inc</man>
+    <pi_id>1</pi_id>
+    <time>11:43:14_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>00:16:76:77:60:2E</MAC>
+    <man>Intel Corporate</man>
+    <pi_id>1</pi_id>
+    <time>11:43:33_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-81</rssi>
+    <MAC>6C:B0:CE:78:EE:66</MAC>
+    <man>NETGEAR</man>
+    <pi_id>1</pi_id>
+    <time>11:43:23_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>F8:27:93:E8:C4:67</MAC>
+    <man>Apple, Inc</man>
+    <pi_id>1</pi_id>
+    <time>11:43:23_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>78:DD:08:D3:D5:26</MAC>
+    <man>Hon Hai Precision Ind. Co.,Ltd.</man>
+    <pi_id>1</pi_id>
+    <time>11:43:33_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>7C:C3:A1:B4:1D:64</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:43:33_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-73</rssi>
+    <MAC>70:1A:04:B3:5F:6F</MAC>
+    <man>Liteon Tech Corp.</man>
+    <pi_id>1</pi_id>
+    <time>11:43:33_July_04_2015</time>
+  </item>
+</root>
+<root id="11:43:47_July_04_2015">
+  <item>
+    <rssi>-85</rssi>
+    <MAC>00:14:6C:E0:8A:F6</MAC>
+    <man>Netgear Inc.</man>
+    <pi_id>1</pi_id>
+    <time>11:43:05_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:43:33_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-65</rssi>
+    <MAC>06:27:22:D5:F0:CA</MAC>
+    <man>UNKNOWN</man>
+    <pi_id>1</pi_id>
+    <time>11:43:33_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-83</rssi>
+    <MAC>2A:A4:3C:4D:F4:35</MAC>
+    <man>UNKNOWN</man>
+    <pi_id>1</pi_id>
+    <time>11:43:05_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>60:03:47:02:DC:E3</MAC>
+    <man>Billion Electric Co. Ltd.</man>
+    <pi_id>1</pi_id>
+    <time>11:43:33_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>6C:B0:CE:78:AC:9E</MAC>
+    <man>NETGEAR</man>
+    <pi_id>1</pi_id>
+    <time>11:43:33_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>C4:04:15:A5:DA:20</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:43:33_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>C4:04:15:A5:DA:21</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:43:23_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-21</rssi>
+    <MAC>10:40:F3:80:A1:AE</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:43:05_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-67</rssi>
+    <MAC>D4:A0:2A:31:40:7E</MAC>
+    <man>CISCO SYSTEMS, INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:43:33_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>E8:DE:27:3D:D5:F2</MAC>
+    <man>TP-LINK TECHNOLOGIES CO.,LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:43:33_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-51</rssi>
+    <MAC>10:41:7F:9C:2A:D6</MAC>
+    <man>Apple Inc</man>
+    <pi_id>1</pi_id>
+    <time>11:43:14_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>00:16:76:77:60:2E</MAC>
+    <man>Intel Corporate</man>
+    <pi_id>1</pi_id>
+    <time>11:43:33_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-81</rssi>
+    <MAC>6C:B0:CE:78:EE:66</MAC>
+    <man>NETGEAR</man>
+    <pi_id>1</pi_id>
+    <time>11:43:23_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>F8:27:93:E8:C4:67</MAC>
+    <man>Apple, Inc</man>
+    <pi_id>1</pi_id>
+    <time>11:43:23_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>78:DD:08:D3:D5:26</MAC>
+    <man>Hon Hai Precision Ind. Co.,Ltd.</man>
+    <pi_id>1</pi_id>
+    <time>11:43:33_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>7C:C3:A1:B4:1D:64</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:43:33_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-73</rssi>
+    <MAC>70:1A:04:B3:5F:6F</MAC>
+    <man>Liteon Tech Corp.</man>
+    <pi_id>1</pi_id>
+    <time>11:43:33_July_04_2015</time>
+  </item>
+</root>
+<root id="11:43:57_July_04_2015">
+  <item>
+    <rssi>-85</rssi>
+    <MAC>00:14:6C:E0:8A:F6</MAC>
+    <man>Netgear Inc.</man>
+    <pi_id>1</pi_id>
+    <time>11:43:05_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:43:51_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-65</rssi>
+    <MAC>06:27:22:D5:F0:CA</MAC>
+    <man>UNKNOWN</man>
+    <pi_id>1</pi_id>
+    <time>11:43:51_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-83</rssi>
+    <MAC>2A:A4:3C:4D:F4:35</MAC>
+    <man>UNKNOWN</man>
+    <pi_id>1</pi_id>
+    <time>11:43:05_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>60:03:47:02:DC:E3</MAC>
+    <man>Billion Electric Co. Ltd.</man>
+    <pi_id>1</pi_id>
+    <time>11:43:51_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>6C:B0:CE:78:AC:9E</MAC>
+    <man>NETGEAR</man>
+    <pi_id>1</pi_id>
+    <time>11:43:51_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>C4:04:15:A5:DA:20</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:43:51_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-81</rssi>
+    <MAC>C4:04:15:A5:DA:21</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:43:51_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-21</rssi>
+    <MAC>10:40:F3:80:A1:AE</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:43:05_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-61</rssi>
+    <MAC>D4:A0:2A:31:40:7E</MAC>
+    <man>CISCO SYSTEMS, INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:43:51_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>E8:DE:27:3D:D5:F2</MAC>
+    <man>TP-LINK TECHNOLOGIES CO.,LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:43:33_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-51</rssi>
+    <MAC>10:41:7F:9C:2A:D6</MAC>
+    <man>Apple Inc</man>
+    <pi_id>1</pi_id>
+    <time>11:43:14_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>00:16:76:77:60:2E</MAC>
+    <man>Intel Corporate</man>
+    <pi_id>1</pi_id>
+    <time>11:43:33_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-81</rssi>
+    <MAC>6C:B0:CE:78:EE:66</MAC>
+    <man>NETGEAR</man>
+    <pi_id>1</pi_id>
+    <time>11:43:23_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>F8:27:93:E8:C4:67</MAC>
+    <man>Apple, Inc</man>
+    <pi_id>1</pi_id>
+    <time>11:43:23_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>78:DD:08:D3:D5:26</MAC>
+    <man>Hon Hai Precision Ind. Co.,Ltd.</man>
+    <pi_id>1</pi_id>
+    <time>11:43:33_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>7C:C3:A1:B4:1D:64</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:43:33_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-73</rssi>
+    <MAC>70:1A:04:B3:5F:6F</MAC>
+    <man>Liteon Tech Corp.</man>
+    <pi_id>1</pi_id>
+    <time>11:43:33_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-67</rssi>
+    <MAC>00:26:C6:6C:89:32</MAC>
+    <man>Intel Corporate</man>
+    <pi_id>1</pi_id>
+    <time>11:43:51_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-63</rssi>
+    <MAC>D4:A0:2A:31:40:7D</MAC>
+    <man>CISCO SYSTEMS, INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:43:51_July_04_2015</time>
+  </item>
+</root>
+<root id="11:44:06_July_04_2015">
+  <item>
+    <rssi>-79</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:43:51_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-67</rssi>
+    <MAC>06:27:22:D5:F0:CA</MAC>
+    <man>UNKNOWN</man>
+    <pi_id>1</pi_id>
+    <time>11:44:01_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>60:03:47:02:DC:E3</MAC>
+    <man>Billion Electric Co. Ltd.</man>
+    <pi_id>1</pi_id>
+    <time>11:44:01_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-67</rssi>
+    <MAC>6C:B0:CE:78:AC:9E</MAC>
+    <man>NETGEAR</man>
+    <pi_id>1</pi_id>
+    <time>11:44:01_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>C4:04:15:A5:DA:20</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:43:51_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>C4:04:15:A5:DA:21</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:44:01_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-61</rssi>
+    <MAC>D4:A0:2A:31:40:7E</MAC>
+    <man>CISCO SYSTEMS, INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:44:01_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>E8:DE:27:3D:D5:F2</MAC>
+    <man>TP-LINK TECHNOLOGIES CO.,LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:44:01_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-51</rssi>
+    <MAC>10:41:7F:9C:2A:D6</MAC>
+    <man>Apple Inc</man>
+    <pi_id>1</pi_id>
+    <time>11:43:14_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>00:16:76:77:60:2E</MAC>
+    <man>Intel Corporate</man>
+    <pi_id>1</pi_id>
+    <time>11:43:33_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-81</rssi>
+    <MAC>6C:B0:CE:78:EE:66</MAC>
+    <man>NETGEAR</man>
+    <pi_id>1</pi_id>
+    <time>11:43:23_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>F8:27:93:E8:C4:67</MAC>
+    <man>Apple, Inc</man>
+    <pi_id>1</pi_id>
+    <time>11:43:23_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>78:DD:08:D3:D5:26</MAC>
+    <man>Hon Hai Precision Ind. Co.,Ltd.</man>
+    <pi_id>1</pi_id>
+    <time>11:43:33_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>7C:C3:A1:B4:1D:64</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:43:33_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-73</rssi>
+    <MAC>70:1A:04:B3:5F:6F</MAC>
+    <man>Liteon Tech Corp.</man>
+    <pi_id>1</pi_id>
+    <time>11:43:33_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-67</rssi>
+    <MAC>00:26:C6:6C:89:32</MAC>
+    <man>Intel Corporate</man>
+    <pi_id>1</pi_id>
+    <time>11:43:51_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-63</rssi>
+    <MAC>D4:A0:2A:31:40:7D</MAC>
+    <man>CISCO SYSTEMS, INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:43:51_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:44:01_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-67</rssi>
+    <MAC>00:26:AB:BC:12:DD</MAC>
+    <man>SEIKO EPSON CORPORATION</man>
+    <pi_id>1</pi_id>
+    <time>11:44:01_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>A4:D1:D2:1A:91:E0</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:44:01_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-65</rssi>
+    <MAC>48:43:7C:63:54:4F</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:44:01_July_04_2015</time>
+  </item>
+</root>
+<root id="11:44:15_July_04_2015">
+  <item>
+    <rssi>-77</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:44:10_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-65</rssi>
+    <MAC>06:27:22:D5:F0:CA</MAC>
+    <man>UNKNOWN</man>
+    <pi_id>1</pi_id>
+    <time>11:44:10_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-73</rssi>
+    <MAC>60:03:47:02:DC:E3</MAC>
+    <man>Billion Electric Co. Ltd.</man>
+    <pi_id>1</pi_id>
+    <time>11:44:10_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-73</rssi>
+    <MAC>6C:B0:CE:78:AC:9E</MAC>
+    <man>NETGEAR</man>
+    <pi_id>1</pi_id>
+    <time>11:44:10_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>C4:04:15:A5:DA:20</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:43:51_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>C4:04:15:A5:DA:21</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:44:10_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-67</rssi>
+    <MAC>D4:A0:2A:31:40:7E</MAC>
+    <man>CISCO SYSTEMS, INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:44:10_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>E8:DE:27:3D:D5:F2</MAC>
+    <man>TP-LINK TECHNOLOGIES CO.,LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:44:10_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>00:16:76:77:60:2E</MAC>
+    <man>Intel Corporate</man>
+    <pi_id>1</pi_id>
+    <time>11:43:33_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-81</rssi>
+    <MAC>6C:B0:CE:78:EE:66</MAC>
+    <man>NETGEAR</man>
+    <pi_id>1</pi_id>
+    <time>11:44:10_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>F8:27:93:E8:C4:67</MAC>
+    <man>Apple, Inc</man>
+    <pi_id>1</pi_id>
+    <time>11:43:23_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>78:DD:08:D3:D5:26</MAC>
+    <man>Hon Hai Precision Ind. Co.,Ltd.</man>
+    <pi_id>1</pi_id>
+    <time>11:43:33_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>7C:C3:A1:B4:1D:64</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:44:10_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-73</rssi>
+    <MAC>70:1A:04:B3:5F:6F</MAC>
+    <man>Liteon Tech Corp.</man>
+    <pi_id>1</pi_id>
+    <time>11:43:33_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-67</rssi>
+    <MAC>00:26:C6:6C:89:32</MAC>
+    <man>Intel Corporate</man>
+    <pi_id>1</pi_id>
+    <time>11:43:51_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-63</rssi>
+    <MAC>D4:A0:2A:31:40:7D</MAC>
+    <man>CISCO SYSTEMS, INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:43:51_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:44:10_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-67</rssi>
+    <MAC>00:26:AB:BC:12:DD</MAC>
+    <man>SEIKO EPSON CORPORATION</man>
+    <pi_id>1</pi_id>
+    <time>11:44:01_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>A4:D1:D2:1A:91:E0</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:44:01_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-65</rssi>
+    <MAC>48:43:7C:63:54:4F</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:44:01_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-55</rssi>
+    <MAC>10:41:7F:9C:2A:D6</MAC>
+    <man>Apple Inc</man>
+    <pi_id>1</pi_id>
+    <time>11:44:10_July_04_2015</time>
+  </item>
+</root>
+<root id="11:44:24_July_04_2015">
+  <item>
+    <rssi>-75</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:44:19_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>06:27:22:D5:F0:CA</MAC>
+    <man>UNKNOWN</man>
+    <pi_id>1</pi_id>
+    <time>11:44:19_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>60:03:47:02:DC:E3</MAC>
+    <man>Billion Electric Co. Ltd.</man>
+    <pi_id>1</pi_id>
+    <time>11:44:19_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>6C:B0:CE:78:AC:9E</MAC>
+    <man>NETGEAR</man>
+    <pi_id>1</pi_id>
+    <time>11:44:19_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>C4:04:15:A5:DA:20</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:43:51_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>C4:04:15:A5:DA:21</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:44:19_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-67</rssi>
+    <MAC>D4:A0:2A:31:40:7E</MAC>
+    <man>CISCO SYSTEMS, INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:44:19_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>E8:DE:27:3D:D5:F2</MAC>
+    <man>TP-LINK TECHNOLOGIES CO.,LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:44:10_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>00:16:76:77:60:2E</MAC>
+    <man>Intel Corporate</man>
+    <pi_id>1</pi_id>
+    <time>11:44:19_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-81</rssi>
+    <MAC>6C:B0:CE:78:EE:66</MAC>
+    <man>NETGEAR</man>
+    <pi_id>1</pi_id>
+    <time>11:44:10_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>78:DD:08:D3:D5:26</MAC>
+    <man>Hon Hai Precision Ind. Co.,Ltd.</man>
+    <pi_id>1</pi_id>
+    <time>11:43:33_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>7C:C3:A1:B4:1D:64</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:44:10_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-73</rssi>
+    <MAC>70:1A:04:B3:5F:6F</MAC>
+    <man>Liteon Tech Corp.</man>
+    <pi_id>1</pi_id>
+    <time>11:43:33_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-67</rssi>
+    <MAC>00:26:C6:6C:89:32</MAC>
+    <man>Intel Corporate</man>
+    <pi_id>1</pi_id>
+    <time>11:43:51_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-63</rssi>
+    <MAC>D4:A0:2A:31:40:7D</MAC>
+    <man>CISCO SYSTEMS, INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:43:51_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:44:19_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-67</rssi>
+    <MAC>00:26:AB:BC:12:DD</MAC>
+    <man>SEIKO EPSON CORPORATION</man>
+    <pi_id>1</pi_id>
+    <time>11:44:01_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>A4:D1:D2:1A:91:E0</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:44:01_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-65</rssi>
+    <MAC>48:43:7C:63:54:4F</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:44:01_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-55</rssi>
+    <MAC>10:41:7F:9C:2A:D6</MAC>
+    <man>Apple Inc</man>
+    <pi_id>1</pi_id>
+    <time>11:44:10_July_04_2015</time>
+  </item>
+</root>
+<root id="11:44:34_July_04_2015">
+  <item>
+    <rssi>-79</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:44:28_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-63</rssi>
+    <MAC>06:27:22:D5:F0:CA</MAC>
+    <man>UNKNOWN</man>
+    <pi_id>1</pi_id>
+    <time>11:44:28_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>60:03:47:02:DC:E3</MAC>
+    <man>Billion Electric Co. Ltd.</man>
+    <pi_id>1</pi_id>
+    <time>11:44:28_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>6C:B0:CE:78:AC:9E</MAC>
+    <man>NETGEAR</man>
+    <pi_id>1</pi_id>
+    <time>11:44:28_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>C4:04:15:A5:DA:20</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:44:28_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>C4:04:15:A5:DA:21</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:44:28_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-67</rssi>
+    <MAC>D4:A0:2A:31:40:7E</MAC>
+    <man>CISCO SYSTEMS, INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:44:28_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>E8:DE:27:3D:D5:F2</MAC>
+    <man>TP-LINK TECHNOLOGIES CO.,LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:44:28_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>00:16:76:77:60:2E</MAC>
+    <man>Intel Corporate</man>
+    <pi_id>1</pi_id>
+    <time>11:44:28_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-81</rssi>
+    <MAC>6C:B0:CE:78:EE:66</MAC>
+    <man>NETGEAR</man>
+    <pi_id>1</pi_id>
+    <time>11:44:10_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>7C:C3:A1:B4:1D:64</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:44:10_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-67</rssi>
+    <MAC>00:26:C6:6C:89:32</MAC>
+    <man>Intel Corporate</man>
+    <pi_id>1</pi_id>
+    <time>11:43:51_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-63</rssi>
+    <MAC>D4:A0:2A:31:40:7D</MAC>
+    <man>CISCO SYSTEMS, INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:43:51_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:44:28_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-67</rssi>
+    <MAC>00:26:AB:BC:12:DD</MAC>
+    <man>SEIKO EPSON CORPORATION</man>
+    <pi_id>1</pi_id>
+    <time>11:44:01_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>A4:D1:D2:1A:91:E0</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:44:01_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-65</rssi>
+    <MAC>48:43:7C:63:54:4F</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:44:01_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-55</rssi>
+    <MAC>10:41:7F:9C:2A:D6</MAC>
+    <man>Apple Inc</man>
+    <pi_id>1</pi_id>
+    <time>11:44:10_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-65</rssi>
+    <MAC>C0:BD:D1:64:9E:06</MAC>
+    <man>Samsung Electro Mechanics co., LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:44:28_July_04_2015</time>
+  </item>
+</root>
+<root id="11:44:43_July_04_2015">
+  <item>
+    <rssi>-73</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:44:38_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-63</rssi>
+    <MAC>06:27:22:D5:F0:CA</MAC>
+    <man>UNKNOWN</man>
+    <pi_id>1</pi_id>
+    <time>11:44:38_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>60:03:47:02:DC:E3</MAC>
+    <man>Billion Electric Co. Ltd.</man>
+    <pi_id>1</pi_id>
+    <time>11:44:38_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-67</rssi>
+    <MAC>6C:B0:CE:78:AC:9E</MAC>
+    <man>NETGEAR</man>
+    <pi_id>1</pi_id>
+    <time>11:44:38_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>C4:04:15:A5:DA:20</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:44:38_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>C4:04:15:A5:DA:21</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:44:28_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-67</rssi>
+    <MAC>D4:A0:2A:31:40:7E</MAC>
+    <man>CISCO SYSTEMS, INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:44:38_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>E8:DE:27:3D:D5:F2</MAC>
+    <man>TP-LINK TECHNOLOGIES CO.,LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:44:38_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>00:16:76:77:60:2E</MAC>
+    <man>Intel Corporate</man>
+    <pi_id>1</pi_id>
+    <time>11:44:28_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-81</rssi>
+    <MAC>6C:B0:CE:78:EE:66</MAC>
+    <man>NETGEAR</man>
+    <pi_id>1</pi_id>
+    <time>11:44:10_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>7C:C3:A1:B4:1D:64</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:44:10_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-67</rssi>
+    <MAC>00:26:C6:6C:89:32</MAC>
+    <man>Intel Corporate</man>
+    <pi_id>1</pi_id>
+    <time>11:43:51_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-63</rssi>
+    <MAC>D4:A0:2A:31:40:7D</MAC>
+    <man>CISCO SYSTEMS, INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:43:51_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-73</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:44:38_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-67</rssi>
+    <MAC>00:26:AB:BC:12:DD</MAC>
+    <man>SEIKO EPSON CORPORATION</man>
+    <pi_id>1</pi_id>
+    <time>11:44:01_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>A4:D1:D2:1A:91:E0</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:44:01_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-65</rssi>
+    <MAC>48:43:7C:63:54:4F</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:44:01_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-55</rssi>
+    <MAC>10:41:7F:9C:2A:D6</MAC>
+    <man>Apple Inc</man>
+    <pi_id>1</pi_id>
+    <time>11:44:10_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-65</rssi>
+    <MAC>C0:BD:D1:64:9E:06</MAC>
+    <man>Samsung Electro Mechanics co., LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:44:28_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-83</rssi>
+    <MAC>00:1D:AA:A1:D8:C8</MAC>
+    <man>DrayTek Corp.</man>
+    <pi_id>1</pi_id>
+    <time>11:44:38_July_04_2015</time>
+  </item>
+</root>
+<root id="11:44:52_July_04_2015">
+  <item>
+    <rssi>-79</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:44:47_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-67</rssi>
+    <MAC>06:27:22:D5:F0:CA</MAC>
+    <man>UNKNOWN</man>
+    <pi_id>1</pi_id>
+    <time>11:44:47_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>60:03:47:02:DC:E3</MAC>
+    <man>Billion Electric Co. Ltd.</man>
+    <pi_id>1</pi_id>
+    <time>11:44:47_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>6C:B0:CE:78:AC:9E</MAC>
+    <man>NETGEAR</man>
+    <pi_id>1</pi_id>
+    <time>11:44:47_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>C4:04:15:A5:DA:20</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:44:38_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>C4:04:15:A5:DA:21</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:44:28_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-67</rssi>
+    <MAC>D4:A0:2A:31:40:7E</MAC>
+    <man>CISCO SYSTEMS, INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:44:47_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>E8:DE:27:3D:D5:F2</MAC>
+    <man>TP-LINK TECHNOLOGIES CO.,LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:44:47_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>00:16:76:77:60:2E</MAC>
+    <man>Intel Corporate</man>
+    <pi_id>1</pi_id>
+    <time>11:44:28_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-81</rssi>
+    <MAC>6C:B0:CE:78:EE:66</MAC>
+    <man>NETGEAR</man>
+    <pi_id>1</pi_id>
+    <time>11:44:10_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>7C:C3:A1:B4:1D:64</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:44:10_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:44:47_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-67</rssi>
+    <MAC>00:26:AB:BC:12:DD</MAC>
+    <man>SEIKO EPSON CORPORATION</man>
+    <pi_id>1</pi_id>
+    <time>11:44:01_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>A4:D1:D2:1A:91:E0</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:44:01_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-65</rssi>
+    <MAC>48:43:7C:63:54:4F</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:44:01_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-55</rssi>
+    <MAC>10:41:7F:9C:2A:D6</MAC>
+    <man>Apple Inc</man>
+    <pi_id>1</pi_id>
+    <time>11:44:10_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-65</rssi>
+    <MAC>C0:BD:D1:64:9E:06</MAC>
+    <man>Samsung Electro Mechanics co., LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:44:28_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-83</rssi>
+    <MAC>00:1D:AA:A1:D8:C8</MAC>
+    <man>DrayTek Corp.</man>
+    <pi_id>1</pi_id>
+    <time>11:44:38_July_04_2015</time>
+  </item>
+</root>
+<root id="11:45:01_July_04_2015">
+  <item>
+    <rssi>-79</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:44:56_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-67</rssi>
+    <MAC>06:27:22:D5:F0:CA</MAC>
+    <man>UNKNOWN</man>
+    <pi_id>1</pi_id>
+    <time>11:44:56_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>60:03:47:02:DC:E3</MAC>
+    <man>Billion Electric Co. Ltd.</man>
+    <pi_id>1</pi_id>
+    <time>11:44:56_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>6C:B0:CE:78:AC:9E</MAC>
+    <man>NETGEAR</man>
+    <pi_id>1</pi_id>
+    <time>11:44:56_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>C4:04:15:A5:DA:20</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:44:38_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>C4:04:15:A5:DA:21</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:44:56_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-67</rssi>
+    <MAC>D4:A0:2A:31:40:7E</MAC>
+    <man>CISCO SYSTEMS, INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:44:56_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>E8:DE:27:3D:D5:F2</MAC>
+    <man>TP-LINK TECHNOLOGIES CO.,LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:44:56_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-73</rssi>
+    <MAC>00:16:76:77:60:2E</MAC>
+    <man>Intel Corporate</man>
+    <pi_id>1</pi_id>
+    <time>11:44:56_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-81</rssi>
+    <MAC>6C:B0:CE:78:EE:66</MAC>
+    <man>NETGEAR</man>
+    <pi_id>1</pi_id>
+    <time>11:44:56_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>7C:C3:A1:B4:1D:64</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:44:10_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:44:56_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-55</rssi>
+    <MAC>10:41:7F:9C:2A:D6</MAC>
+    <man>Apple Inc</man>
+    <pi_id>1</pi_id>
+    <time>11:44:10_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-65</rssi>
+    <MAC>C0:BD:D1:64:9E:06</MAC>
+    <man>Samsung Electro Mechanics co., LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:44:28_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-83</rssi>
+    <MAC>00:1D:AA:A1:D8:C8</MAC>
+    <man>DrayTek Corp.</man>
+    <pi_id>1</pi_id>
+    <time>11:44:38_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-85</rssi>
+    <MAC>00:14:6C:E0:8A:F6</MAC>
+    <man>Netgear Inc.</man>
+    <pi_id>1</pi_id>
+    <time>11:44:56_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-65</rssi>
+    <MAC>18:A9:05:F5:B6:E8</MAC>
+    <man>Hewlett-Packard Company</man>
+    <pi_id>1</pi_id>
+    <time>11:44:56_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-83</rssi>
+    <MAC>70:3E:AC:3D:93:59</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:44:56_July_04_2015</time>
+  </item>
+</root>
+<root id="11:45:11_July_04_2015">
+  <item>
+    <rssi>-79</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:44:56_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-67</rssi>
+    <MAC>06:27:22:D5:F0:CA</MAC>
+    <man>UNKNOWN</man>
+    <pi_id>1</pi_id>
+    <time>11:44:56_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>60:03:47:02:DC:E3</MAC>
+    <man>Billion Electric Co. Ltd.</man>
+    <pi_id>1</pi_id>
+    <time>11:44:56_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>6C:B0:CE:78:AC:9E</MAC>
+    <man>NETGEAR</man>
+    <pi_id>1</pi_id>
+    <time>11:44:56_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>C4:04:15:A5:DA:20</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:44:38_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>C4:04:15:A5:DA:21</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:44:56_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-67</rssi>
+    <MAC>D4:A0:2A:31:40:7E</MAC>
+    <man>CISCO SYSTEMS, INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:44:56_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>E8:DE:27:3D:D5:F2</MAC>
+    <man>TP-LINK TECHNOLOGIES CO.,LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:44:56_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-73</rssi>
+    <MAC>00:16:76:77:60:2E</MAC>
+    <man>Intel Corporate</man>
+    <pi_id>1</pi_id>
+    <time>11:44:56_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-81</rssi>
+    <MAC>6C:B0:CE:78:EE:66</MAC>
+    <man>NETGEAR</man>
+    <pi_id>1</pi_id>
+    <time>11:44:56_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>7C:C3:A1:B4:1D:64</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:44:10_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:44:56_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-55</rssi>
+    <MAC>10:41:7F:9C:2A:D6</MAC>
+    <man>Apple Inc</man>
+    <pi_id>1</pi_id>
+    <time>11:44:10_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-65</rssi>
+    <MAC>C0:BD:D1:64:9E:06</MAC>
+    <man>Samsung Electro Mechanics co., LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:44:28_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-83</rssi>
+    <MAC>00:1D:AA:A1:D8:C8</MAC>
+    <man>DrayTek Corp.</man>
+    <pi_id>1</pi_id>
+    <time>11:44:38_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-85</rssi>
+    <MAC>00:14:6C:E0:8A:F6</MAC>
+    <man>Netgear Inc.</man>
+    <pi_id>1</pi_id>
+    <time>11:44:56_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-65</rssi>
+    <MAC>18:A9:05:F5:B6:E8</MAC>
+    <man>Hewlett-Packard Company</man>
+    <pi_id>1</pi_id>
+    <time>11:44:56_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-83</rssi>
+    <MAC>70:3E:AC:3D:93:59</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:44:56_July_04_2015</time>
+  </item>
+</root>
+<root id="11:45:20_July_04_2015">
+  <item>
+    <rssi>-81</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:45:15_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>06:27:22:D5:F0:CA</MAC>
+    <man>UNKNOWN</man>
+    <pi_id>1</pi_id>
+    <time>11:45:15_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>60:03:47:02:DC:E3</MAC>
+    <man>Billion Electric Co. Ltd.</man>
+    <pi_id>1</pi_id>
+    <time>11:45:15_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>6C:B0:CE:78:AC:9E</MAC>
+    <man>NETGEAR</man>
+    <pi_id>1</pi_id>
+    <time>11:45:15_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>C4:04:15:A5:DA:20</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:45:15_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>C4:04:15:A5:DA:21</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:45:15_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>D4:A0:2A:31:40:7E</MAC>
+    <man>CISCO SYSTEMS, INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:45:15_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>E8:DE:27:3D:D5:F2</MAC>
+    <man>TP-LINK TECHNOLOGIES CO.,LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:45:15_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-73</rssi>
+    <MAC>00:16:76:77:60:2E</MAC>
+    <man>Intel Corporate</man>
+    <pi_id>1</pi_id>
+    <time>11:44:56_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-81</rssi>
+    <MAC>6C:B0:CE:78:EE:66</MAC>
+    <man>NETGEAR</man>
+    <pi_id>1</pi_id>
+    <time>11:44:56_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:44:56_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-65</rssi>
+    <MAC>C0:BD:D1:64:9E:06</MAC>
+    <man>Samsung Electro Mechanics co., LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:44:28_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-83</rssi>
+    <MAC>00:1D:AA:A1:D8:C8</MAC>
+    <man>DrayTek Corp.</man>
+    <pi_id>1</pi_id>
+    <time>11:44:38_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-85</rssi>
+    <MAC>00:14:6C:E0:8A:F6</MAC>
+    <man>Netgear Inc.</man>
+    <pi_id>1</pi_id>
+    <time>11:44:56_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-65</rssi>
+    <MAC>18:A9:05:F5:B6:E8</MAC>
+    <man>Hewlett-Packard Company</man>
+    <pi_id>1</pi_id>
+    <time>11:44:56_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-83</rssi>
+    <MAC>70:3E:AC:3D:93:59</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:44:56_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>7C:C3:A1:B4:1D:64</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:45:15_July_04_2015</time>
+  </item>
+</root>
+<root id="11:45:30_July_04_2015">
+  <item>
+    <rssi>-79</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:45:24_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>06:27:22:D5:F0:CA</MAC>
+    <man>UNKNOWN</man>
+    <pi_id>1</pi_id>
+    <time>11:45:24_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>60:03:47:02:DC:E3</MAC>
+    <man>Billion Electric Co. Ltd.</man>
+    <pi_id>1</pi_id>
+    <time>11:45:24_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>6C:B0:CE:78:AC:9E</MAC>
+    <man>NETGEAR</man>
+    <pi_id>1</pi_id>
+    <time>11:45:24_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>C4:04:15:A5:DA:20</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:45:15_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>C4:04:15:A5:DA:21</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:45:15_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-65</rssi>
+    <MAC>D4:A0:2A:31:40:7E</MAC>
+    <man>CISCO SYSTEMS, INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:45:24_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-73</rssi>
+    <MAC>E8:DE:27:3D:D5:F2</MAC>
+    <man>TP-LINK TECHNOLOGIES CO.,LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:45:24_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-73</rssi>
+    <MAC>00:16:76:77:60:2E</MAC>
+    <man>Intel Corporate</man>
+    <pi_id>1</pi_id>
+    <time>11:44:56_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-83</rssi>
+    <MAC>6C:B0:CE:78:EE:66</MAC>
+    <man>NETGEAR</man>
+    <pi_id>1</pi_id>
+    <time>11:45:24_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:45:24_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-83</rssi>
+    <MAC>00:1D:AA:A1:D8:C8</MAC>
+    <man>DrayTek Corp.</man>
+    <pi_id>1</pi_id>
+    <time>11:44:38_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-85</rssi>
+    <MAC>00:14:6C:E0:8A:F6</MAC>
+    <man>Netgear Inc.</man>
+    <pi_id>1</pi_id>
+    <time>11:44:56_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-65</rssi>
+    <MAC>18:A9:05:F5:B6:E8</MAC>
+    <man>Hewlett-Packard Company</man>
+    <pi_id>1</pi_id>
+    <time>11:44:56_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-83</rssi>
+    <MAC>70:3E:AC:3D:93:59</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:44:56_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>7C:C3:A1:B4:1D:64</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:45:15_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-81</rssi>
+    <MAC>2A:A4:3C:4D:F4:35</MAC>
+    <man>UNKNOWN</man>
+    <pi_id>1</pi_id>
+    <time>11:45:24_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-53</rssi>
+    <MAC>10:40:F3:80:A1:AE</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:45:24_July_04_2015</time>
+  </item>
+</root>
+<root id="11:45:39_July_04_2015">
+  <item>
+    <rssi>-77</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:45:34_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-65</rssi>
+    <MAC>06:27:22:D5:F0:CA</MAC>
+    <man>UNKNOWN</man>
+    <pi_id>1</pi_id>
+    <time>11:45:34_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>60:03:47:02:DC:E3</MAC>
+    <man>Billion Electric Co. Ltd.</man>
+    <pi_id>1</pi_id>
+    <time>11:45:34_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>6C:B0:CE:78:AC:9E</MAC>
+    <man>NETGEAR</man>
+    <pi_id>1</pi_id>
+    <time>11:45:34_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>C4:04:15:A5:DA:20</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:45:34_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>C4:04:15:A5:DA:21</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:45:34_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-67</rssi>
+    <MAC>D4:A0:2A:31:40:7E</MAC>
+    <man>CISCO SYSTEMS, INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:45:34_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-73</rssi>
+    <MAC>E8:DE:27:3D:D5:F2</MAC>
+    <man>TP-LINK TECHNOLOGIES CO.,LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:45:34_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-73</rssi>
+    <MAC>00:16:76:77:60:2E</MAC>
+    <man>Intel Corporate</man>
+    <pi_id>1</pi_id>
+    <time>11:44:56_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-81</rssi>
+    <MAC>6C:B0:CE:78:EE:66</MAC>
+    <man>NETGEAR</man>
+    <pi_id>1</pi_id>
+    <time>11:45:34_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:45:34_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-85</rssi>
+    <MAC>00:14:6C:E0:8A:F6</MAC>
+    <man>Netgear Inc.</man>
+    <pi_id>1</pi_id>
+    <time>11:44:56_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-65</rssi>
+    <MAC>18:A9:05:F5:B6:E8</MAC>
+    <man>Hewlett-Packard Company</man>
+    <pi_id>1</pi_id>
+    <time>11:44:56_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-83</rssi>
+    <MAC>70:3E:AC:3D:93:59</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:44:56_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>7C:C3:A1:B4:1D:64</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:45:34_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-81</rssi>
+    <MAC>2A:A4:3C:4D:F4:35</MAC>
+    <man>UNKNOWN</man>
+    <pi_id>1</pi_id>
+    <time>11:45:24_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-53</rssi>
+    <MAC>10:40:F3:80:A1:AE</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:45:24_July_04_2015</time>
+  </item>
+</root>
+<root id="11:45:48_July_04_2015">
+  <item>
+    <rssi>-73</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:45:43_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-63</rssi>
+    <MAC>06:27:22:D5:F0:CA</MAC>
+    <man>UNKNOWN</man>
+    <pi_id>1</pi_id>
+    <time>11:45:43_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>60:03:47:02:DC:E3</MAC>
+    <man>Billion Electric Co. Ltd.</man>
+    <pi_id>1</pi_id>
+    <time>11:45:43_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>6C:B0:CE:78:AC:9E</MAC>
+    <man>NETGEAR</man>
+    <pi_id>1</pi_id>
+    <time>11:45:43_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>C4:04:15:A5:DA:20</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:45:34_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>C4:04:15:A5:DA:21</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:45:34_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>D4:A0:2A:31:40:7E</MAC>
+    <man>CISCO SYSTEMS, INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:45:43_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>E8:DE:27:3D:D5:F2</MAC>
+    <man>TP-LINK TECHNOLOGIES CO.,LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:45:43_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-73</rssi>
+    <MAC>00:16:76:77:60:2E</MAC>
+    <man>Intel Corporate</man>
+    <pi_id>1</pi_id>
+    <time>11:44:56_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-81</rssi>
+    <MAC>6C:B0:CE:78:EE:66</MAC>
+    <man>NETGEAR</man>
+    <pi_id>1</pi_id>
+    <time>11:45:34_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-73</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:45:43_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-85</rssi>
+    <MAC>00:14:6C:E0:8A:F6</MAC>
+    <man>Netgear Inc.</man>
+    <pi_id>1</pi_id>
+    <time>11:44:56_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-65</rssi>
+    <MAC>18:A9:05:F5:B6:E8</MAC>
+    <man>Hewlett-Packard Company</man>
+    <pi_id>1</pi_id>
+    <time>11:44:56_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-83</rssi>
+    <MAC>70:3E:AC:3D:93:59</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:44:56_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-65</rssi>
+    <MAC>7C:C3:A1:B4:1D:64</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:45:43_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-81</rssi>
+    <MAC>2A:A4:3C:4D:F4:35</MAC>
+    <man>UNKNOWN</man>
+    <pi_id>1</pi_id>
+    <time>11:45:24_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-53</rssi>
+    <MAC>10:40:F3:80:A1:AE</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:45:24_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-61</rssi>
+    <MAC>18:3D:A2:9C:B6:90</MAC>
+    <man>Intel Corporate</man>
+    <pi_id>1</pi_id>
+    <time>11:45:43_July_04_2015</time>
+  </item>
+</root>
+<root id="11:45:58_July_04_2015">
+  <item>
+    <rssi>-77</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:45:52_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-67</rssi>
+    <MAC>06:27:22:D5:F0:CA</MAC>
+    <man>UNKNOWN</man>
+    <pi_id>1</pi_id>
+    <time>11:45:52_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>60:03:47:02:DC:E3</MAC>
+    <man>Billion Electric Co. Ltd.</man>
+    <pi_id>1</pi_id>
+    <time>11:45:52_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-67</rssi>
+    <MAC>6C:B0:CE:78:AC:9E</MAC>
+    <man>NETGEAR</man>
+    <pi_id>1</pi_id>
+    <time>11:45:52_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-73</rssi>
+    <MAC>C4:04:15:A5:DA:20</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:45:52_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>C4:04:15:A5:DA:21</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:45:52_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>D4:A0:2A:31:40:7E</MAC>
+    <man>CISCO SYSTEMS, INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:45:43_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>E8:DE:27:3D:D5:F2</MAC>
+    <man>TP-LINK TECHNOLOGIES CO.,LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:45:43_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-81</rssi>
+    <MAC>6C:B0:CE:78:EE:66</MAC>
+    <man>NETGEAR</man>
+    <pi_id>1</pi_id>
+    <time>11:45:34_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:45:52_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-65</rssi>
+    <MAC>7C:C3:A1:B4:1D:64</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:45:43_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-81</rssi>
+    <MAC>2A:A4:3C:4D:F4:35</MAC>
+    <man>UNKNOWN</man>
+    <pi_id>1</pi_id>
+    <time>11:45:24_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-21</rssi>
+    <MAC>10:40:F3:80:A1:AE</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:45:52_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-61</rssi>
+    <MAC>18:3D:A2:9C:B6:90</MAC>
+    <man>Intel Corporate</man>
+    <pi_id>1</pi_id>
+    <time>11:45:43_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>00:26:C6:6C:89:32</MAC>
+    <man>Intel Corporate</man>
+    <pi_id>1</pi_id>
+    <time>11:45:52_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-67</rssi>
+    <MAC>D4:A0:2A:31:40:7D</MAC>
+    <man>CISCO SYSTEMS, INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:45:52_July_04_2015</time>
+  </item>
+</root>
+<root id="11:46:07_July_04_2015">
+  <item>
+    <rssi>-75</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:46:02_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-65</rssi>
+    <MAC>06:27:22:D5:F0:CA</MAC>
+    <man>UNKNOWN</man>
+    <pi_id>1</pi_id>
+    <time>11:46:02_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-73</rssi>
+    <MAC>60:03:47:02:DC:E3</MAC>
+    <man>Billion Electric Co. Ltd.</man>
+    <pi_id>1</pi_id>
+    <time>11:46:02_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-67</rssi>
+    <MAC>6C:B0:CE:78:AC:9E</MAC>
+    <man>NETGEAR</man>
+    <pi_id>1</pi_id>
+    <time>11:46:02_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>C4:04:15:A5:DA:20</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:46:02_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>C4:04:15:A5:DA:21</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:46:02_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>D4:A0:2A:31:40:7E</MAC>
+    <man>CISCO SYSTEMS, INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:45:43_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-73</rssi>
+    <MAC>E8:DE:27:3D:D5:F2</MAC>
+    <man>TP-LINK TECHNOLOGIES CO.,LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:46:02_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-81</rssi>
+    <MAC>6C:B0:CE:78:EE:66</MAC>
+    <man>NETGEAR</man>
+    <pi_id>1</pi_id>
+    <time>11:45:34_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:46:02_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>7C:C3:A1:B4:1D:64</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:46:02_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-81</rssi>
+    <MAC>2A:A4:3C:4D:F4:35</MAC>
+    <man>UNKNOWN</man>
+    <pi_id>1</pi_id>
+    <time>11:45:24_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-21</rssi>
+    <MAC>10:40:F3:80:A1:AE</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:45:52_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-61</rssi>
+    <MAC>18:3D:A2:9C:B6:90</MAC>
+    <man>Intel Corporate</man>
+    <pi_id>1</pi_id>
+    <time>11:45:43_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>00:26:C6:6C:89:32</MAC>
+    <man>Intel Corporate</man>
+    <pi_id>1</pi_id>
+    <time>11:45:52_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-67</rssi>
+    <MAC>D4:A0:2A:31:40:7D</MAC>
+    <man>CISCO SYSTEMS, INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:45:52_July_04_2015</time>
+  </item>
+</root>
+<root id="11:46:16_July_04_2015">
+  <item>
+    <rssi>-79</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:46:11_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-61</rssi>
+    <MAC>06:27:22:D5:F0:CA</MAC>
+    <man>UNKNOWN</man>
+    <pi_id>1</pi_id>
+    <time>11:46:11_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>60:03:47:02:DC:E3</MAC>
+    <man>Billion Electric Co. Ltd.</man>
+    <pi_id>1</pi_id>
+    <time>11:46:11_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>6C:B0:CE:78:AC:9E</MAC>
+    <man>NETGEAR</man>
+    <pi_id>1</pi_id>
+    <time>11:46:11_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>C4:04:15:A5:DA:20</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:46:11_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>C4:04:15:A5:DA:21</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:46:11_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>D4:A0:2A:31:40:7E</MAC>
+    <man>CISCO SYSTEMS, INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:46:11_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-65</rssi>
+    <MAC>E8:DE:27:3D:D5:F2</MAC>
+    <man>TP-LINK TECHNOLOGIES CO.,LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:46:11_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-81</rssi>
+    <MAC>6C:B0:CE:78:EE:66</MAC>
+    <man>NETGEAR</man>
+    <pi_id>1</pi_id>
+    <time>11:45:34_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:46:11_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>7C:C3:A1:B4:1D:64</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:46:02_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-81</rssi>
+    <MAC>2A:A4:3C:4D:F4:35</MAC>
+    <man>UNKNOWN</man>
+    <pi_id>1</pi_id>
+    <time>11:45:24_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-21</rssi>
+    <MAC>10:40:F3:80:A1:AE</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:45:52_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-61</rssi>
+    <MAC>18:3D:A2:9C:B6:90</MAC>
+    <man>Intel Corporate</man>
+    <pi_id>1</pi_id>
+    <time>11:45:43_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>00:26:C6:6C:89:32</MAC>
+    <man>Intel Corporate</man>
+    <pi_id>1</pi_id>
+    <time>11:45:52_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-67</rssi>
+    <MAC>D4:A0:2A:31:40:7D</MAC>
+    <man>CISCO SYSTEMS, INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:45:52_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-83</rssi>
+    <MAC>00:1D:AA:A1:D8:C8</MAC>
+    <man>DrayTek Corp.</man>
+    <pi_id>1</pi_id>
+    <time>11:46:11_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>60:03:08:5A:03:0C</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:46:11_July_04_2015</time>
+  </item>
+</root>
+<root id="11:46:25_July_04_2015">
+  <item>
+    <rssi>-67</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:46:20_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-61</rssi>
+    <MAC>06:27:22:D5:F0:CA</MAC>
+    <man>UNKNOWN</man>
+    <pi_id>1</pi_id>
+    <time>11:46:11_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>60:03:47:02:DC:E3</MAC>
+    <man>Billion Electric Co. Ltd.</man>
+    <pi_id>1</pi_id>
+    <time>11:46:20_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-67</rssi>
+    <MAC>6C:B0:CE:78:AC:9E</MAC>
+    <man>NETGEAR</man>
+    <pi_id>1</pi_id>
+    <time>11:46:20_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>C4:04:15:A5:DA:20</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:46:20_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>C4:04:15:A5:DA:21</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:46:20_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-65</rssi>
+    <MAC>D4:A0:2A:31:40:7E</MAC>
+    <man>CISCO SYSTEMS, INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:46:20_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-65</rssi>
+    <MAC>E8:DE:27:3D:D5:F2</MAC>
+    <man>TP-LINK TECHNOLOGIES CO.,LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:46:11_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-81</rssi>
+    <MAC>6C:B0:CE:78:EE:66</MAC>
+    <man>NETGEAR</man>
+    <pi_id>1</pi_id>
+    <time>11:45:34_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-67</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:46:20_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>7C:C3:A1:B4:1D:64</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:46:02_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-19</rssi>
+    <MAC>10:40:F3:80:A1:AE</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:46:20_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-61</rssi>
+    <MAC>18:3D:A2:9C:B6:90</MAC>
+    <man>Intel Corporate</man>
+    <pi_id>1</pi_id>
+    <time>11:45:43_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>00:26:C6:6C:89:32</MAC>
+    <man>Intel Corporate</man>
+    <pi_id>1</pi_id>
+    <time>11:45:52_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-67</rssi>
+    <MAC>D4:A0:2A:31:40:7D</MAC>
+    <man>CISCO SYSTEMS, INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:45:52_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-83</rssi>
+    <MAC>00:1D:AA:A1:D8:C8</MAC>
+    <man>DrayTek Corp.</man>
+    <pi_id>1</pi_id>
+    <time>11:46:11_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>60:03:08:5A:03:0C</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:46:11_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>00:0B:EA:00:AA:59</MAC>
+    <man>Zultys Technologies</man>
+    <pi_id>1</pi_id>
+    <time>11:46:20_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>40:F2:E9:F2:60:DA</MAC>
+    <man>IBM</man>
+    <pi_id>1</pi_id>
+    <time>11:46:20_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>E4:1F:13:3F:31:C2</MAC>
+    <man>IBM Corp</man>
+    <pi_id>1</pi_id>
+    <time>11:46:20_July_04_2015</time>
+  </item>
+</root>
+<root id="11:46:35_July_04_2015">
+  <item>
+    <rssi>-77</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:46:29_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-63</rssi>
+    <MAC>06:27:22:D5:F0:CA</MAC>
+    <man>UNKNOWN</man>
+    <pi_id>1</pi_id>
+    <time>11:46:29_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>60:03:47:02:DC:E3</MAC>
+    <man>Billion Electric Co. Ltd.</man>
+    <pi_id>1</pi_id>
+    <time>11:46:29_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>6C:B0:CE:78:AC:9E</MAC>
+    <man>NETGEAR</man>
+    <pi_id>1</pi_id>
+    <time>11:46:29_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>C4:04:15:A5:DA:20</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:46:20_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>C4:04:15:A5:DA:21</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:46:20_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>D4:A0:2A:31:40:7E</MAC>
+    <man>CISCO SYSTEMS, INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:46:29_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>E8:DE:27:3D:D5:F2</MAC>
+    <man>TP-LINK TECHNOLOGIES CO.,LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:46:29_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:46:29_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>7C:C3:A1:B4:1D:64</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:46:02_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-19</rssi>
+    <MAC>10:40:F3:80:A1:AE</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:46:20_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-61</rssi>
+    <MAC>18:3D:A2:9C:B6:90</MAC>
+    <man>Intel Corporate</man>
+    <pi_id>1</pi_id>
+    <time>11:45:43_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>00:26:C6:6C:89:32</MAC>
+    <man>Intel Corporate</man>
+    <pi_id>1</pi_id>
+    <time>11:45:52_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-67</rssi>
+    <MAC>D4:A0:2A:31:40:7D</MAC>
+    <man>CISCO SYSTEMS, INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:45:52_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-83</rssi>
+    <MAC>00:1D:AA:A1:D8:C8</MAC>
+    <man>DrayTek Corp.</man>
+    <pi_id>1</pi_id>
+    <time>11:46:11_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>60:03:08:5A:03:0C</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:46:11_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>00:0B:EA:00:AA:59</MAC>
+    <man>Zultys Technologies</man>
+    <pi_id>1</pi_id>
+    <time>11:46:20_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>40:F2:E9:F2:60:DA</MAC>
+    <man>IBM</man>
+    <pi_id>1</pi_id>
+    <time>11:46:20_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>E4:1F:13:3F:31:C2</MAC>
+    <man>IBM Corp</man>
+    <pi_id>1</pi_id>
+    <time>11:46:20_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-85</rssi>
+    <MAC>00:1A:92:E9:05:E4</MAC>
+    <man>ASUSTek COMPUTER INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:46:29_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-61</rssi>
+    <MAC>90:18:7C:45:8D:81</MAC>
+    <man>Samsung Electro Mechanics co., LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:46:29_July_04_2015</time>
+  </item>
+</root>
+<root id="11:46:44_July_04_2015">
+  <item>
+    <rssi>-69</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:46:39_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-67</rssi>
+    <MAC>06:27:22:D5:F0:CA</MAC>
+    <man>UNKNOWN</man>
+    <pi_id>1</pi_id>
+    <time>11:46:39_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>60:03:47:02:DC:E3</MAC>
+    <man>Billion Electric Co. Ltd.</man>
+    <pi_id>1</pi_id>
+    <time>11:46:39_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>6C:B0:CE:78:AC:9E</MAC>
+    <man>NETGEAR</man>
+    <pi_id>1</pi_id>
+    <time>11:46:39_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>C4:04:15:A5:DA:20</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:46:39_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>C4:04:15:A5:DA:21</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:46:39_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>D4:A0:2A:31:40:7E</MAC>
+    <man>CISCO SYSTEMS, INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:46:39_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>E8:DE:27:3D:D5:F2</MAC>
+    <man>TP-LINK TECHNOLOGIES CO.,LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:46:29_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:46:39_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>7C:C3:A1:B4:1D:64</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:46:02_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-19</rssi>
+    <MAC>10:40:F3:80:A1:AE</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:46:20_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>00:26:C6:6C:89:32</MAC>
+    <man>Intel Corporate</man>
+    <pi_id>1</pi_id>
+    <time>11:45:52_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-67</rssi>
+    <MAC>D4:A0:2A:31:40:7D</MAC>
+    <man>CISCO SYSTEMS, INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:45:52_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-83</rssi>
+    <MAC>00:1D:AA:A1:D8:C8</MAC>
+    <man>DrayTek Corp.</man>
+    <pi_id>1</pi_id>
+    <time>11:46:11_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>60:03:08:5A:03:0C</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:46:11_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>00:0B:EA:00:AA:59</MAC>
+    <man>Zultys Technologies</man>
+    <pi_id>1</pi_id>
+    <time>11:46:20_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>40:F2:E9:F2:60:DA</MAC>
+    <man>IBM</man>
+    <pi_id>1</pi_id>
+    <time>11:46:20_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>E4:1F:13:3F:31:C2</MAC>
+    <man>IBM Corp</man>
+    <pi_id>1</pi_id>
+    <time>11:46:20_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-85</rssi>
+    <MAC>00:1A:92:E9:05:E4</MAC>
+    <man>ASUSTek COMPUTER INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:46:29_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-61</rssi>
+    <MAC>90:18:7C:45:8D:81</MAC>
+    <man>Samsung Electro Mechanics co., LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:46:29_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-81</rssi>
+    <MAC>2A:A4:3C:4D:F4:35</MAC>
+    <man>UNKNOWN</man>
+    <pi_id>1</pi_id>
+    <time>11:46:39_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>00:16:76:77:60:2E</MAC>
+    <man>Intel Corporate</man>
+    <pi_id>1</pi_id>
+    <time>11:46:39_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-57</rssi>
+    <MAC>88:30:8A:73:D2:8F</MAC>
+    <man>Murata Manufactuaring Co.,Ltd.</man>
+    <pi_id>1</pi_id>
+    <time>11:46:39_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-63</rssi>
+    <MAC>48:43:7C:63:54:4F</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:46:39_July_04_2015</time>
+  </item>
+</root>
+<root id="11:46:54_July_04_2015">
+  <item>
+    <rssi>-73</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:46:48_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-67</rssi>
+    <MAC>06:27:22:D5:F0:CA</MAC>
+    <man>UNKNOWN</man>
+    <pi_id>1</pi_id>
+    <time>11:46:48_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>60:03:47:02:DC:E3</MAC>
+    <man>Billion Electric Co. Ltd.</man>
+    <pi_id>1</pi_id>
+    <time>11:46:48_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>6C:B0:CE:78:AC:9E</MAC>
+    <man>NETGEAR</man>
+    <pi_id>1</pi_id>
+    <time>11:46:48_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>C4:04:15:A5:DA:20</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:46:39_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>C4:04:15:A5:DA:21</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:46:39_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>D4:A0:2A:31:40:7E</MAC>
+    <man>CISCO SYSTEMS, INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:46:39_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>E8:DE:27:3D:D5:F2</MAC>
+    <man>TP-LINK TECHNOLOGIES CO.,LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:46:29_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-73</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:46:48_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>7C:C3:A1:B4:1D:64</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:46:02_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-19</rssi>
+    <MAC>10:40:F3:80:A1:AE</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:46:20_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-83</rssi>
+    <MAC>00:1D:AA:A1:D8:C8</MAC>
+    <man>DrayTek Corp.</man>
+    <pi_id>1</pi_id>
+    <time>11:46:11_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>60:03:08:5A:03:0C</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:46:11_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>00:0B:EA:00:AA:59</MAC>
+    <man>Zultys Technologies</man>
+    <pi_id>1</pi_id>
+    <time>11:46:20_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>40:F2:E9:F2:60:DA</MAC>
+    <man>IBM</man>
+    <pi_id>1</pi_id>
+    <time>11:46:20_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>E4:1F:13:3F:31:C2</MAC>
+    <man>IBM Corp</man>
+    <pi_id>1</pi_id>
+    <time>11:46:20_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-85</rssi>
+    <MAC>00:1A:92:E9:05:E4</MAC>
+    <man>ASUSTek COMPUTER INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:46:29_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-61</rssi>
+    <MAC>90:18:7C:45:8D:81</MAC>
+    <man>Samsung Electro Mechanics co., LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:46:29_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-81</rssi>
+    <MAC>2A:A4:3C:4D:F4:35</MAC>
+    <man>UNKNOWN</man>
+    <pi_id>1</pi_id>
+    <time>11:46:39_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>00:16:76:77:60:2E</MAC>
+    <man>Intel Corporate</man>
+    <pi_id>1</pi_id>
+    <time>11:46:39_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-57</rssi>
+    <MAC>88:30:8A:73:D2:8F</MAC>
+    <man>Murata Manufactuaring Co.,Ltd.</man>
+    <pi_id>1</pi_id>
+    <time>11:46:39_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-63</rssi>
+    <MAC>48:43:7C:63:54:4F</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:46:39_July_04_2015</time>
+  </item>
+</root>
+<root id="11:47:03_July_04_2015">
+  <item>
+    <rssi>-73</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:46:58_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-63</rssi>
+    <MAC>06:27:22:D5:F0:CA</MAC>
+    <man>UNKNOWN</man>
+    <pi_id>1</pi_id>
+    <time>11:46:58_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>60:03:47:02:DC:E3</MAC>
+    <man>Billion Electric Co. Ltd.</man>
+    <pi_id>1</pi_id>
+    <time>11:46:58_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>6C:B0:CE:78:AC:9E</MAC>
+    <man>NETGEAR</man>
+    <pi_id>1</pi_id>
+    <time>11:46:58_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>C4:04:15:A5:DA:20</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:46:39_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>C4:04:15:A5:DA:21</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:46:39_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-61</rssi>
+    <MAC>D4:A0:2A:31:40:7E</MAC>
+    <man>CISCO SYSTEMS, INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:46:58_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>E8:DE:27:3D:D5:F2</MAC>
+    <man>TP-LINK TECHNOLOGIES CO.,LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:46:58_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-73</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:46:58_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-25</rssi>
+    <MAC>10:40:F3:80:A1:AE</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:46:58_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-83</rssi>
+    <MAC>00:1D:AA:A1:D8:C8</MAC>
+    <man>DrayTek Corp.</man>
+    <pi_id>1</pi_id>
+    <time>11:46:11_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>60:03:08:5A:03:0C</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:46:11_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>00:0B:EA:00:AA:59</MAC>
+    <man>Zultys Technologies</man>
+    <pi_id>1</pi_id>
+    <time>11:46:20_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>40:F2:E9:F2:60:DA</MAC>
+    <man>IBM</man>
+    <pi_id>1</pi_id>
+    <time>11:46:20_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>E4:1F:13:3F:31:C2</MAC>
+    <man>IBM Corp</man>
+    <pi_id>1</pi_id>
+    <time>11:46:20_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-85</rssi>
+    <MAC>00:1A:92:E9:05:E4</MAC>
+    <man>ASUSTek COMPUTER INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:46:29_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-61</rssi>
+    <MAC>90:18:7C:45:8D:81</MAC>
+    <man>Samsung Electro Mechanics co., LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:46:29_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-81</rssi>
+    <MAC>2A:A4:3C:4D:F4:35</MAC>
+    <man>UNKNOWN</man>
+    <pi_id>1</pi_id>
+    <time>11:46:39_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>00:16:76:77:60:2E</MAC>
+    <man>Intel Corporate</man>
+    <pi_id>1</pi_id>
+    <time>11:46:39_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-57</rssi>
+    <MAC>88:30:8A:73:D2:8F</MAC>
+    <man>Murata Manufactuaring Co.,Ltd.</man>
+    <pi_id>1</pi_id>
+    <time>11:46:39_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-63</rssi>
+    <MAC>48:43:7C:63:54:4F</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:46:39_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-67</rssi>
+    <MAC>D0:22:BE:17:83:99</MAC>
+    <man>Samsung Electro Mechanics co.,LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:46:58_July_04_2015</time>
+  </item>
+</root>
+<root id="11:47:13_July_04_2015">
+  <item>
+    <rssi>-71</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:47:07_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-73</rssi>
+    <MAC>06:27:22:D5:F0:CA</MAC>
+    <man>UNKNOWN</man>
+    <pi_id>1</pi_id>
+    <time>11:47:07_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-81</rssi>
+    <MAC>60:03:47:02:DC:E3</MAC>
+    <man>Billion Electric Co. Ltd.</man>
+    <pi_id>1</pi_id>
+    <time>11:47:07_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>6C:B0:CE:78:AC:9E</MAC>
+    <man>NETGEAR</man>
+    <pi_id>1</pi_id>
+    <time>11:47:07_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>C4:04:15:A5:DA:20</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:47:07_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>C4:04:15:A5:DA:21</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:47:07_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>D4:A0:2A:31:40:7E</MAC>
+    <man>CISCO SYSTEMS, INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:47:07_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>E8:DE:27:3D:D5:F2</MAC>
+    <man>TP-LINK TECHNOLOGIES CO.,LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:47:07_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:47:07_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-25</rssi>
+    <MAC>10:40:F3:80:A1:AE</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:46:58_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>00:0B:EA:00:AA:59</MAC>
+    <man>Zultys Technologies</man>
+    <pi_id>1</pi_id>
+    <time>11:46:20_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>40:F2:E9:F2:60:DA</MAC>
+    <man>IBM</man>
+    <pi_id>1</pi_id>
+    <time>11:46:20_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>E4:1F:13:3F:31:C2</MAC>
+    <man>IBM Corp</man>
+    <pi_id>1</pi_id>
+    <time>11:46:20_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-85</rssi>
+    <MAC>00:1A:92:E9:05:E4</MAC>
+    <man>ASUSTek COMPUTER INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:46:29_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-67</rssi>
+    <MAC>90:18:7C:45:8D:81</MAC>
+    <man>Samsung Electro Mechanics co., LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:47:07_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>2A:A4:3C:4D:F4:35</MAC>
+    <man>UNKNOWN</man>
+    <pi_id>1</pi_id>
+    <time>11:47:07_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>00:16:76:77:60:2E</MAC>
+    <man>Intel Corporate</man>
+    <pi_id>1</pi_id>
+    <time>11:46:39_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-57</rssi>
+    <MAC>88:30:8A:73:D2:8F</MAC>
+    <man>Murata Manufactuaring Co.,Ltd.</man>
+    <pi_id>1</pi_id>
+    <time>11:46:39_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-57</rssi>
+    <MAC>48:43:7C:63:54:4F</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:47:07_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>D0:22:BE:17:83:99</MAC>
+    <man>Samsung Electro Mechanics co.,LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:47:07_July_04_2015</time>
+  </item>
+</root>
+<root id="11:47:22_July_04_2015">
+  <item>
+    <rssi>-77</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:47:17_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>06:27:22:D5:F0:CA</MAC>
+    <man>UNKNOWN</man>
+    <pi_id>1</pi_id>
+    <time>11:47:17_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-73</rssi>
+    <MAC>60:03:47:02:DC:E3</MAC>
+    <man>Billion Electric Co. Ltd.</man>
+    <pi_id>1</pi_id>
+    <time>11:47:17_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>6C:B0:CE:78:AC:9E</MAC>
+    <man>NETGEAR</man>
+    <pi_id>1</pi_id>
+    <time>11:47:17_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-83</rssi>
+    <MAC>C4:04:15:A5:DA:20</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:47:17_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>C4:04:15:A5:DA:21</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:47:17_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-63</rssi>
+    <MAC>D4:A0:2A:31:40:7E</MAC>
+    <man>CISCO SYSTEMS, INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:47:17_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>E8:DE:27:3D:D5:F2</MAC>
+    <man>TP-LINK TECHNOLOGIES CO.,LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:47:17_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:47:17_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-25</rssi>
+    <MAC>10:40:F3:80:A1:AE</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:46:58_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-85</rssi>
+    <MAC>00:1A:92:E9:05:E4</MAC>
+    <man>ASUSTek COMPUTER INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:46:29_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-67</rssi>
+    <MAC>90:18:7C:45:8D:81</MAC>
+    <man>Samsung Electro Mechanics co., LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:47:07_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-83</rssi>
+    <MAC>2A:A4:3C:4D:F4:35</MAC>
+    <man>UNKNOWN</man>
+    <pi_id>1</pi_id>
+    <time>11:47:17_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>00:16:76:77:60:2E</MAC>
+    <man>Intel Corporate</man>
+    <pi_id>1</pi_id>
+    <time>11:47:17_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-57</rssi>
+    <MAC>88:30:8A:73:D2:8F</MAC>
+    <man>Murata Manufactuaring Co.,Ltd.</man>
+    <pi_id>1</pi_id>
+    <time>11:46:39_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-57</rssi>
+    <MAC>48:43:7C:63:54:4F</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:47:07_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>D0:22:BE:17:83:99</MAC>
+    <man>Samsung Electro Mechanics co.,LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:47:07_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>00:26:2D:1A:DD:9C</MAC>
+    <man>Wistron Corporation</man>
+    <pi_id>1</pi_id>
+    <time>11:47:17_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>00:23:EB:B0:ED:F9</MAC>
+    <man>CISCO SYSTEMS, INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:47:17_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>2C:27:D7:36:36:96</MAC>
+    <man>Hewlett-Packard Company</man>
+    <pi_id>1</pi_id>
+    <time>11:47:17_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>F8:27:93:C6:3B:F3</MAC>
+    <man>Apple, Inc</man>
+    <pi_id>1</pi_id>
+    <time>11:47:17_July_04_2015</time>
+  </item>
+</root>
+<root id="11:47:31_July_04_2015">
+  <item>
+    <rssi>-77</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:47:26_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>06:27:22:D5:F0:CA</MAC>
+    <man>UNKNOWN</man>
+    <pi_id>1</pi_id>
+    <time>11:47:26_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>60:03:47:02:DC:E3</MAC>
+    <man>Billion Electric Co. Ltd.</man>
+    <pi_id>1</pi_id>
+    <time>11:47:26_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-73</rssi>
+    <MAC>6C:B0:CE:78:AC:9E</MAC>
+    <man>NETGEAR</man>
+    <pi_id>1</pi_id>
+    <time>11:47:26_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>C4:04:15:A5:DA:20</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:47:26_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>C4:04:15:A5:DA:21</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:47:26_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-65</rssi>
+    <MAC>D4:A0:2A:31:40:7E</MAC>
+    <man>CISCO SYSTEMS, INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:47:26_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>E8:DE:27:3D:D5:F2</MAC>
+    <man>TP-LINK TECHNOLOGIES CO.,LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:47:17_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:47:26_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-25</rssi>
+    <MAC>10:40:F3:80:A1:AE</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:46:58_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-67</rssi>
+    <MAC>90:18:7C:45:8D:81</MAC>
+    <man>Samsung Electro Mechanics co., LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:47:07_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-83</rssi>
+    <MAC>2A:A4:3C:4D:F4:35</MAC>
+    <man>UNKNOWN</man>
+    <pi_id>1</pi_id>
+    <time>11:47:17_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>00:16:76:77:60:2E</MAC>
+    <man>Intel Corporate</man>
+    <pi_id>1</pi_id>
+    <time>11:47:26_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-57</rssi>
+    <MAC>88:30:8A:73:D2:8F</MAC>
+    <man>Murata Manufactuaring Co.,Ltd.</man>
+    <pi_id>1</pi_id>
+    <time>11:46:39_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-57</rssi>
+    <MAC>48:43:7C:63:54:4F</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:47:07_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>D0:22:BE:17:83:99</MAC>
+    <man>Samsung Electro Mechanics co.,LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:47:07_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>00:26:2D:1A:DD:9C</MAC>
+    <man>Wistron Corporation</man>
+    <pi_id>1</pi_id>
+    <time>11:47:17_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>00:23:EB:B0:ED:F9</MAC>
+    <man>CISCO SYSTEMS, INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:47:17_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>2C:27:D7:36:36:96</MAC>
+    <man>Hewlett-Packard Company</man>
+    <pi_id>1</pi_id>
+    <time>11:47:17_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>F8:27:93:C6:3B:F3</MAC>
+    <man>Apple, Inc</man>
+    <pi_id>1</pi_id>
+    <time>11:47:17_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-81</rssi>
+    <MAC>C0:63:94:1D:7E:75</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:47:26_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>DC:86:D8:EA:76:45</MAC>
+    <man>Apple, Inc</man>
+    <pi_id>1</pi_id>
+    <time>11:47:26_July_04_2015</time>
+  </item>
+</root>
+<root id="11:47:40_July_04_2015">
+  <item>
+    <rssi>-75</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:47:35_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-67</rssi>
+    <MAC>06:27:22:D5:F0:CA</MAC>
+    <man>UNKNOWN</man>
+    <pi_id>1</pi_id>
+    <time>11:47:35_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>60:03:47:02:DC:E3</MAC>
+    <man>Billion Electric Co. Ltd.</man>
+    <pi_id>1</pi_id>
+    <time>11:47:35_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>6C:B0:CE:78:AC:9E</MAC>
+    <man>NETGEAR</man>
+    <pi_id>1</pi_id>
+    <time>11:47:35_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>C4:04:15:A5:DA:20</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:47:35_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>C4:04:15:A5:DA:21</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:47:35_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-65</rssi>
+    <MAC>D4:A0:2A:31:40:7E</MAC>
+    <man>CISCO SYSTEMS, INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:47:35_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>E8:DE:27:3D:D5:F2</MAC>
+    <man>TP-LINK TECHNOLOGIES CO.,LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:47:17_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:47:35_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-23</rssi>
+    <MAC>10:40:F3:80:A1:AE</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:47:35_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-67</rssi>
+    <MAC>90:18:7C:45:8D:81</MAC>
+    <man>Samsung Electro Mechanics co., LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:47:07_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>2A:A4:3C:4D:F4:35</MAC>
+    <man>UNKNOWN</man>
+    <pi_id>1</pi_id>
+    <time>11:47:35_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>00:16:76:77:60:2E</MAC>
+    <man>Intel Corporate</man>
+    <pi_id>1</pi_id>
+    <time>11:47:26_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-57</rssi>
+    <MAC>48:43:7C:63:54:4F</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:47:07_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>D0:22:BE:17:83:99</MAC>
+    <man>Samsung Electro Mechanics co.,LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:47:07_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>00:26:2D:1A:DD:9C</MAC>
+    <man>Wistron Corporation</man>
+    <pi_id>1</pi_id>
+    <time>11:47:17_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>00:23:EB:B0:ED:F9</MAC>
+    <man>CISCO SYSTEMS, INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:47:35_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>2C:27:D7:36:36:96</MAC>
+    <man>Hewlett-Packard Company</man>
+    <pi_id>1</pi_id>
+    <time>11:47:17_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>F8:27:93:C6:3B:F3</MAC>
+    <man>Apple, Inc</man>
+    <pi_id>1</pi_id>
+    <time>11:47:17_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-81</rssi>
+    <MAC>C0:63:94:1D:7E:75</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:47:26_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>DC:86:D8:EA:76:45</MAC>
+    <man>Apple, Inc</man>
+    <pi_id>1</pi_id>
+    <time>11:47:26_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-83</rssi>
+    <MAC>00:1A:92:E9:05:E4</MAC>
+    <man>ASUSTek COMPUTER INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:47:35_July_04_2015</time>
+  </item>
+</root>
+<root id="11:47:50_July_04_2015">
+  <item>
+    <rssi>-77</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:47:45_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>06:27:22:D5:F0:CA</MAC>
+    <man>UNKNOWN</man>
+    <pi_id>1</pi_id>
+    <time>11:47:45_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>60:03:47:02:DC:E3</MAC>
+    <man>Billion Electric Co. Ltd.</man>
+    <pi_id>1</pi_id>
+    <time>11:47:45_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>6C:B0:CE:78:AC:9E</MAC>
+    <man>NETGEAR</man>
+    <pi_id>1</pi_id>
+    <time>11:47:45_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-81</rssi>
+    <MAC>C4:04:15:A5:DA:20</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:47:45_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>C4:04:15:A5:DA:21</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:47:45_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-67</rssi>
+    <MAC>D4:A0:2A:31:40:7E</MAC>
+    <man>CISCO SYSTEMS, INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:47:45_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>E8:DE:27:3D:D5:F2</MAC>
+    <man>TP-LINK TECHNOLOGIES CO.,LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:47:45_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:47:45_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-23</rssi>
+    <MAC>10:40:F3:80:A1:AE</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:47:35_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-67</rssi>
+    <MAC>90:18:7C:45:8D:81</MAC>
+    <man>Samsung Electro Mechanics co., LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:47:07_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>2A:A4:3C:4D:F4:35</MAC>
+    <man>UNKNOWN</man>
+    <pi_id>1</pi_id>
+    <time>11:47:35_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>00:16:76:77:60:2E</MAC>
+    <man>Intel Corporate</man>
+    <pi_id>1</pi_id>
+    <time>11:47:26_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-57</rssi>
+    <MAC>48:43:7C:63:54:4F</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:47:07_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>D0:22:BE:17:83:99</MAC>
+    <man>Samsung Electro Mechanics co.,LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:47:07_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>00:26:2D:1A:DD:9C</MAC>
+    <man>Wistron Corporation</man>
+    <pi_id>1</pi_id>
+    <time>11:47:17_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>00:23:EB:B0:ED:F9</MAC>
+    <man>CISCO SYSTEMS, INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:47:35_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>2C:27:D7:36:36:96</MAC>
+    <man>Hewlett-Packard Company</man>
+    <pi_id>1</pi_id>
+    <time>11:47:17_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>F8:27:93:C6:3B:F3</MAC>
+    <man>Apple, Inc</man>
+    <pi_id>1</pi_id>
+    <time>11:47:17_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-81</rssi>
+    <MAC>C0:63:94:1D:7E:75</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:47:26_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>DC:86:D8:EA:76:45</MAC>
+    <man>Apple, Inc</man>
+    <pi_id>1</pi_id>
+    <time>11:47:26_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-81</rssi>
+    <MAC>00:1A:92:E9:05:E4</MAC>
+    <man>ASUSTek COMPUTER INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:47:45_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-67</rssi>
+    <MAC>64:E6:82:E4:98:F0</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:47:45_July_04_2015</time>
+  </item>
+</root>
+<root id="11:47:59_July_04_2015">
+  <item>
+    <rssi>-77</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:47:54_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>06:27:22:D5:F0:CA</MAC>
+    <man>UNKNOWN</man>
+    <pi_id>1</pi_id>
+    <time>11:47:54_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>60:03:47:02:DC:E3</MAC>
+    <man>Billion Electric Co. Ltd.</man>
+    <pi_id>1</pi_id>
+    <time>11:47:54_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>6C:B0:CE:78:AC:9E</MAC>
+    <man>NETGEAR</man>
+    <pi_id>1</pi_id>
+    <time>11:47:54_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-81</rssi>
+    <MAC>C4:04:15:A5:DA:20</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:47:54_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>C4:04:15:A5:DA:21</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:47:54_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>D4:A0:2A:31:40:7E</MAC>
+    <man>CISCO SYSTEMS, INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:47:54_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>E8:DE:27:3D:D5:F2</MAC>
+    <man>TP-LINK TECHNOLOGIES CO.,LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:47:54_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:47:54_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-23</rssi>
+    <MAC>10:40:F3:80:A1:AE</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:47:35_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-67</rssi>
+    <MAC>90:18:7C:45:8D:81</MAC>
+    <man>Samsung Electro Mechanics co., LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:47:07_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>2A:A4:3C:4D:F4:35</MAC>
+    <man>UNKNOWN</man>
+    <pi_id>1</pi_id>
+    <time>11:47:35_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>00:16:76:77:60:2E</MAC>
+    <man>Intel Corporate</man>
+    <pi_id>1</pi_id>
+    <time>11:47:26_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-57</rssi>
+    <MAC>48:43:7C:63:54:4F</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:47:07_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>D0:22:BE:17:83:99</MAC>
+    <man>Samsung Electro Mechanics co.,LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:47:07_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>00:26:2D:1A:DD:9C</MAC>
+    <man>Wistron Corporation</man>
+    <pi_id>1</pi_id>
+    <time>11:47:17_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>00:23:EB:B0:ED:F9</MAC>
+    <man>CISCO SYSTEMS, INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:47:35_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>2C:27:D7:36:36:96</MAC>
+    <man>Hewlett-Packard Company</man>
+    <pi_id>1</pi_id>
+    <time>11:47:17_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>F8:27:93:C6:3B:F3</MAC>
+    <man>Apple, Inc</man>
+    <pi_id>1</pi_id>
+    <time>11:47:17_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-81</rssi>
+    <MAC>C0:63:94:1D:7E:75</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:47:26_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>DC:86:D8:EA:76:45</MAC>
+    <man>Apple, Inc</man>
+    <pi_id>1</pi_id>
+    <time>11:47:26_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-81</rssi>
+    <MAC>00:1A:92:E9:05:E4</MAC>
+    <man>ASUSTek COMPUTER INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:47:45_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-67</rssi>
+    <MAC>64:E6:82:E4:98:F0</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:47:45_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-61</rssi>
+    <MAC>88:30:8A:73:D2:8F</MAC>
+    <man>Murata Manufactuaring Co.,Ltd.</man>
+    <pi_id>1</pi_id>
+    <time>11:47:54_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>D4:3D:7E:D0:34:76</MAC>
+    <man>Micro-Star Int'l Co, Ltd</man>
+    <pi_id>1</pi_id>
+    <time>11:47:54_July_04_2015</time>
+  </item>
+</root>
+<root id="11:48:09_July_04_2015">
+  <item>
+    <rssi>-79</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:48:03_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>06:27:22:D5:F0:CA</MAC>
+    <man>UNKNOWN</man>
+    <pi_id>1</pi_id>
+    <time>11:48:03_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-73</rssi>
+    <MAC>60:03:47:02:DC:E3</MAC>
+    <man>Billion Electric Co. Ltd.</man>
+    <pi_id>1</pi_id>
+    <time>11:48:03_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>6C:B0:CE:78:AC:9E</MAC>
+    <man>NETGEAR</man>
+    <pi_id>1</pi_id>
+    <time>11:48:03_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>C4:04:15:A5:DA:20</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:48:03_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>C4:04:15:A5:DA:21</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:48:03_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-67</rssi>
+    <MAC>D4:A0:2A:31:40:7E</MAC>
+    <man>CISCO SYSTEMS, INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:48:03_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>E8:DE:27:3D:D5:F2</MAC>
+    <man>TP-LINK TECHNOLOGIES CO.,LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:48:03_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:48:03_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-53</rssi>
+    <MAC>10:40:F3:80:A1:AE</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:48:03_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>2A:A4:3C:4D:F4:35</MAC>
+    <man>UNKNOWN</man>
+    <pi_id>1</pi_id>
+    <time>11:47:35_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>00:16:76:77:60:2E</MAC>
+    <man>Intel Corporate</man>
+    <pi_id>1</pi_id>
+    <time>11:47:26_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>00:26:2D:1A:DD:9C</MAC>
+    <man>Wistron Corporation</man>
+    <pi_id>1</pi_id>
+    <time>11:47:17_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>00:23:EB:B0:ED:F9</MAC>
+    <man>CISCO SYSTEMS, INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:47:35_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>2C:27:D7:36:36:96</MAC>
+    <man>Hewlett-Packard Company</man>
+    <pi_id>1</pi_id>
+    <time>11:47:17_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>F8:27:93:C6:3B:F3</MAC>
+    <man>Apple, Inc</man>
+    <pi_id>1</pi_id>
+    <time>11:47:17_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-81</rssi>
+    <MAC>C0:63:94:1D:7E:75</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:47:26_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>DC:86:D8:EA:76:45</MAC>
+    <man>Apple, Inc</man>
+    <pi_id>1</pi_id>
+    <time>11:47:26_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-83</rssi>
+    <MAC>00:1A:92:E9:05:E4</MAC>
+    <man>ASUSTek COMPUTER INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:48:03_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-67</rssi>
+    <MAC>64:E6:82:E4:98:F0</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:47:45_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-61</rssi>
+    <MAC>88:30:8A:73:D2:8F</MAC>
+    <man>Murata Manufactuaring Co.,Ltd.</man>
+    <pi_id>1</pi_id>
+    <time>11:47:54_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>D4:3D:7E:D0:34:76</MAC>
+    <man>Micro-Star Int'l Co, Ltd</man>
+    <pi_id>1</pi_id>
+    <time>11:47:54_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-81</rssi>
+    <MAC>00:26:AB:BC:12:DD</MAC>
+    <man>SEIKO EPSON CORPORATION</man>
+    <pi_id>1</pi_id>
+    <time>11:48:03_July_04_2015</time>
+  </item>
+</root>
+<root id="11:48:18_July_04_2015">
+  <item>
+    <rssi>-81</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:48:13_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>06:27:22:D5:F0:CA</MAC>
+    <man>UNKNOWN</man>
+    <pi_id>1</pi_id>
+    <time>11:48:13_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>60:03:47:02:DC:E3</MAC>
+    <man>Billion Electric Co. Ltd.</man>
+    <pi_id>1</pi_id>
+    <time>11:48:13_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>6C:B0:CE:78:AC:9E</MAC>
+    <man>NETGEAR</man>
+    <pi_id>1</pi_id>
+    <time>11:48:13_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>C4:04:15:A5:DA:20</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:48:13_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>C4:04:15:A5:DA:21</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:48:13_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>D4:A0:2A:31:40:7E</MAC>
+    <man>CISCO SYSTEMS, INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:48:13_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>E8:DE:27:3D:D5:F2</MAC>
+    <man>TP-LINK TECHNOLOGIES CO.,LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:48:03_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-81</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:48:13_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-53</rssi>
+    <MAC>10:40:F3:80:A1:AE</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:48:03_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-81</rssi>
+    <MAC>2A:A4:3C:4D:F4:35</MAC>
+    <man>UNKNOWN</man>
+    <pi_id>1</pi_id>
+    <time>11:48:13_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>00:16:76:77:60:2E</MAC>
+    <man>Intel Corporate</man>
+    <pi_id>1</pi_id>
+    <time>11:47:26_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>00:23:EB:B0:ED:F9</MAC>
+    <man>CISCO SYSTEMS, INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:47:35_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-81</rssi>
+    <MAC>C0:63:94:1D:7E:75</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:47:26_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>DC:86:D8:EA:76:45</MAC>
+    <man>Apple, Inc</man>
+    <pi_id>1</pi_id>
+    <time>11:47:26_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-83</rssi>
+    <MAC>00:1A:92:E9:05:E4</MAC>
+    <man>ASUSTek COMPUTER INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:48:03_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-67</rssi>
+    <MAC>64:E6:82:E4:98:F0</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:47:45_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-61</rssi>
+    <MAC>88:30:8A:73:D2:8F</MAC>
+    <man>Murata Manufactuaring Co.,Ltd.</man>
+    <pi_id>1</pi_id>
+    <time>11:47:54_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>D4:3D:7E:D0:34:76</MAC>
+    <man>Micro-Star Int'l Co, Ltd</man>
+    <pi_id>1</pi_id>
+    <time>11:48:13_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-81</rssi>
+    <MAC>00:26:AB:BC:12:DD</MAC>
+    <man>SEIKO EPSON CORPORATION</man>
+    <pi_id>1</pi_id>
+    <time>11:48:03_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>7C:C3:A1:B4:1D:64</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:48:13_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>00:17:C8:07:A1:6C</MAC>
+    <man>KYOCERA Document Solutions Inc.</man>
+    <pi_id>1</pi_id>
+    <time>11:48:13_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>00:1B:A9:3C:CD:25</MAC>
+    <man>BROTHER INDUSTRIES, LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:48:13_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>B4:75:0E:1C:A0:C6</MAC>
+    <man>Belkin International Inc.</man>
+    <pi_id>1</pi_id>
+    <time>11:48:13_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>C4:34:6B:69:66:56</MAC>
+    <man>Hewlett Packard</man>
+    <pi_id>1</pi_id>
+    <time>11:48:13_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>D4:3D:7E:D0:32:81</MAC>
+    <man>Micro-Star Int'l Co, Ltd</man>
+    <pi_id>1</pi_id>
+    <time>11:48:13_July_04_2015</time>
+  </item>
+</root>
+<root id="11:48:28_July_04_2015">
+  <item>
+    <rssi>-77</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:48:22_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>06:27:22:D5:F0:CA</MAC>
+    <man>UNKNOWN</man>
+    <pi_id>1</pi_id>
+    <time>11:48:22_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-67</rssi>
+    <MAC>60:03:47:02:DC:E3</MAC>
+    <man>Billion Electric Co. Ltd.</man>
+    <pi_id>1</pi_id>
+    <time>11:48:22_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-73</rssi>
+    <MAC>6C:B0:CE:78:AC:9E</MAC>
+    <man>NETGEAR</man>
+    <pi_id>1</pi_id>
+    <time>11:48:22_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>C4:04:15:A5:DA:20</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:48:22_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>C4:04:15:A5:DA:21</MAC>
+    <man>NETGEAR INC.,</man>
+    <pi_id>1</pi_id>
+    <time>11:48:22_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-69</rssi>
+    <MAC>D4:A0:2A:31:40:7E</MAC>
+    <man>CISCO SYSTEMS, INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:48:22_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-71</rssi>
+    <MAC>E8:DE:27:3D:D5:F2</MAC>
+    <man>TP-LINK TECHNOLOGIES CO.,LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:48:03_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>00:60:64:F4:46:2E</MAC>
+    <man>NETCOMM LIMITED</man>
+    <pi_id>1</pi_id>
+    <time>11:48:22_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-53</rssi>
+    <MAC>10:40:F3:80:A1:AE</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:48:03_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-81</rssi>
+    <MAC>2A:A4:3C:4D:F4:35</MAC>
+    <man>UNKNOWN</man>
+    <pi_id>1</pi_id>
+    <time>11:48:22_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>00:23:EB:B0:ED:F9</MAC>
+    <man>CISCO SYSTEMS, INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:47:35_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-83</rssi>
+    <MAC>00:1A:92:E9:05:E4</MAC>
+    <man>ASUSTek COMPUTER INC.</man>
+    <pi_id>1</pi_id>
+    <time>11:48:03_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-67</rssi>
+    <MAC>64:E6:82:E4:98:F0</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:47:45_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-61</rssi>
+    <MAC>88:30:8A:73:D2:8F</MAC>
+    <man>Murata Manufactuaring Co.,Ltd.</man>
+    <pi_id>1</pi_id>
+    <time>11:47:54_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>D4:3D:7E:D0:34:76</MAC>
+    <man>Micro-Star Int'l Co, Ltd</man>
+    <pi_id>1</pi_id>
+    <time>11:48:13_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-81</rssi>
+    <MAC>00:26:AB:BC:12:DD</MAC>
+    <man>SEIKO EPSON CORPORATION</man>
+    <pi_id>1</pi_id>
+    <time>11:48:03_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-75</rssi>
+    <MAC>7C:C3:A1:B4:1D:64</MAC>
+    <man>Apple</man>
+    <pi_id>1</pi_id>
+    <time>11:48:13_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>00:17:C8:07:A1:6C</MAC>
+    <man>KYOCERA Document Solutions Inc.</man>
+    <pi_id>1</pi_id>
+    <time>11:48:13_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>00:1B:A9:3C:CD:25</MAC>
+    <man>BROTHER INDUSTRIES, LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:48:13_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>B4:75:0E:1C:A0:C6</MAC>
+    <man>Belkin International Inc.</man>
+    <pi_id>1</pi_id>
+    <time>11:48:13_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>C4:34:6B:69:66:56</MAC>
+    <man>Hewlett Packard</man>
+    <pi_id>1</pi_id>
+    <time>11:48:13_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-79</rssi>
+    <MAC>D4:3D:7E:D0:32:81</MAC>
+    <man>Micro-Star Int'l Co, Ltd</man>
+    <pi_id>1</pi_id>
+    <time>11:48:13_July_04_2015</time>
+  </item>
+  <item>
+    <rssi>-77</rssi>
+    <MAC>D0:22:BE:17:83:99</MAC>
+    <man>Samsung Electro Mechanics co.,LTD.</man>
+    <pi_id>1</pi_id>
+    <time>11:48:22_July_04_2015</time>
+  </item>
+</root>
