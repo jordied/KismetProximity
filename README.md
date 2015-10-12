@@ -18,6 +18,15 @@ This can be installed using `sudo pip install dicttoxml`
 
 This can be installed using `sudo pip install lxml`
 
+#### 5. [Numpy](http://www.numpy.org)
+
+This can be installed using `sudo pip install scipy`
+
+#### 6. [NetAddr](https://pythonhosted.org/netaddr/installation.html)
+
+This can be installed using `sudo pip install netaddr`
+
+
 ## Usage
 *To be completed*
 
