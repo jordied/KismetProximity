@@ -1,7 +1,7 @@
-@relation rssi_time_total-weka.filters.unsupervised.attribute.Remove-R3-weka.filters.unsupervised.attribute.NumericToNominal-Rfirst-last
+@relation rssi_rssi_total
 
-@attribute Timeout {10,20,30,45,60,75,90,120,180}
-@attribute RSSI {40,45,50,55,60,65,70,75,80,85,90,100}
+@attribute Timeout numeric
+@attribute RSSI numeric
 @attribute 'Manual Count' numeric
 @attribute Total_Devs numeric
 
