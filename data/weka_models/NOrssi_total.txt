@@ -1,0 +1,389 @@
+=== Run information ===
+
+Scheme:weka.classifiers.trees.M5P -M 4.0
+Relation:     rssi_NOrssi_total
+Instances:    6505
+Attributes:   3
+              Timeout
+              Manual Count
+              Total_Devs
+Test mode:10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+M5 pruned model tree:
+(using smoothed linear models)
+
+Timeout <= 165 : 
+|   Total_Devs <= 38.5 : 
+|   |   Total_Devs <= 24.5 : 
+|   |   |   Timeout <= 15 : 
+|   |   |   |   Total_Devs <= 15.5 : LM1 (59/20.942%)
+|   |   |   |   Total_Devs >  15.5 : LM2 (213/18.063%)
+|   |   |   Timeout >  15 : 
+|   |   |   |   Timeout <= 52.5 : 
+|   |   |   |   |   Total_Devs <= 16.5 : 
+|   |   |   |   |   |   Timeout <= 25 : 
+|   |   |   |   |   |   |   Total_Devs <= 12.5 : LM3 (21/43.28%)
+|   |   |   |   |   |   |   Total_Devs >  12.5 : LM4 (53/11.39%)
+|   |   |   |   |   |   Timeout >  25 : 
+|   |   |   |   |   |   |   Total_Devs <= 1.5 : LM5 (7/23.049%)
+|   |   |   |   |   |   |   Total_Devs >  1.5 : LM6 (22/67.138%)
+|   |   |   |   |   Total_Devs >  16.5 : 
+|   |   |   |   |   |   Total_Devs <= 22.5 : LM7 (279/69.359%)
+|   |   |   |   |   |   Total_Devs >  22.5 : LM8 (108/82.599%)
+|   |   |   |   Timeout >  52.5 : 
+|   |   |   |   |   Total_Devs <= 19.5 : 
+|   |   |   |   |   |   Total_Devs <= 5.5 : LM9 (19/103.702%)
+|   |   |   |   |   |   Total_Devs >  5.5 : 
+|   |   |   |   |   |   |   Timeout <= 67.5 : LM10 (27/93.673%)
+|   |   |   |   |   |   |   Timeout >  67.5 : LM11 (15/62.733%)
+|   |   |   |   |   Total_Devs >  19.5 : LM12 (228/64.061%)
+|   |   Total_Devs >  24.5 : 
+|   |   |   Timeout <= 37.5 : 
+|   |   |   |   Total_Devs <= 27.5 : LM13 (149/75.054%)
+|   |   |   |   Total_Devs >  27.5 : 
+|   |   |   |   |   Total_Devs <= 31.5 : LM14 (308/43.42%)
+|   |   |   |   |   Total_Devs >  31.5 : LM15 (205/38.142%)
+|   |   |   Timeout >  37.5 : 
+|   |   |   |   Timeout <= 82.5 : 
+|   |   |   |   |   Total_Devs <= 32.5 : LM16 (572/52.401%)
+|   |   |   |   |   Total_Devs >  32.5 : LM17 (201/30.877%)
+|   |   |   |   Timeout >  82.5 : 
+|   |   |   |   |   Total_Devs <= 31.5 : LM18 (285/34.827%)
+|   |   |   |   |   Total_Devs >  31.5 : LM19 (243/39.503%)
+|   Total_Devs >  38.5 : 
+|   |   Timeout <= 135 : 
+|   |   |   Total_Devs <= 52.5 : 
+|   |   |   |   Timeout <= 60 : 
+|   |   |   |   |   Total_Devs <= 40.5 : LM20 (39/53.24%)
+|   |   |   |   |   Total_Devs >  40.5 : LM21 (114/23.559%)
+|   |   |   |   Timeout >  60 : 
+|   |   |   |   |   Total_Devs <= 42.5 : 
+|   |   |   |   |   |   Timeout <= 82.5 : LM22 (95/37.911%)
+|   |   |   |   |   |   Timeout >  82.5 : LM23 (32/78.519%)
+|   |   |   |   |   Total_Devs >  42.5 : 
+|   |   |   |   |   |   Timeout <= 82.5 : LM24 (347/51.397%)
+|   |   |   |   |   |   Timeout >  82.5 : LM25 (99/20.303%)
+|   |   |   Total_Devs >  52.5 : 
+|   |   |   |   Timeout <= 105 : 
+|   |   |   |   |   Timeout <= 82.5 : LM26 (40/44.571%)
+|   |   |   |   |   Timeout >  82.5 : LM27 (117/12.165%)
+|   |   |   |   Timeout >  105 : LM28 (141/16.522%)
+|   |   Timeout >  135 : 
+|   |   |   Total_Devs <= 61.5 : 
+|   |   |   |   Total_Devs <= 53.5 : 
+|   |   |   |   |   Total_Devs <= 45.5 : 
+|   |   |   |   |   |   Total_Devs <= 43.5 : LM29 (10/0%)
+|   |   |   |   |   |   Total_Devs >  43.5 : LM30 (3/0%)
+|   |   |   |   |   Total_Devs >  45.5 : LM31 (48/14.42%)
+|   |   |   |   Total_Devs >  53.5 : 
+|   |   |   |   |   Total_Devs <= 59.5 : LM32 (109/15.876%)
+|   |   |   |   |   Total_Devs >  59.5 : LM33 (40/22.38%)
+|   |   |   Total_Devs >  61.5 : 
+|   |   |   |   Total_Devs <= 68.5 : LM34 (146/30.537%)
+|   |   |   |   Total_Devs >  68.5 : LM35 (41/26.187%)
+Timeout >  165 : 
+|   Timeout <= 210 : 
+|   |   Total_Devs <= 56.5 : LM36 (208/30.771%)
+|   |   Total_Devs >  56.5 : 
+|   |   |   Total_Devs <= 60.5 : LM37 (177/24.983%)
+|   |   |   Total_Devs >  60.5 : 
+|   |   |   |   Total_Devs <= 68.5 : LM38 (328/26.035%)
+|   |   |   |   Total_Devs >  68.5 : LM39 (116/24.427%)
+|   Timeout >  210 : 
+|   |   Timeout <= 270 : 
+|   |   |   Total_Devs <= 55.5 : LM40 (736/121.149%)
+|   |   |   Total_Devs >  55.5 : 
+|   |   |   |   Total_Devs <= 58.5 : LM41 (100/132.523%)
+|   |   |   |   Total_Devs >  58.5 : LM42 (118/50.17%)
+|   |   Timeout >  270 : 
+|   |   |   Total_Devs <= 50.5 : 
+|   |   |   |   Total_Devs <= 27.5 : LM43 (12/97.966%)
+|   |   |   |   Total_Devs >  27.5 : LM44 (46/4.05%)
+|   |   |   Total_Devs >  50.5 : LM45 (229/20.946%)
+
+LM num: 1
+Manual Count = 
+	0.0056 * Timeout 
+	+ 0.2838 * Total_Devs 
+	+ 4.1691
+
+LM num: 2
+Manual Count = 
+	0.0056 * Timeout 
+	+ 0.0718 * Total_Devs 
+	+ 6.6892
+
+LM num: 3
+Manual Count = 
+	-0.2077 * Timeout 
+	+ 0.7198 * Total_Devs 
+	+ 16.7136
+
+LM num: 4
+Manual Count = 
+	-0.2077 * Timeout 
+	+ 0.1659 * Total_Devs 
+	+ 23.3189
+
+LM num: 5
+Manual Count = 
+	-0.3177 * Timeout 
+	+ 0.789 * Total_Devs 
+	+ 15.1294
+
+LM num: 6
+Manual Count = 
+	-0.3177 * Timeout 
+	+ 0.2183 * Total_Devs 
+	+ 17.7224
+
+LM num: 7
+Manual Count = 
+	-0.0265 * Timeout 
+	+ 0.0207 * Total_Devs 
+	+ 9.9982
+
+LM num: 8
+Manual Count = 
+	-0.0265 * Timeout 
+	+ 0.04 * Total_Devs 
+	+ 11.5154
+
+LM num: 9
+Manual Count = 
+	-0.0221 * Timeout 
+	+ 1.4928 * Total_Devs 
+	+ 7.4259
+
+LM num: 10
+Manual Count = 
+	-0.0376 * Timeout 
+	+ 0.2338 * Total_Devs 
+	+ 18.2708
+
+LM num: 11
+Manual Count = 
+	-0.0471 * Timeout 
+	+ 0.2338 * Total_Devs 
+	+ 16.31
+
+LM num: 12
+Manual Count = 
+	0.003 * Timeout 
+	+ 0.0328 * Total_Devs 
+	+ 16.7007
+
+LM num: 13
+Manual Count = 
+	0.0003 * Timeout 
+	+ 1.9749 * Total_Devs 
+	- 35.0662
+
+LM num: 14
+Manual Count = 
+	0.0003 * Timeout 
+	+ 0.0274 * Total_Devs 
+	+ 18.243
+
+LM num: 15
+Manual Count = 
+	0.0003 * Timeout 
+	+ 0.0323 * Total_Devs 
+	+ 19.3081
+
+LM num: 16
+Manual Count = 
+	0.0007 * Timeout 
+	- 0.1086 * Total_Devs 
+	+ 16.6076
+
+LM num: 17
+Manual Count = 
+	-0.1319 * Timeout 
+	- 0.2406 * Total_Devs 
+	+ 27.2801
+
+LM num: 18
+Manual Count = 
+	0.0036 * Timeout 
+	+ 0.0133 * Total_Devs 
+	+ 16.8968
+
+LM num: 19
+Manual Count = 
+	0.0036 * Timeout 
+	+ 0.0151 * Total_Devs 
+	+ 18.3941
+
+LM num: 20
+Manual Count = 
+	-0.0008 * Timeout 
+	- 0.0401 * Total_Devs 
+	+ 13.378
+
+LM num: 21
+Manual Count = 
+	-0.0008 * Timeout 
+	- 0.0192 * Total_Devs 
+	+ 11.2449
+
+LM num: 22
+Manual Count = 
+	0.0195 * Timeout 
+	- 0.0041 * Total_Devs 
+	+ 7.4006
+
+LM num: 23
+Manual Count = 
+	-0.0902 * Timeout 
+	- 0.9607 * Total_Devs 
+	+ 60.869
+
+LM num: 24
+Manual Count = 
+	-0.0019 * Timeout 
+	+ 0.0944 * Total_Devs 
+	+ 6.0044
+
+LM num: 25
+Manual Count = 
+	0.0233 * Timeout 
+	- 0.0041 * Total_Devs 
+	+ 6.4242
+
+LM num: 26
+Manual Count = 
+	0.0162 * Timeout 
+	- 0.4467 * Total_Devs 
+	+ 30.3311
+
+LM num: 27
+Manual Count = 
+	0.0105 * Timeout 
+	- 0.029 * Total_Devs 
+	+ 8.1154
+
+LM num: 28
+Manual Count = 
+	0.0069 * Timeout 
+	+ 0.114 * Total_Devs 
+	+ 1.8077
+
+LM num: 29
+Manual Count = 
+	0.0027 * Timeout 
+	- 0.205 * Total_Devs 
+	+ 24.0092
+
+LM num: 30
+Manual Count = 
+	0.0027 * Timeout 
+	- 0.2598 * Total_Devs 
+	+ 26.0451
+
+LM num: 31
+Manual Count = 
+	0.0027 * Timeout 
+	- 0.0336 * Total_Devs 
+	+ 15.9078
+
+LM num: 32
+Manual Count = 
+	0.0027 * Timeout 
+	- 0.0721 * Total_Devs 
+	+ 17.4067
+
+LM num: 33
+Manual Count = 
+	0.0027 * Timeout 
+	+ 0.0325 * Total_Devs 
+	+ 12.2235
+
+LM num: 34
+Manual Count = 
+	0.0027 * Timeout 
+	+ 0.0259 * Total_Devs 
+	+ 13.7943
+
+LM num: 35
+Manual Count = 
+	0.0027 * Timeout 
+	+ 0.3999 * Total_Devs 
+	- 10.9758
+
+LM num: 36
+Manual Count = 
+	0.002 * Timeout 
+	+ 0.1132 * Total_Devs 
+	+ 9.0371
+
+LM num: 37
+Manual Count = 
+	0.002 * Timeout 
+	+ 0.0107 * Total_Devs 
+	+ 16.0682
+
+LM num: 38
+Manual Count = 
+	0.002 * Timeout 
+	+ 0.0054 * Total_Devs 
+	+ 17.7834
+
+LM num: 39
+Manual Count = 
+	0.002 * Timeout 
+	- 0.1723 * Total_Devs 
+	+ 29.6875
+
+LM num: 40
+Manual Count = 
+	0.0049 * Timeout 
+	+ 0.016 * Total_Devs 
+	+ 11.4649
+
+LM num: 41
+Manual Count = 
+	0.0049 * Timeout 
+	+ 0.1845 * Total_Devs 
+	+ 7.5273
+
+LM num: 42
+Manual Count = 
+	0.0049 * Timeout 
+	+ 0.3602 * Total_Devs 
+	+ 3.2899
+
+LM num: 43
+Manual Count = 
+	0.0127 * Timeout 
+	+ 0.2933 * Total_Devs 
+	+ 19.1066
+
+LM num: 44
+Manual Count = 
+	0.0127 * Timeout 
+	+ 0.0541 * Total_Devs 
+	+ 24.5948
+
+LM num: 45
+Manual Count = 
+	0.0127 * Timeout 
+	+ 0.0192 * Total_Devs 
+	+ 26.7176
+
+Number of Rules : 45
+
+Time taken to build model: 0.66 seconds
+
+=== Cross-validation ===
+=== Summary ===
+
+Correlation coefficient                  0.7899
+Mean absolute error                      2.9851
+Root mean squared error                  4.2683
+Relative absolute error                 52.6306 %
+Root relative squared error             61.3398 %
+Total Number of Instances             6505     
+
