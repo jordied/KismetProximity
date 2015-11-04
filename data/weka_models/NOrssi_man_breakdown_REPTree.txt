@@ -1,0 +1,179 @@
+=== Run information ===
+
+Scheme:weka.classifiers.trees.REPTree -M 2 -V 0.001 -N 3 -S 1 -L 5
+Relation:     rssi_NOrssi_man_breakdown
+Instances:    6505
+Attributes:   92
+              Timeout
+              Manual Count
+              Apple
+              Apple Inc
+              Apple, Inc
+              Apple, Inc.
+              Askey Computer Corp
+              ASUSTek COMPUTER INC.
+              Azurewave Technologies., inc.
+              Belkin International Inc.
+              Billion Electric Co. Ltd.
+              Billion Electric Co., Ltd.
+              BROTHER INDUSTRIES, LTD.
+              CABLE TELEVISION LABORATORIES, INC.
+              Cisco
+              CISCO SYSTEMS, INC.
+              COMPAL INFORMATION (KUNSHAN) CO., LTD.
+              D-Link International
+              D-LINK INTERNATIONAL PTE LIMITED
+              Dell Inc
+              DrayTek Corp.
+              Elitegroup Computer System Co.
+              ELITEGROUP COMPUTER SYSTEM CO., LTD.
+              Enerpoint Ltd.
+              FUJI-XEROX CO. LTD.
+              GainSpan Corp.
+              GIGA-BYTE TECHNOLOGY CO.,LTD.
+              Hewlett Packard
+              Hewlett-Packard Company
+              Hon Hai Precision Ind. Co.,Ltd.
+              Hon Hai Precision Ind.Co.Ltd
+              HTC Corporation
+              Huawei Technologies Co., Ltd
+              IBM
+              IBM Corp
+              ICP Electronics Inc.
+              Intel Corporate
+              KYOCERA Document Solutions Inc.
+              Lexmark International Inc.
+              LG Electronics
+              Liteon Tech Corp.
+              Liteon Technology Corporation
+              Micro-Star Int'l Co, Ltd
+              Microsoft
+              Microsoft Corporation
+              Motorola Mobility LLC
+              Murata Manufactuaring Co.,Ltd.
+              Murata Manufacturing Co., Ltd.
+              Murata Manufacturing Co.,Ltd.
+              NETCOMM LIMITED
+              NETGEAR
+              Netgear Inc
+              Netgear Inc.
+              NETGEAR INC.,
+              Nokia Corporation
+              OnePlus Tech (Shenzhen) Ltd
+              Panasonic Automotive Systems Company of America
+              Paragon Technologies Inc.
+              PEGATRON CORPORATION
+              Pittasoft
+              RICOH COMPANY LTD.
+              Routerboard.com
+              Samsung Elec Co.,Ltd
+              Samsung Electro Mechanics co., LTD.
+              Samsung Electro Mechanics co.,LTD.
+              SAMSUNG ELECTRO-MECHANICS
+              SAMSUNG ELECTRO-MECHANICS CO., LTD.
+              Samsung Electronics Co., LTD
+              Samsung Electronics Co.,Ltd
+              Samsung Electronics ITS, Printer division
+              SEIKO EPSON CORPORATION
+              Seoul Commtech
+              Shenzhen JSR Technology Co.,Ltd.
+              Shenzhen Ogemray Technology Co., Ltd.
+              Shenzhen Xin KingBrand enterprises Co.,Ltd
+              Sierra Wireless Inc
+              SIRONA DENTAL SYSTEMS GmbH & Co. KG
+              Sony Mobile Communications AB
+              SparkLAN Communications, Inc.
+              TCT mobile limited
+              TP-LINK TECHNOLOGIES CO., LTD.
+              TP-LINK TECHNOLOGIES CO.,LTD.
+              Ubiquiti Networks
+              Ubiquiti Networks, INC
+              UNKNOWN
+              Verifone, INC.
+              WISOL
+              Wistron Corporation
+              Wistron InfoComm(ZhongShan) Corporation
+              Zebra Technologies Inc
+              zte corporation
+              Zultys Technologies
+Test mode:10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+
+REPTree
+============
+
+Apple < 13.5
+|   Billion Electric Co. Ltd. < 1.5
+|   |   NETGEAR INC., < 1.5
+|   |   |   Timeout < 270
+|   |   |   |   Apple < 1.5 : 7.76 (46/35.55) [29/65.59]
+|   |   |   |   Apple >= 1.5 : 17.28 (1610/15.38) [807/13.34]
+|   |   |   Timeout >= 270 : 30.33 (35/26.65) [14/0.78]
+|   |   NETGEAR INC., >= 1.5
+|   |   |   Timeout < 52.5
+|   |   |   |   Hon Hai Precision Ind.Co.Ltd < 0.5 : 10.63 (377/24.91) [208/24.31]
+|   |   |   |   Hon Hai Precision Ind.Co.Ltd >= 0.5 : 6.45 (84/0.44) [53/0.45]
+|   |   |   Timeout >= 52.5
+|   |   |   |   ASUSTek COMPUTER INC. < 0.5 : 27.3 (18/2.14) [5/2.56]
+|   |   |   |   ASUSTek COMPUTER INC. >= 0.5 : 18.51 (62/15.4) [38/15.23]
+|   Billion Electric Co. Ltd. >= 1.5
+|   |   Samsung Electro Mechanics co., LTD. < 1.5
+|   |   |   Enerpoint Ltd. < 1.5
+|   |   |   |   Azurewave Technologies., inc. < 0.5 : 9.65 (1202/17.88) [580/18.09]
+|   |   |   |   Azurewave Technologies., inc. >= 0.5 : 30.33 (10/0.24) [8/0.21]
+|   |   |   Enerpoint Ltd. >= 1.5
+|   |   |   |   Timeout < 75 : 14.4 (137/8.08) [71/7.43]
+|   |   |   |   Timeout >= 75 : 18.91 (44/3.18) [24/2.99]
+|   |   Samsung Electro Mechanics co., LTD. >= 1.5
+|   |   |   HTC Corporation < 0.5
+|   |   |   |   NETGEAR < 2.5 : 17.15 (44/2.54) [21/2.91]
+|   |   |   |   NETGEAR >= 2.5 : 14.15 (100/2.56) [44/2.84]
+|   |   |   HTC Corporation >= 0.5
+|   |   |   |   Azurewave Technologies., inc. < 0.5 : 18.82 (66/2.95) [37/0.95]
+|   |   |   |   Azurewave Technologies., inc. >= 0.5 : 31 (6/0) [2/0]
+Apple >= 13.5
+|   COMPAL INFORMATION (KUNSHAN) CO., LTD. < 0.5
+|   |   ASUSTek COMPUTER INC. < 1.5
+|   |   |   Murata Manufacturing Co.,Ltd. < 0.5
+|   |   |   |   IBM Corp < 1.5 : 30.82 (134/0.3) [64/7.62]
+|   |   |   |   IBM Corp >= 1.5 : 27.06 (31/10.1) [20/10.29]
+|   |   |   Murata Manufacturing Co.,Ltd. >= 0.5
+|   |   |   |   Murata Manufactuaring Co.,Ltd. < 0.5 : 31.81 (44/0.82) [25/0.82]
+|   |   |   |   Murata Manufactuaring Co.,Ltd. >= 0.5 : 34 (35/0) [15/0]
+|   |   ASUSTek COMPUTER INC. >= 1.5
+|   |   |   Apple, Inc < 2.5
+|   |   |   |   Samsung Electronics ITS, Printer division < 0.5 : 30.85 (10/0.36) [3/0.04]
+|   |   |   |   Samsung Electronics ITS, Printer division >= 0.5 : 29.26 (19/0.22) [8/0.15]
+|   |   |   Apple, Inc >= 2.5
+|   |   |   |   Timeout < 210 : 16.57 (9/2.67) [5/6.4]
+|   |   |   |   Timeout >= 210 : 22.65 (37/1.53) [14/1.52]
+|   COMPAL INFORMATION (KUNSHAN) CO., LTD. >= 0.5
+|   |   Intel Corporate < 2.5
+|   |   |   Timeout < 210
+|   |   |   |   Huawei Technologies Co., Ltd < 1 : 16.98 (110/1.47) [50/1.91]
+|   |   |   |   Huawei Technologies Co., Ltd >= 1 : 20 (5/0) [2/0]
+|   |   |   Timeout >= 210 : 20.3 (15/0.22) [8/0.19]
+|   |   Intel Corporate >= 2.5
+|   |   |   Timeout < 165
+|   |   |   |   SEIKO EPSON CORPORATION < 0.5 : 19 (12/0) [3/0]
+|   |   |   |   SEIKO EPSON CORPORATION >= 0.5 : 18 (3/0) [1/0]
+|   |   |   Timeout >= 165
+|   |   |   |   DrayTek Corp. < 0.5 : 20.8 (7/0.98) [3/0.93]
+|   |   |   |   DrayTek Corp. >= 0.5 : 20 (24/0) [7/0]
+
+Size of the tree : 59
+
+Time taken to build model: 0.13 seconds
+
+=== Cross-validation ===
+=== Summary ===
+
+Correlation coefficient                  0.8364
+Mean absolute error                      2.7241
+Root mean squared error                  3.8139
+Relative absolute error                 48.0278 %
+Root relative squared error             54.8105 %
+Total Number of Instances             6505     
+
