@@ -273,7 +273,7 @@ if __name__ == "__main__":
     root_logger = logging.getLogger('WiFiScanner')
     kismet_instance = KismetInstance(logger=logging.getLogger('kismet'))
     MQTTHelper = MQTTHelper(logger=logging.getLogger('MQTT_Helper'), host=args.host)
-    formatter = MessageFormatter(logger=logging.getLogger('Message_Formatter'), id=args.id, searchMac=args.findDevice)
+    formatter = MessageFormatter(logger=logging.getLogger('Message_Formatter'), id=args.id, findDevice=args.findDevice)
     wlan_addr = kismet_instance.get_hw_Addr('wlan0')
     root_logger.warning("Program Starting!")
     while True:
