@@ -199,10 +199,12 @@ class MessageFormatter:
                 list_of_client_dict.append(
                     {'pi_id': self.id, 'time': datetime.now().strftime(format), 'MAC': mac, 'rssi': dbm})
                 msg = '{0}\t{1}\t{2}'.format(time.strftime('%X %x %Z'), mac, dbm)
+                print type(mac)
                 self.logger.debug(msg)
                 if self.findDevice is None:
                     print msg
                 elif self.findDevice == mac:
+                    msg += '*********'
                     print msg
         return list_of_client_dict
 
