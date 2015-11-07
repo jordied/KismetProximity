@@ -1,6 +1,6 @@
 === Run information ===
 
-Scheme:weka.classifiers.trees.REPTree -M 2 -V 0.001 -N 3 -S 1 -L 5
+Scheme:weka.classifiers.trees.REPTree -M 2 -V 0.001 -N 3 -S 1 -L 6
 Relation:     rssi_rssi_man_breakdown
 Instances:    4018
 Attributes:   96
@@ -120,52 +120,78 @@ Timeout < 15
 |   |   TP-LINK TECHNOLOGIES CO.,LTD. < 0.5 : 7.72 (195/3.18) [101/3.8]
 |   |   TP-LINK TECHNOLOGIES CO.,LTD. >= 0.5
 |   |   |   Billion Electric Co. Ltd. < 0.5
-|   |   |   |   COMPAL INFORMATION (KUNSHAN) CO., LTD. < 0.5 : 9.68 (45/3.04) [11/3.23]
-|   |   |   |   COMPAL INFORMATION (KUNSHAN) CO., LTD. >= 0.5 : 7.31 (16/1.75) [10/0.25]
+|   |   |   |   COMPAL INFORMATION (KUNSHAN) CO., LTD. < 0.5
+|   |   |   |   |   WISOL < 0.5 : 9.88 (43/2.82) [9/2.24]
+|   |   |   |   |   WISOL >= 0.5 : 7 (2/0) [2/0]
+|   |   |   |   COMPAL INFORMATION (KUNSHAN) CO., LTD. >= 0.5
+|   |   |   |   |   Apple < 0.5 : 11 (2/0) [0/0]
+|   |   |   |   |   Apple >= 0.5 : 7 (14/0) [10/0]
 |   |   |   Billion Electric Co. Ltd. >= 0.5
 |   |   |   |   Apple < 2.5 : 8.41 (119/0.99) [69/1.05]
-|   |   |   |   Apple >= 2.5 : 8.02 (85/0.93) [39/1.13]
+|   |   |   |   Apple >= 2.5
+|   |   |   |   |   Belkin International Inc. < 1.5 : 8.05 (83/0.87) [39/1.1]
+|   |   |   |   |   Belkin International Inc. >= 1.5 : 6 (2/0) [0/0]
 Timeout >= 15
 |   Timeout < 82.5
 |   |   Timeout < 52.5
 |   |   |   Timeout < 37.5
-|   |   |   |   RSSI < 55 : 16.43 (91/54.67) [61/65.87]
-|   |   |   |   RSSI >= 55 : 12.82 (432/9.66) [220/7.97]
+|   |   |   |   RSSI < 55
+|   |   |   |   |   RSSI < 47.5 : 12.41 (57/42.74) [38/49.25]
+|   |   |   |   |   RSSI >= 47.5 : 23.12 (34/0.58) [23/25.22]
+|   |   |   |   RSSI >= 55
+|   |   |   |   |   Apple < 0.5 : 7.57 (14/34.41) [7/37.59]
+|   |   |   |   |   Apple >= 0.5 : 12.99 (418/7.94) [213/5.94]
 |   |   |   Timeout >= 37.5
-|   |   |   |   NETCOMM LIMITED < 0.5 : 16.06 (46/8.84) [21/14.38]
-|   |   |   |   NETCOMM LIMITED >= 0.5 : 22.64 (62/2.6) [34/3.4]
+|   |   |   |   NETCOMM LIMITED < 0.5
+|   |   |   |   |   Apple < 0.5 : 5.67 (2/72.25) [1/72.25]
+|   |   |   |   |   Apple >= 0.5 : 16.55 (44/3.16) [20/1.85]
+|   |   |   |   NETCOMM LIMITED >= 0.5
+|   |   |   |   |   Apple, Inc < 1.5 : 22.08 (51/1.6) [24/3.01]
+|   |   |   |   |   Apple, Inc >= 1.5 : 24.62 (11/0.79) [10/0.23]
 |   |   Timeout >= 52.5
 |   |   |   Ubiquiti Networks, INC < 0.5
-|   |   |   |   Samsung Electro Mechanics co.,LTD. < 0.5 : 8.24 (393/8.36) [180/5.45]
+|   |   |   |   Samsung Electro Mechanics co.,LTD. < 0.5
+|   |   |   |   |   RSSI < 57.5 : 7.39 (206/0.62) [101/1.63]
+|   |   |   |   |   RSSI >= 57.5 : 9.21 (187/14.7) [79/9.53]
 |   |   |   |   Samsung Electro Mechanics co.,LTD. >= 0.5 : 0 (8/0) [5/0]
 |   |   |   Ubiquiti Networks, INC >= 0.5
-|   |   |   |   Hon Hai Precision Ind. Co.,Ltd. < 0.5 : 20.49 (49/0.9) [32/1.21]
+|   |   |   |   Hon Hai Precision Ind. Co.,Ltd. < 0.5
+|   |   |   |   |   Hewlett Packard < 2.5 : 20.12 (43/0.63) [22/0.47]
+|   |   |   |   |   Hewlett Packard >= 2.5 : 22 (6/0) [10/0]
 |   |   |   |   Hon Hai Precision Ind. Co.,Ltd. >= 0.5 : 18 (8/0) [6/0]
 |   Timeout >= 82.5
 |   |   Samsung Electro Mechanics co.,LTD. < 0.5
 |   |   |   Dell Inc < 0.5
-|   |   |   |   Netgear Inc. < 0.5 : 15.28 (735/14.65) [355/15.71]
-|   |   |   |   Netgear Inc. >= 0.5 : 13.07 (132/1.49) [63/2.42]
+|   |   |   |   Netgear Inc. < 0.5
+|   |   |   |   |   RSSI < 67.5 : 14.43 (506/9.49) [254/9.93]
+|   |   |   |   |   RSSI >= 67.5 : 17.24 (229/19.79) [101/26.59]
+|   |   |   |   Netgear Inc. >= 0.5
+|   |   |   |   |   Timeout < 135 : 15.5 (18/0.8) [18/0.7]
+|   |   |   |   |   Timeout >= 135 : 12.52 (114/0.37) [45/0.39]
 |   |   |   Dell Inc >= 0.5
-|   |   |   |   RSSI < 85 : 10.92 (76/0.85) [43/3.91]
+|   |   |   |   RSSI < 85
+|   |   |   |   |   Apple Inc < 0.5 : 12.13 (23/0.14) [16/6.54]
+|   |   |   |   |   Apple Inc >= 0.5 : 10.33 (53/0.42) [27/0.65]
 |   |   |   |   RSSI >= 85 : 17 (5/0) [2/0]
 |   |   Samsung Electro Mechanics co.,LTD. >= 0.5
 |   |   |   Ubiquiti Networks < 0.5 : 15 (26/0) [8/0]
 |   |   |   Ubiquiti Networks >= 0.5
-|   |   |   |   RSSI < 85 : 22.38 (47/0.44) [19/0.56]
+|   |   |   |   RSSI < 85
+|   |   |   |   |   GIGA-BYTE TECHNOLOGY CO.,LTD. < 4.5 : 21.83 (26/0.21) [9/0.4]
+|   |   |   |   |   GIGA-BYTE TECHNOLOGY CO.,LTD. >= 4.5 : 23 (21/0) [10/0]
 |   |   |   |   RSSI >= 85 : 15 (2/0) [1/0]
 
-Size of the tree : 47
+Size of the tree : 73
 
-Time taken to build model: 0.24 seconds
+Time taken to build model: 0.17 seconds
 
 === Cross-validation ===
 === Summary ===
 
-Correlation coefficient                  0.7473
-Mean absolute error                      2.1874
-Root mean squared error                  3.3248
-Relative absolute error                 53.4375 %
-Root relative squared error             66.4279 %
+Correlation coefficient                  0.7684
+Mean absolute error                      2.0525
+Root mean squared error                  3.2024
+Relative absolute error                 50.1418 %
+Root relative squared error             63.9819 %
 Total Number of Instances             4018     
 
