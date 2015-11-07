@@ -83,7 +83,7 @@ Requires a folder `./logs`
 Flip the rows and columns of a csv.
 
 `python transpose.py [filename]`
-### model/manlookup
+### model/manlookup.py
 Lookup the OUI of a MAC Address. (Works with AA:BB:CC:DD:EE:FF format)
 
-`python transpose.py [MAC]`
+`python manlookup.py [MAC]`
